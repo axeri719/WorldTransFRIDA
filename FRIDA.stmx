@@ -5,7 +5,7 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.7.2" isee:build_number="3414" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.7.1" isee:build_number="3377" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -1816,6 +1816,8 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 				<connect2 to="Land_Use_Forcing.agricultural_water_withdrawal" from="Freshwater.agricultural_water_withdrawal"/>
 				<connect to="Finance.technological_water_discovery" from="Freshwater.technological_water_discovery"/>
 				<connect2 to="Finance.technological_water_discovery" from="Freshwater.technological_water_discovery"/>
+				<connect to="Planetary_boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
+				<connect2 to="Planetary_boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
 				<connect to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 				<connect2 to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 				<connect to="Freshwater.GDP_per_person" from="Demographics.GDP_per_person"/>
@@ -1832,6 +1834,8 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 				<connect2 to="Freshwater.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Freshwater.switch_for_climate_damage" from="Climate.switch_for_all_climate_damage"/>
 				<connect2 to="Freshwater.switch_for_climate_damage" from="Climate.switch_for_all_climate_damage"/>
+				<connect to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
+				<connect2 to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
 				<connect to="Emissions.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect2 to="Emissions.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Emissions.clearing_forest_for_grassland" from="Land_Use.clearing_forest_for_grassland"/>
@@ -1840,8 +1844,12 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 				<connect2 to="Emissions.clearing_forests_for_crops" from="Land_Use.clearing_forests_for_crops"/>
 				<connect to="Emissions.Mature_Forest" from="Land_Use.Mature_Forest"/>
 				<connect2 to="Emissions.Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect to="Planetary_boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect2 to="Planetary_boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
 				<connect to="Emissions.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
 				<connect2 to="Emissions.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
+				<connect to="Planetary_boundaries.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
+				<connect2 to="Planetary_boundaries.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
 				<connect to="Land_Use.forestation_policy_1" from="Government_Regulations.forestation_policy"/>
 				<connect2 to="Land_Use.forestation_policy_1" from="Government_Regulations.forestation_policy"/>
 				<connect to="Land_Use.Policy_Start_Year" from="Government_Regulations.start_year"/>
@@ -1935,6 +1943,17 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 				<connect to="fossil_energy_oil.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect2 to="fossil_energy_oil.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 			</module>
+			<module name="Planetary boundaries" isee:label="">
+				<format scale_by="auto"/>
+				<connect to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
+				<connect2 to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
+				<connect to="Planetary_boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect2 to="Planetary_boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect to="Planetary_boundaries.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
+				<connect2 to="Planetary_boundaries.Recovering_Forest" from="Land_Use.Recovering_Forest"/>
+				<connect to="Planetary_boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
+				<connect2 to="Planetary_boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
+			</module>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1984,7 +2003,7 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="8" isee:scroll_y="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="3" isee:page_rows="8" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2362,6 +2381,11 @@ mountain glaciers (metre)} + Sea_Level.SLR_from_Greenland_Ice_Sheet_by_PCTILE[PC
 					<from>Government_Regulations</from>
 					<to>Energy</to>
 				</connector>
+				<module x="43" y="119" name="Planetary boundaries"/>
+				<connector uid="123" isee:thickness="2" angle="214.577" isee:autocreated="true">
+					<from>Land_Use_and_Agriculture</from>
+					<to>Planetary_boundaries</to>
+				</connector>
 			</view>
 			<view isee:template_view="template:1" isee:name="Landing Page without image" isee:original_design="Deluxe Prev-Next Blue Green Pastel" background="white" page_width="1066" page_height="600" home_view="true" type="interface">
 				<style>
@@ -2385,7 +2409,7 @@ Lorem ipsum dolor sit amet</text_box>
 					</style>
 					<isee:shape background="#F7F7F7" border_width="thin" border_style="none" transparent_background="false" x="0" y="0" width="1066" height="600" kind="rectangle"/>
 					<graphics_frame z_index="2" fill="none" x="12.4806" y="16.9825" width="166" height="34">
-						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/Applications/Stella Architect.app/Contents/Resources/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
+						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">C:/Program Files/isee systems/Stella Architect/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
 					</graphics_frame>
 				</view>
 			</isee:templates>
@@ -2577,7 +2601,7 @@ Lorem ipsum dolor sit amet</text_box>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:scroll_x="113.75" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2631,6 +2655,408 @@ Lorem ipsum dolor sit amet</text_box>
 			</view>
 		</views>
 	</model>
+	<model name="Planetary_boundaries">
+		<variables>
+			<group name="PB 2 Land Use" run="false">
+				<format scale_by="auto"/>
+				<entity name='"Forested_area_-_Baseline"'/>
+				<entity name='"PB2:1_Boundary_value"'/>
+				<entity name='"PB2:1_Relative_forest_cover"'/>
+				<entity name='"Relative_transgression_in_PB2:1"'/>
+				<entity name="Forested_area"/>
+				<entity name="Fraction_of_recovering_forest_to_include"/>
+				<entity name="Mature_Forest"/>
+				<entity name="Recovering_Forest"/>
+				<entity name="Recovering_forest_area_to_include"/>
+			</group>
+			<stock name="Mature Forest" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mha</units>
+			</stock>
+			<aux name="PB2:1 Relative forest cover">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Forested_area/&quot;Forested_area_-_Baseline&quot;</eqn>
+				<units>dmnl</units>
+			</aux>
+			<stock name="Recovering Forest" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<non_negative/>
+				<units>Mha</units>
+			</stock>
+			<aux name="Forested area">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Mature_Forest + Recovering_forest_area_to_include</eqn>
+				<units>Mha</units>
+			</aux>
+			<aux name="Forested area - Baseline">
+				<eqn>4790/0.75</eqn>
+				<units>Mha</units>
+			</aux>
+			<aux name="Fraction of recovering forest to include">
+				<eqn>0.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="Recovering forest area to include">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Recovering_Forest*Fraction_of_recovering_forest_to_include</eqn>
+				<units>Mha</units>
+			</aux>
+			<group name="PB 4 Biogeochemical flows" run="false">
+				<format scale_by="auto"/>
+				<entity name='"N:P_ratio_in_fertilizer"'/>
+				<entity name='"PB4:2_Boundary_value"'/>
+				<entity name='"PB4:2_Flow_of_P_from_fertilizer_to_erodible_soils"'/>
+				<entity name='"PB4:3_Adjusted_boundary_value"'/>
+				<entity name='"PB4:3_Boundary_value"'/>
+				<entity name='"PB4:3_Intentionally_fixed_N_applied_to_the_agricultural_system"'/>
+				<entity name='"Total_impact_factor_on_PB4:3_boundary"'/>
+				<entity name="fertilizer_use"/>
+				<entity name="Fraction_of_fertilizer_which_is_intentionally_fixed_N"/>
+				<entity name="Fraction_of_P_from_fertilizer_going_to_erodible_soils"/>
+			</group>
+			<stock name="fertilizer use" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>MtN/year</units>
+			</stock>
+			<aux name="Fraction of fertilizer which is intentionally fixed N">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB4:3 Intentionally fixed N\napplied to the\nagricultural system">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>fertilizer_use*Fraction_of_fertilizer_which_is_intentionally_fixed_N</eqn>
+				<units>MtN/year</units>
+			</aux>
+			<group name="Interconnections between PBs" run="false">
+				<format scale_by="auto"/>
+				<entity name='"PB2:1_fractional_reduction_of_PB4:3"'/>
+			</group>
+			<aux name="PB2:1 Boundary value">
+				<eqn>0.75</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB4:3 Boundary value">
+				<eqn>62</eqn>
+				<units>MtN/year</units>
+			</aux>
+			<aux name="Relative transgression in PB2:1">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>MAX(-(&quot;PB2:1_Relative_forest_cover&quot; - &quot;PB2:1_Boundary_value&quot;)/&quot;PB2:1_Boundary_value&quot;,  0)</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB2:1 fractional reduction of PB4:3">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>1 - EXP(-&quot;Relative_transgression_in_PB2:1&quot;)</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB4:3 Adjusted boundary value">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>&quot;PB4:3_Boundary_value&quot;*&quot;Total_impact_factor_on_PB4:3_boundary&quot;</eqn>
+				<units>MtN/year</units>
+			</aux>
+			<aux name="Total impact factor on PB4:3 boundary">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>(1 - &quot;PB2:1_fractional_reduction_of_PB4:3&quot;)</eqn>
+				<units>dmnl</units>
+			</aux>
+			<group name="PB 3 Freshwater change" run="false">
+				<format scale_by="auto"/>
+				<entity name='"m^3_to_km^3"'/>
+				<entity name='"PB3:1_Boundary_value"'/>
+				<entity name='"PB3:1alt_Freshwater_withdrawal_for_consumptive_use_(blue)"'/>
+				<entity name="Fraction_of_water_withdrawal_for_human_consumptive_use"/>
+				<entity name="total_water_withdrawal"/>
+			</group>
+			<aux name="total\nwater\nwithdrawal" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>m^3/year</units>
+			</aux>
+			<aux name="PB3:1 Boundary value">
+				<eqn>4000</eqn>
+				<units>km^3/year</units>
+			</aux>
+			<aux name="Fraction of water withdrawal for human consumptive use">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB3:1alt Freshwater withdrawal\nfor consumptive use (blue)">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Fraction_of_water_withdrawal_for_human_consumptive_use * total_water_withdrawal*&quot;m^3_to_km^3&quot;</eqn>
+				<units>km^3/year</units>
+			</aux>
+			<aux name="m^3 to km^3">
+				<eqn>1000^-3</eqn>
+				<units>km^3/m^3</units>
+			</aux>
+			<aux name="PB4:2 Flow of P from fertilizer to erodible soils">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Fraction_of_P_from_fertilizer_going_to_erodible_soils*fertilizer_use/&quot;N:P_ratio_in_fertilizer&quot;</eqn>
+				<units>MtP/year</units>
+			</aux>
+			<aux name="N:P ratio in fertilizer">
+				<eqn>11.8</eqn>
+				<units>MtN/MtP</units>
+			</aux>
+			<aux name="Fraction of P from fertilizer going to erodible soils">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="PB4:2 Boundary value">
+				<eqn>6.2</eqn>
+				<units>MtP/year</units>
+			</aux>
+			<group name="PB 1 Biosphere Integrity" run="false">
+				<format scale_by="auto"/>
+			</group>
+		</variables>
+		<views>
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="fuchsia" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="#008F44" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#0CA0FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="lime" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1" pen_style="dot_dashed"/>
+						<isee:series_style color="#F586FF" thickness="1" pen_style="dotted"/>
+						<isee:series_style color="black" thickness="1" pen_style="dashed"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				<button color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595"/>
+				<isee:annotation color="black" background="#E0E0E0" font_size="12pt" border_width="thin" border_style="solid" transparent="false" corner_radius="0" isee:flat="false" icon_side="top" isee:highlight_on_hover="false" isee:highlight_color="#959595" popup_corner_radius="0" popup_background_color="#FFFECF"/>
+				<slider color="#66CC66" background="#E0E0E0" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" vertical="false" isee:fancy_appearance="false" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:stacked_container color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="0" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:dual_slider color="#66CC66" background="silver" font_size="12pt" num_ticks="3" label_side="top" wrap_title="true" isee:show_hover_tip="when_deciding" input_expands="true" input_width="100"/>
+				<isee:sim_speed_slider color="black" background="white"/>
+				<isee:time_slider color="#E95F74" background="silver"/>
+				<isee:pie_input color="black" background="white" font_size="12pt" legend_position="bottom" isee:transparent="false"/>
+				<knob color="#66CC66" background="#E0E0E0" font_size="12pt" label_side="bottom" wrap_title="true"/>
+				<numeric_input color="black" background="#E0E0E0" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<isee:dropdown_input color="black" background="white" font_size="12pt" label_side="left" wrap_title="true" input_expands="false" input_width="100"/>
+				<switch color="black" background="#E0E0E0" font_size="12pt" label_side="top" wrap_title="true" isee:appearance="switch" isee:on_color="green"/>
+				<options color="black" background="white" appearance="radio-buttons" arrangement="vertical"/>
+				<graphical_input color="black" background="#E0E0E0" font_size="12pt" isee:show_hover_tip="true"/>
+				<group_input color="black" background="#E0E0E0" font_size="12pt"/>
+				<lamp color="black" background="white" font_size="9pt"/>
+				<gauge color="black" background="white" font_size="9pt" needle_color="#F09F72" bar_color="#EEEEEE" bar_progress_color="black" appearance="radial" num_major_ticks="11" num_minor_ticks="11" show_numeric_value="true"/>
+				<isee:spatial_map color="black" background="white" font_size="12pt"/>
+				<isee:animation_object color="black" background="white" font_size="12pt"/>
+				<isee:navigation_widget color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" padding="6 8" border_color="#999999" border_width="thin" border_style="solid" item_spacing="6" appearance="tabs" corner_radius="4" selected_item_color="black" selected_item_background="white" item_background="#DDDDDD" transparent_bg="false"/>
+				<isee:shape color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid" opacity="1" transparent_background="true" corner_radius="1"/>
+				<isee:selector color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
+				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+			</style>
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="3" isee:page_rows="2" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+						<shape type="rectangle" width="45" height="35"/>
+					</stock>
+					<flow color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</flow>
+					<isee:placeholder color="#228B22" background="white" font_color="#228B22" font_size="11pt" label_side="bottom"/>
+					<module color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+						<shape type="rectangle" width="67" height="55"/>
+					</module>
+					<aux color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+						<shape type="circle" radius="18"/>
+					</aux>
+					<group color="red" background="white" font_color="red" font_size="11pt"/>
+					<connector color="#FF007F" background="white" font_color="#FF007F" font_size="9pt" isee:thickness="1"/>
+					<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+					<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+					<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+						<isee:series_styles>
+							<isee:series_style color="blue" thickness="1"/>
+							<isee:series_style color="red" thickness="1"/>
+							<isee:series_style color="fuchsia" thickness="1"/>
+							<isee:series_style color="#008F44" thickness="1"/>
+							<isee:series_style color="#FF7F00" thickness="1"/>
+							<isee:series_style color="#7F00FF" thickness="1"/>
+							<isee:series_style color="#0CA0FF" thickness="1"/>
+							<isee:series_style color="lime" thickness="1"/>
+							<isee:series_style color="#FF007F" thickness="1"/>
+							<isee:series_style color="aqua" thickness="1"/>
+							<isee:series_style color="#F586FF" thickness="1"/>
+							<isee:series_style color="black" thickness="1"/>
+							<isee:series_style color="#C8C8C8" thickness="1"/>
+						</isee:series_styles>
+					</graph>
+					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+				</style>
+				<group locked="true" x="862.944" y="69" width="711.389" height="403.722" name="PB 2 Land Use">
+					<item uid="9"/>
+				</group>
+				<stock font_style="italic" font_weight="bold" x="921.5" y="107" name="Mature Forest"/>
+				<aux x="1208.61" y="148.333" name="PB2:1 Relative forest cover"/>
+				<stock font_style="italic" font_weight="bold" x="921.5" y="178.889" name="Recovering Forest"/>
+				<aux x="1068.61" y="143.333" name="Forested area"/>
+				<connector uid="5" angle="356.313">
+					<from>Mature_Forest</from>
+					<to>Forested_area</to>
+				</connector>
+				<aux x="935.944" y="325.778" name="Forested area - Baseline"/>
+				<connector uid="7" angle="357.955">
+					<from>Forested_area</from>
+					<to>&quot;PB2:1_Relative_forest_cover&quot;</to>
+				</connector>
+				<connector uid="8" angle="33.055">
+					<from>&quot;Forested_area_-_Baseline&quot;</from>
+					<to>&quot;PB2:1_Relative_forest_cover&quot;</to>
+				</connector>
+				<text_box uid="9" x="868.056" y="383.333" width="260" height="62.4444">References:
+- Forested area - Baseline: Steffen et al (2015), a secondary source
+- PB2:1 Boundary value: Same source
+</text_box>
+				<aux x="921.5" y="232.056" name="Fraction of recovering forest to include"/>
+				<aux x="1014.72" y="204.056" name="Recovering forest area to include"/>
+				<connector uid="10" angle="354.734">
+					<from>Recovering_Forest</from>
+					<to>Recovering_forest_area_to_include</to>
+				</connector>
+				<connector uid="11" angle="16.7181">
+					<from>Fraction_of_recovering_forest_to_include</from>
+					<to>Recovering_forest_area_to_include</to>
+				</connector>
+				<connector uid="12" angle="48.4124">
+					<from>Recovering_forest_area_to_include</from>
+					<to>Forested_area</to>
+				</connector>
+				<group locked="true" x="2685.42" y="61.833" width="445" height="457.75" name="PB 4 Biogeochemical flows">
+					<item uid="27"/>
+				</group>
+				<stock font_style="italic" font_weight="bold" x="2727.92" y="205.083" name="fertilizer use"/>
+				<aux x="2715.42" y="300.722" name="Fraction of fertilizer which is intentionally fixed N"/>
+				<aux x="2854.17" y="293.583" name="PB4:3 Intentionally fixed N\napplied to the\nagricultural system"/>
+				<connector uid="13" angle="324.97">
+					<from>fertilizer_use</from>
+					<to>&quot;PB4:3_Intentionally_fixed_N_applied_to_the_agricultural_system&quot;</to>
+				</connector>
+				<connector uid="14" angle="14.4539">
+					<from>Fraction_of_fertilizer_which_is_intentionally_fixed_N</from>
+					<to>&quot;PB4:3_Intentionally_fixed_N_applied_to_the_agricultural_system&quot;</to>
+				</connector>
+				<group locked="false" x="258.75" y="594.75" width="703.75" height="156.5" name="Interconnections between PBs"/>
+				<aux label_side="top" x="1265" y="152.389" name="PB2:1 Boundary value"/>
+				<aux x="2929.17" y="293.583" name="PB4:3 Boundary value"/>
+				<aux x="1332.5" y="151.222" name="Relative transgression in PB2:1"/>
+				<connector uid="15" angle="292.51">
+					<from>&quot;PB2:1_Relative_forest_cover&quot;</from>
+					<to>&quot;Relative_transgression_in_PB2:1&quot;</to>
+				</connector>
+				<connector uid="16" angle="13.8651">
+					<from>&quot;PB2:1_Boundary_value&quot;</from>
+					<to>&quot;Relative_transgression_in_PB2:1&quot;</to>
+				</connector>
+				<aux x="287.5" y="626.25" name="PB2:1 fractional reduction of PB4:3"/>
+				<connector uid="17" angle="277.757">
+					<from>&quot;Relative_transgression_in_PB2:1&quot;</from>
+					<to>&quot;PB2:1_fractional_reduction_of_PB4:3&quot;</to>
+				</connector>
+				<aux label_side="top" x="2996.67" y="293.583" name="PB4:3 Adjusted boundary value"/>
+				<connector uid="18" angle="2.48368">
+					<from>&quot;PB2:1_fractional_reduction_of_PB4:3&quot;</from>
+					<to>&quot;Total_impact_factor_on_PB4:3_boundary&quot;</to>
+				</connector>
+				<connector uid="20" angle="22.6194">
+					<from>&quot;PB4:3_Boundary_value&quot;</from>
+					<to>&quot;PB4:3_Adjusted_boundary_value&quot;</to>
+				</connector>
+				<aux x="3111.67" y="503.75" name="Total impact factor on PB4:3 boundary"/>
+				<connector uid="21" angle="118.687">
+					<from>&quot;Total_impact_factor_on_PB4:3_boundary&quot;</from>
+					<to>&quot;PB4:3_Adjusted_boundary_value&quot;</to>
+				</connector>
+				<group locked="true" x="1921.17" y="74.333" width="506.25" height="311.5" name="PB 3 Freshwater change"/>
+				<aux font_style="italic" font_weight="bold" x="1972.08" y="109.083" name="total\nwater\nwithdrawal"/>
+				<aux x="2157.08" y="115.833" name="PB3:1 Boundary value"/>
+				<aux x="1972.08" y="188.139" name="Fraction of water withdrawal for human consumptive use"/>
+				<aux label_side="top" x="2053.33" y="115.833" name="PB3:1alt Freshwater withdrawal\nfor consumptive use (blue)"/>
+				<connector uid="22" angle="10.4258">
+					<from>total_water_withdrawal</from>
+					<to>&quot;PB3:1alt_Freshwater_withdrawal_for_consumptive_use_(blue)&quot;</to>
+				</connector>
+				<connector uid="23" angle="52.5931">
+					<from>Fraction_of_water_withdrawal_for_human_consumptive_use</from>
+					<to>&quot;PB3:1alt_Freshwater_withdrawal_for_consumptive_use_(blue)&quot;</to>
+				</connector>
+				<aux x="1972.08" y="248.333" name="m^3 to km^3"/>
+				<connector uid="24" angle="19.7989">
+					<from>&quot;m^3_to_km^3&quot;</from>
+					<to>&quot;PB3:1alt_Freshwater_withdrawal_for_consumptive_use_(blue)&quot;</to>
+				</connector>
+				<aux x="2854.17" y="198.75" name="PB4:2 Flow of P from fertilizer to erodible soils"/>
+				<connector uid="25" angle="332.464">
+					<from>fertilizer_use</from>
+					<to>&quot;PB4:2_Flow_of_P_from_fertilizer_to_erodible_soils&quot;</to>
+				</connector>
+				<aux x="2727.92" y="91.25" name="N:P ratio in fertilizer"/>
+				<connector uid="26" angle="319.586">
+					<from>&quot;N:P_ratio_in_fertilizer&quot;</from>
+					<to>&quot;PB4:2_Flow_of_P_from_fertilizer_to_erodible_soils&quot;</to>
+				</connector>
+				<text_box uid="27" x="2700.98" y="437.833" width="260" height="76.1944">References:
+- N:P ratio in fertilizer: Steffen et al (2015), a secondary source
+- PB4:2 Boundary value: Same source
+- PB4:3 Boundary value: Same source
+</text_box>
+				<aux x="2727.92" y="132.5" name="Fraction of P from fertilizer going to erodible soils"/>
+				<connector uid="28" angle="332.312">
+					<from>Fraction_of_P_from_fertilizer_going_to_erodible_soils</from>
+					<to>&quot;PB4:2_Flow_of_P_from_fertilizer_to_erodible_soils&quot;</to>
+				</connector>
+				<aux x="2929.17" y="205.083" name="PB4:2 Boundary value"/>
+				<group locked="false" x="32.5" y="71.806" width="702.5" height="336.5" name="PB 1 Biosphere Integrity"/>
+			</view>
+		</views>
+	</model>
+	<isee:controls>
+		<isee:control priority="interactive" name="Planetary_boundaries.Fraction_of_recovering_forest_to_include" value="0.00273571310934889"/>
+	</isee:controls>
 	<macro name="PCTILE5">
 		<eqn>out</eqn>
 		<parm>in</parm>
