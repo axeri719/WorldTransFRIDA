@@ -22,7 +22,7 @@
 		</dim>
 		<dim name="Run" size="1"/>
 	</dimensions>
-	<isee:prefs saved_runs="100" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rerun_on_structure_change="false" rifp="true">
+	<isee:prefs saved_runs="5" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rerun_on_structure_change="false" rifp="true">
 		<isee:ignored_words>
 			<isee:ignored_word>WolrdTrans</isee:ignored_word>
 			<isee:ignored_word>WorldTrans</isee:ignored_word>
@@ -409,12 +409,16 @@
 				<connect2 to="Emissions.clearing_forest_for_grassland" from="Land_Use.clearing_forest_for_grassland"/>
 				<connect to="Emissions.clearing_forests_for_crops" from="Land_Use.clearing_forests_for_crops"/>
 				<connect2 to="Emissions.clearing_forests_for_crops" from="Land_Use.clearing_forests_for_crops"/>
+				<connect to="Planetary_boundaries.clearing_forests_for_crops" from="Land_Use.clearing_forests_for_crops"/>
+				<connect2 to="Planetary_boundaries.clearing_forests_for_crops" from="Land_Use.clearing_forests_for_crops"/>
 				<connect to="Crop.Cropland" from="Land_Use.Cropland"/>
 				<connect2 to="Crop.Cropland" from="Land_Use.Cropland"/>
 				<connect to="Freshwater.Cropland" from="Land_Use.Cropland"/>
 				<connect2 to="Freshwater.Cropland" from="Land_Use.Cropland"/>
 				<connect to="Land_Use_and_Agriculture.Cropland" from="Land_Use.Cropland"/>
 				<connect2 to="Cropland" from="Land_Use.Cropland"/>
+				<connect to="Planetary_boundaries.Cropland" from="Land_Use.Cropland"/>
+				<connect2 to="Planetary_boundaries.Cropland" from="Land_Use.Cropland"/>
 				<connect to="Land_Use_and_Agriculture.Forest_Land" from="Land_Use.Forest_Land"/>
 				<connect2 to="Forest_Land" from="Land_Use.Forest_Land"/>
 				<connect to="Land_Use_and_Agriculture.Grassland" from="Land_Use.Grassland"/>
@@ -460,12 +464,12 @@
 				<connect2 to="Crop.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
 				<connect to="Land_Use_and_Agriculture.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
 				<connect2 to="fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
-				<connect to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
-				<connect2 to="Planetary_boundaries.fertilizer_use" from="Land_Nutrients.fertilizer_use"/>
 				<connect to="Emissions.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect2 to="Emissions.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Land_Use_and_Agriculture.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect2 to="man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
+				<connect to="Planetary_boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
+				<connect2 to="Planetary_boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Land_Use_and_Agriculture.manure_fertilizer_use" from="Land_Nutrients.manure_fertilizer_use"/>
 				<connect2 to="manure_fertilizer_use" from="Land_Nutrients.manure_fertilizer_use"/>
 				<connect to="Land_Nutrients.crop_balance_with_reserves" from="Crop.crop_balance_with_reserves"/>
@@ -550,6 +554,8 @@
 				<connect2 to="crop_production" from="Crop.crop_production"/>
 				<connect to="Soil.crop_residue_litter" from="Crop.crop_residue_litter"/>
 				<connect2 to="Soil.crop_residue_litter" from="Crop.crop_residue_litter"/>
+				<connect to="Planetary_boundaries.crop_residue_on_field_fraction" from="Crop.crop_residue_on_field_fraction"/>
+				<connect2 to="Planetary_boundaries.crop_residue_on_field_fraction" from="Crop.crop_residue_on_field_fraction"/>
 				<connect to="Land_Use.crop_yield" from="Crop.crop_yield"/>
 				<connect2 to="Land_Use.crop_yield" from="Crop.crop_yield"/>
 				<connect to="Crop.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
@@ -1377,7 +1383,7 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<eqn>crop_residue_production*crop_residue_on_field_fraction</eqn>
 				<units>GtC/Year</units>
 			</aux>
-			<aux name="crop residue on field fraction">
+			<aux name="crop residue on field fraction" access="output" isee:autocreated="true">
 				<eqn>0.44</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -1640,7 +1646,7 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1093" page_height="767" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1163.33" isee:scroll_y="1365" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1161.67" isee:scroll_y="840" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2919,7 +2925,7 @@ Old value from calibration: 164600402563.243</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="6.66667" isee:scroll_y="190" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="321.667" isee:scroll_y="246.667" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3487,7 +3493,7 @@ Includes Manure and Technological</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="447" isee:scroll_y="158" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="320" isee:scroll_y="158" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4131,7 +4137,7 @@ https://ourworldindata.org/world-lost-one-third-forests</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="161.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="188.75" isee:scroll_y="81.25" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
