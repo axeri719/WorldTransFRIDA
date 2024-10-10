@@ -5,7 +5,7 @@
 		<name>Land Use and Agriculture</name>
 		<uuid>4b1bfdf6-0d8e-44ed-8961-df13293735b9</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="3.7.2" isee:build_number="3414" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="3.7.1" isee:build_number="3377" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -485,6 +485,8 @@
 				<connect2 to="Animal_Products.grazing_land" from="Land_Use.grazing_land"/>
 				<connect to="Food_Demand.grazing_land" from="Land_Use.grazing_land"/>
 				<connect2 to="Food_Demand.grazing_land" from="Land_Use.grazing_land"/>
+				<connect to="Planetary_Boundaries.grazing_land" from="Land_Use.grazing_land"/>
+				<connect2 to="Planetary_Boundaries.grazing_land" from="Land_Use.grazing_land"/>
 				<connect to="Terrestrial_carbon_balance.gross_forest_land_use_loss" from="Land_Use.gross_forest_land_use_loss"/>
 				<connect2 to="Terrestrial_carbon_balance.gross_forest_land_use_loss" from="Land_Use.gross_forest_land_use_loss"/>
 				<connect to="Terrestrial_carbon_balance.gross_grassland_land_use_loss" from="Land_Use.gross_grassland_land_use_loss"/>
@@ -497,6 +499,8 @@
 				<connect2 to="Forest.Mature_Forest" from="Land_Use.Mature_Forest"/>
 				<connect to="Land_Use_and_Agriculture.Mature_Forest" from="Land_Use.Mature_Forest"/>
 				<connect2 to="Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect to="Planetary_Boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
+				<connect2 to="Planetary_Boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>
 				<connect to="grassland_soil_carbon.reforesting_grassland" from="Land_Use.reforesting_grassland"/>
 				<connect2 to="grassland_soil_carbon.reforesting_grassland" from="Land_Use.reforesting_grassland"/>
 				<connect to="cropland_soil_carbon.reforesting_cropland" from="Land_Use.reforesting_cropland"/>
@@ -507,6 +511,8 @@
 				<connect2 to="Forest.Young_Forest" from="Land_Use.Young_Forest"/>
 				<connect to="Land_Use_and_Agriculture.Recovering_Forest" from="Land_Use.Young_Forest"/>
 				<connect2 to="Recovering_Forest" from="Land_Use.Young_Forest"/>
+				<connect to="Planetary_Boundaries.Young_Forest" from="Land_Use.Young_Forest"/>
+				<connect2 to="Planetary_Boundaries.Young_Forest" from="Land_Use.Young_Forest"/>
 				<connect to="forest_soil_carbon.young_forest_share" from="Land_Use.young_forest_share"/>
 				<connect2 to="forest_soil_carbon.young_forest_share" from="Land_Use.young_forest_share"/>
 				<connect to="Forest.young_forest_share" from="Land_Use.young_forest_share"/>
@@ -540,6 +546,8 @@
 				<connect2 to="Emissions.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Land_Use_and_Agriculture.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect2 to="man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
+				<connect to="Planetary_Boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
+				<connect2 to="Planetary_Boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Land_Use_and_Agriculture.manure_fertilizer_use" from="Land_Nutrients.manure_fertilizer_use"/>
 				<connect2 to="manure_fertilizer_use" from="Land_Nutrients.manure_fertilizer_use"/>
 				<connect to="Land_Nutrients.crop_balance_with_reserves" from="Crop.crop_balance_with_reserves"/>
@@ -561,6 +569,8 @@
 				<connect2 to="Finance.technological_water_discovery" from="Freshwater.technological_water_discovery"/>
 				<connect to="Land_Use_and_Agriculture.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
 				<connect2 to="total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
+				<connect to="Planetary_Boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
+				<connect2 to="Planetary_Boundaries.total_water_withdrawal" from="Freshwater.total_water_withdrawal"/>
 				<connect to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 				<connect2 to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 				<connect to="Freshwater.Cropland" from="Land_Use.Cropland"/>
@@ -580,7 +590,7 @@
 				<connect to="Freshwater.switch_for_climate_damage" from="Climate.switch_for_all_climate_damage"/>
 				<connect2 to="Freshwater.switch_for_climate_damage" from="Climate.switch_for_all_climate_damage"/>
 			</module>
-			<module name="Soil" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Soil.itmx">
+			<module name="Soil" isee:label="" url="C:/Users/axe30/OneDrive/Documents/Programming/Stella/PIK master thesis code/WorldTransFRIDA Axel/FRIDA_Modules/Soil.itmx">
 				<format scale_by="auto"/>
 				<connect to="Cropland_Carbon_Balance.cropland_landuse_fast_soil_carbon_input" from="cropland_soil_carbon.cropland_landuse_fast_soil_carbon_input"/>
 				<connect2 to="Cropland_Carbon_Balance.cropland_landuse_fast_soil_carbon_input" from="cropland_soil_carbon.cropland_landuse_fast_soil_carbon_input"/>
@@ -768,6 +778,8 @@
 				<connect2 to="Land_Use.crop_yield" from="Crop.crop_yield"/>
 				<connect to="Cropland_Carbon_Balance.cropland_net_primary_production_1" from="Crop.cropland_net_primary_production"/>
 				<connect2 to="Cropland_Carbon_Balance.cropland_net_primary_production_1" from="Crop.cropland_net_primary_production"/>
+				<connect to="Planetary_Boundaries.cropland_net_primary_production" from="Crop.cropland_net_primary_production"/>
+				<connect2 to="Planetary_Boundaries.cropland_net_primary_production" from="Crop.cropland_net_primary_production"/>
 				<connect to="Terrestrial_carbon_balance.cropland_net_primary_production" from="Crop.cropland_net_primary_production"/>
 				<connect2 to="Terrestrial_carbon_balance.cropland_net_primary_production" from="Crop.cropland_net_primary_production"/>
 				<connect to="Cropland_Carbon_Balance.UNIT_GtC_per_PCal_1" from="Crop.UNIT_GtC_per_PCal_crop"/>
@@ -856,7 +868,7 @@
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtN/year</units>
 			</aux>
-			<module name="Grass" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Grass.itmx">
+			<module name="Grass" isee:label="" url="C:/Users/axe30/OneDrive/Documents/Programming/Stella/PIK master thesis code/WorldTransFRIDA Axel/FRIDA_Modules/Grass.itmx">
 				<format scale_by="auto"/>
 				<connect to="Grassland_carbon_balance.animal_grazing_1" from="Grass.animal_grazing"/>
 				<connect2 to="Grassland_carbon_balance.animal_grazing_1" from="Grass.animal_grazing"/>
@@ -864,6 +876,8 @@
 				<connect2 to="Terrestrial_carbon_balance.animal_grazing" from="Grass.animal_grazing"/>
 				<connect to="degraded_land_soil_carbon.grass_net_primary_production" from="Grass.grass_net_primary_production"/>
 				<connect2 to="degraded_land_soil_carbon.grass_net_primary_production" from="Grass.grass_net_primary_production"/>
+				<connect to="Planetary_Boundaries.grass_net_primary_production" from="Grass.grass_net_primary_production"/>
+				<connect2 to="Planetary_Boundaries.grass_net_primary_production" from="Grass.grass_net_primary_production"/>
 				<connect to="grassland_soil_carbon.grassland_litter" from="Grass.grassland_litter"/>
 				<connect2 to="grassland_soil_carbon.grassland_litter" from="Grass.grassland_litter"/>
 				<connect to="Grassland_carbon_balance.grassland_net_primary_production_1" from="Grass.grassland_net_primary_production"/>
@@ -895,7 +909,7 @@
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>GtC</units>
 			</aux>
-			<module name="Forest" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Forest.itmx">
+			<module name="Forest" isee:label="" url="C:/Users/axe30/OneDrive/Documents/Programming/Stella/PIK master thesis code/WorldTransFRIDA Axel/FRIDA_Modules/Forest.itmx">
 				<format scale_by="auto"/>
 				<connect to="Terrestrial_carbon_balance.clearing" from="Forest.clearing"/>
 				<connect2 to="Terrestrial_carbon_balance.clearing" from="Forest.clearing"/>
@@ -913,6 +927,8 @@
 				<connect2 to="Terrestrial_carbon_balance.mature_forest_net_primary_production" from="Forest.mature_forest_net_primary_production"/>
 				<connect to="Forest_carbon_balance.timber_1" from="Forest.timber"/>
 				<connect2 to="Forest_carbon_balance.timber_1" from="Forest.timber"/>
+				<connect to="Planetary_Boundaries.timber" from="Forest.timber"/>
+				<connect2 to="Planetary_Boundaries.timber" from="Forest.timber"/>
 				<connect to="Terrestrial_carbon_balance.timber" from="Forest.timber"/>
 				<connect2 to="Terrestrial_carbon_balance.timber" from="Forest.timber"/>
 				<connect to="Terrestrial_carbon_balance.young_forest_growth" from="Forest.young_forest_growth"/>
@@ -942,7 +958,7 @@
 				<connect to="Forest.young_forest_share" from="Land_Use.young_forest_share"/>
 				<connect2 to="Forest.young_forest_share" from="Land_Use.young_forest_share"/>
 			</module>
-			<module name="Terrestrial carbon balance" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Terrestrial carbon balance.itmx">
+			<module name="Terrestrial carbon balance" isee:label="" url="C:/Users/axe30/OneDrive/Documents/Programming/Stella/PIK master thesis code/WorldTransFRIDA Axel/FRIDA_Modules/Terrestrial carbon balance.itmx">
 				<format scale_by="auto"/>
 				<connect to="Terrestrial_carbon_balance.animal_grazing" from="Grass.animal_grazing"/>
 				<connect2 to="Terrestrial_carbon_balance.animal_grazing" from="Grass.animal_grazing"/>
@@ -1138,7 +1154,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="2" isee:scroll_x="78" isee:scroll_y="23" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1096" page_height="764" isee:page_cols="5" isee:page_rows="2" isee:scroll_x="78" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2209,7 +2225,7 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="2314.29" isee:scroll_y="885" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1093" page_height="767" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="1063.33" isee:scroll_y="880" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4222,7 +4238,7 @@ Calibration Parameter: forest land &amp; CO2 emissions from land cover change &a
 				<non_negative/>
 				<units>Mha/year</units>
 			</flow>
-			<aux name="fraction of grassland for grazing">
+			<aux name="fraction of grassland for grazing" access="output" isee:autocreated="true">
 				<doc>${Calibration Parameter}
 </doc>
 				<eqn>0.71254157242799</eqn>
@@ -4632,7 +4648,7 @@ https://ourworldindata.org/world-lost-one-third-forests</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="168" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1093" page_height="767" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="762.5" isee:scroll_y="207.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
