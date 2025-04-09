@@ -2066,6 +2066,8 @@
 				<connect2 to="fossil_energy_gas.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
 				<connect to="fossil_energy_oil.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
 				<connect2 to="fossil_energy_oil.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
+				<connect to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
+				<connect2 to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
 				<connect to="Employment.Population_1" from="Emissions.Population"/>
 				<connect2 to="Employment.Population_1" from="Emissions.Population"/>
 				<connect to="Coastal_sea_level_rise.Total_CO2_Emissions" from="Emissions.Total_CO2_Emissions"/>
@@ -3311,6 +3313,8 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<connect2 to="Planetary_Boundaries.grazing_land_2" from="Land_Use.grazing_land"/>
 				<connect to="Planetary_Boundaries.Habitable_Land_Area" from="Land_Use.Habitable_Land_Area"/>
 				<connect2 to="Planetary_Boundaries.Habitable_Land_Area" from="Land_Use.Habitable_Land_Area"/>
+				<connect to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
+				<connect2 to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
 				<connect to="Planetary_Boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect2 to="Planetary_Boundaries.man_made_fertilizer_use" from="Land_Nutrients.man_made_fertilizer_use"/>
 				<connect to="Planetary_Boundaries.Mature_Forest" from="Land_Use.Mature_Forest"/>

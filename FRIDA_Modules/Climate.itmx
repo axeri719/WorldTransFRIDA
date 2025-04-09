@@ -660,6 +660,8 @@ Carbon" url="C:/Not for OneDrive/Programming not for OneDrive/Stella not for One
 				<connect2 to="fossil_energy_oil.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
 				<connect to="Minor_GHGs_Forcing.HFC134a_emissions" from="Emissions.HFC134a_eq_Emissions"/>
 				<connect2 to="Minor_GHGs_Forcing.HFC134a_emissions" from="Emissions.HFC134a_eq_Emissions"/>
+				<connect to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
+				<connect2 to="Planetary_Boundaries.HFC134a_eq_Emissions" from="Emissions.HFC134a_eq_Emissions"/>
 				<connect to="CO2_Forcing.Net_land_carbon_flux" from="Emissions.land_carbon_sink"/>
 				<connect2 to="CO2_Forcing.Net_land_carbon_flux" from="Emissions.land_carbon_sink"/>
 				<connect to="Terrestrial_Carbon_Balance.land_carbon_sink" from="Emissions.land_carbon_sink"/>
