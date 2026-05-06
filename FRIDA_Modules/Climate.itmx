@@ -5,7 +5,7 @@
 		<name>Climate</name>
 		<uuid>0c8314dd-e357-43f9-8ae2-c746fdbc0f8d</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.2.1" isee:build_number="3895" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -250,7 +250,7 @@
 	</model_units>
 	<model name="Climate">
 		<variables>
-			<module name="Sea Level" isee:label="" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_Modules/Sea Level.itmx">
+			<module name="Sea Level" isee:label="" url="C:/Users/earcwel/Documents/WorldTransPostdoc/Github/chrisdwells/WorldTransFRIDA/FRIDA_Modules/Sea Level.itmx">
 				<format scale_by="auto"/>
 				<connect to="Freshwater.Land_water_storage_from_water_impoundment" from="Sea_Level.Land_water_storage_from_water_impoundment"/>
 				<connect2 to="Freshwater.Land_water_storage_from_water_impoundment" from="Sea_Level.Land_water_storage_from_water_impoundment"/>
@@ -292,7 +292,7 @@
 				<connect2 to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 			</module>
 			<module name="Ocean" isee:label="Ocean
-Carbon" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_Modules/Ocean.itmx">
+Carbon" url="C:/Users/earcwel/Documents/WorldTransPostdoc/Github/chrisdwells/WorldTransFRIDA/FRIDA_Modules/Ocean.itmx">
 				<format scale_by="auto"/>
 				<connect to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
 				<connect2 to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
@@ -643,7 +643,7 @@ Carbon" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_
 				<connect to="Energy_Balance_Model.Total_Effective_Radiative_Forcing" from="Forcing.Total_Effective_Radiative_Forcing"/>
 				<connect2 to="Energy_Balance_Model.Total_Effective_Radiative_Forcing" from="Forcing.Total_Effective_Radiative_Forcing"/>
 			</module>
-			<module name="Emissions" isee:label="" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_Modules/Emissions.itmx">
+			<module name="Emissions" isee:label="" url="C:/Users/earcwel/Documents/WorldTransPostdoc/Github/chrisdwells/WorldTransFRIDA/FRIDA_Modules/Emissions.itmx">
 				<format scale_by="auto"/>
 				<connect to="Ozone_Forcing.Baseline_CO_emissions" from="Emissions.Baseline_CO_Emissions"/>
 				<connect2 to="Ozone_Forcing.Baseline_CO_emissions" from="Emissions.Baseline_CO_Emissions"/>
@@ -799,7 +799,7 @@ Carbon" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_
 				<connect2 to="Emissions.UNIT_ktN2O_to_MtN2O_1" from="Climate_Units.UNIT_ktN2O_to_MtN2O"/>
 			</module>
 			<module name="Forcing" isee:label="Radiative
-Forcing" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA_Modules/Forcing.itmx">
+Forcing" url="C:/Users/earcwel/Documents/WorldTransPostdoc/Github/chrisdwells/WorldTransFRIDA/FRIDA_Modules/Forcing.itmx">
 				<format scale_by="auto"/>
 				<connect to="Biosphere_Indicators.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
 				<connect2 to="Biosphere_Indicators.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
@@ -859,6 +859,8 @@ Forcing" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA
 				<connect2 to="Grass.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
 				<connect to="Ocean.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
 				<connect2 to="Ocean.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
+				<connect to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
+				<connect2 to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
 				<connect to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
 				<connect2 to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
 				<connect to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
@@ -1244,7 +1246,7 @@ Forcing" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="808" page_height="561" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="7.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="7.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1379,7 +1381,7 @@ Forcing" url="/Users/lennartramme/Arbeit/2_WorldTrans/work/FRIDA/FRIDA_dev/FRIDA
 					<dim name="Run"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>47</eqn>
+					<eqn>50</eqn>
 				</element>
 				<units>dmnl</units>
 			</aux>
@@ -1615,7 +1617,7 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="2" isee:scroll_x="276" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1729,304 +1731,304 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0389126148964</eqn>
+					<eqn>0.00833610900042</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.040322231635</eqn>
+					<eqn>0.00877766645069</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.0058817163654</eqn>
+					<eqn>0.0178499960281</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.0464566865894</eqn>
+					<eqn>0.0570029914388</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>0.186573578219</eqn>
+					<eqn>0.0574686329757</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.039395882827</eqn>
+					<eqn>-0.0784420176502</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.0156035663387</eqn>
+					<eqn>-0.0653011251858</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>0.194163960562</eqn>
+					<eqn>0.0227304948304</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>0.232472621579</eqn>
+					<eqn>-0.0400983933639</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>0.182655936185</eqn>
+					<eqn>-0.090633733631</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>0.054381420524</eqn>
+					<eqn>-0.0292482128733</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.0697391085469</eqn>
+					<eqn>-0.0369309804596</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.00395896378761</eqn>
+					<eqn>0.00713901617976</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.0774019203439</eqn>
+					<eqn>0.0428527280646</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.107621860338</eqn>
+					<eqn>0.00238770973368</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>0.0960680781227</eqn>
+					<eqn>0.013991805521</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.0609834762055</eqn>
+					<eqn>-0.0105864342227</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.134617201302</eqn>
+					<eqn>-0.0216479421494</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.000727249174587</eqn>
+					<eqn>-0.0282707674001</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.0256881287553</eqn>
+					<eqn>0.0495566270377</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.13678378502</eqn>
+					<eqn>-0.0498324236157</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.0563707761954</eqn>
+					<eqn>0.0393106279913</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.0191882015439</eqn>
+					<eqn>-0.0341913887381</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>0.0934715958278</eqn>
+					<eqn>0.0358503372352</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.0384134111918</eqn>
+					<eqn>-0.174797027255</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.00529182410868</eqn>
+					<eqn>-0.0436002146253</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.0329281013986</eqn>
+					<eqn>0.00122351461357</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>0.0468689276784</eqn>
+					<eqn>-0.0173171517888</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.0149622417695</eqn>
+					<eqn>0.028753754032</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.203378382778</eqn>
+					<eqn>0.0233389712697</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.221323827877</eqn>
+					<eqn>-0.0616071892472</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.10544478617</eqn>
+					<eqn>0.0479878026085</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.0407922317384</eqn>
+					<eqn>-0.000411617674283</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.0952050728175</eqn>
+					<eqn>0.00351901165389</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.00579829949373</eqn>
+					<eqn>0.0495909679292</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.0199455411338</eqn>
+					<eqn>-0.0140761356512</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.0554048993725</eqn>
+					<eqn>-0.0507065873626</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.0673946705768</eqn>
+					<eqn>0.00163349949829</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.0571562495781</eqn>
+					<eqn>0.0364152599354</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>0.0848940082791</eqn>
+					<eqn>-0.0110054363519</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>0.122023320002</eqn>
+					<eqn>0.0807972561187</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.0273457594041</eqn>
+					<eqn>0.0569574685276</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.00214151346171</eqn>
+					<eqn>0.00474572974234</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.0495585121379</eqn>
+					<eqn>0.00248589739337</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>0.0840936348524</eqn>
+					<eqn>0.112843265951</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.0308291827604</eqn>
+					<eqn>-0.019653952954</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.0457428306155</eqn>
+					<eqn>-0.0136185640648</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.031304548917</eqn>
+					<eqn>-0.0348891890722</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.0423547463984</eqn>
+					<eqn>-0.00731530219834</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.0890900040204</eqn>
+					<eqn>0.0712763012553</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>0.103310454981</eqn>
+					<eqn>-0.211083134647</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>0.0941426313633</eqn>
+					<eqn>-0.0439345369311</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.0458056128508</eqn>
+					<eqn>-0.0354211936873</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.0596503624704</eqn>
+					<eqn>-0.0542609081339</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.0606006786557</eqn>
+					<eqn>-0.0756141730773</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.0159629883971</eqn>
+					<eqn>-0.0102745913444</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.0800913531731</eqn>
+					<eqn>0.0635671944299</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.120983299723</eqn>
+					<eqn>0.14843211461</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.0603949621757</eqn>
+					<eqn>0.0161681384488</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.0129353717652</eqn>
+					<eqn>-0.0540961043619</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.135360762414</eqn>
+					<eqn>-0.0153291660512</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.26679477866</eqn>
+					<eqn>0.0242757951214</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.14345192763</eqn>
+					<eqn>-0.0168443537025</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>0.155206508894</eqn>
+					<eqn>-0.0476833254069</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.118066299397</eqn>
+					<eqn>0.0125341797927</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.0189050387264</eqn>
+					<eqn>-0.0278416021841</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.0410230803274</eqn>
+					<eqn>0.0254068854517</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>0.0426723610536</eqn>
+					<eqn>-0.108974069188</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.00416737397559</eqn>
+					<eqn>-0.0179493352866</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.0422737051237</eqn>
+					<eqn>0.0119024918562</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>0.0669736928055</eqn>
+					<eqn>0.00629830680215</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.0926356493545</eqn>
+					<eqn>0.0783364699441</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.0779373996564</eqn>
+					<eqn>-0.0504709315542</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.0431314250737</eqn>
+					<eqn>0.112376281726</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.0023068397158</eqn>
+					<eqn>0.0300614225675</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>0.0981444843435</eqn>
+					<eqn>0.0740958380007</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.00621484092476</eqn>
+					<eqn>-0.0282715093994</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.0704562838212</eqn>
+					<eqn>-0.00635614436372</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.0389296125295</eqn>
+					<eqn>-0.0855701770772</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.0354074424052</eqn>
+					<eqn>0.00403489591012</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.07790389155</eqn>
+					<eqn>0.0475325217875</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.0391242032909</eqn>
+					<eqn>-0.0436906394471</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.00915160403585</eqn>
+					<eqn>-0.0304645187742</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.0236610559566</eqn>
+					<eqn>-0.00436920767048</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.0253069005868</eqn>
+					<eqn>-0.0285477854229</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.0309928364766</eqn>
+					<eqn>0.233608354517</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>0.116340652838</eqn>
+					<eqn>-0.04861860143</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.0769850016984</eqn>
+					<eqn>-0.096337662072</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.00579656387778</eqn>
+					<eqn>0.0215605875705</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.0118289437783</eqn>
+					<eqn>-0.0456687129707</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.00834747600559</eqn>
+					<eqn>0.0961887660186</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.0849309019674</eqn>
+					<eqn>-0.090059328285</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.0806680855772</eqn>
+					<eqn>-0.0245947062112</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>0.075868467916</eqn>
+					<eqn>0.0484026607825</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.034066820167</eqn>
+					<eqn>0.0295490105251</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.291232593781</eqn>
+					<eqn>0.0249150942056</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.0920520236646</eqn>
+					<eqn>0.00505857874622</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.0476763879247</eqn>
+					<eqn>0.161412839088</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.117296858398</eqn>
+					<eqn>-0.0337796426408</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>0.345013718841</eqn>
+					<eqn>0.0734735533867</eqn>
 				</element>
 				<units>K</units>
 			</aux>
@@ -2037,304 +2039,304 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.715552957241</eqn>
+					<eqn>0.283784931151</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.453407799688</eqn>
+					<eqn>0.449310791322</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.677065701722</eqn>
+					<eqn>0.382393637658</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.534788843311</eqn>
+					<eqn>0.348762422044</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>0.45266781418</eqn>
+					<eqn>0.334680520368</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.410661413313</eqn>
+					<eqn>0.0618276155725</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.308726368804</eqn>
+					<eqn>0.131298486254</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>0.597907840322</eqn>
+					<eqn>0.347945739603</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>0.544101502296</eqn>
+					<eqn>0.151344520939</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>0.547968848759</eqn>
+					<eqn>0.221829782771</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>0.465252024775</eqn>
+					<eqn>0.0671731280776</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.411648149816</eqn>
+					<eqn>0.16396381115</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.570136063336</eqn>
+					<eqn>0.433190736878</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.502158872532</eqn>
+					<eqn>0.334873881862</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.650778876091</eqn>
+					<eqn>0.318204420852</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>0.592227798814</eqn>
+					<eqn>0.504578237494</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.481104604195</eqn>
+					<eqn>0.138376729898</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.732827937274</eqn>
+					<eqn>0.336287852876</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.49259158445</eqn>
+					<eqn>0.225342958381</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.743565307729</eqn>
+					<eqn>0.475465369093</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.402025065883</eqn>
+					<eqn>0.139287889324</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.516195254721</eqn>
+					<eqn>0.516618135235</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.512698256228</eqn>
+					<eqn>0.203672907065</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>0.651927178613</eqn>
+					<eqn>0.418737729909</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.46814790127</eqn>
+					<eqn>-0.035173649725</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.468382114704</eqn>
+					<eqn>0.00447745447104</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.392777092842</eqn>
+					<eqn>0.209572078701</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>0.438020894071</eqn>
+					<eqn>0.175007125228</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.538602383775</eqn>
+					<eqn>0.359139811691</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.591245093554</eqn>
+					<eqn>0.387581925244</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.653807489685</eqn>
+					<eqn>-0.0696637207049</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.451445283666</eqn>
+					<eqn>0.67300078063</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.375658588377</eqn>
+					<eqn>0.380669368244</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.623950271169</eqn>
+					<eqn>0.347996990975</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.592433719185</eqn>
+					<eqn>0.538255161579</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.622457491301</eqn>
+					<eqn>0.219104222085</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.574776429836</eqn>
+					<eqn>0.307477534061</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.365013152199</eqn>
+					<eqn>0.210097323594</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.448705850557</eqn>
+					<eqn>0.330454877912</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>0.60695597816</eqn>
+					<eqn>0.22412286736</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>0.575260022537</eqn>
+					<eqn>0.402526575671</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.526147761429</eqn>
+					<eqn>0.436202119146</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.549426921313</eqn>
+					<eqn>0.416382871846</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.381242697518</eqn>
+					<eqn>0.544748157333</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>0.566455759313</eqn>
+					<eqn>0.312051400874</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.496670812862</eqn>
+					<eqn>0.127287977121</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.560123064557</eqn>
+					<eqn>0.27959795918</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.634178078361</eqn>
+					<eqn>0.288741119308</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.734503894158</eqn>
+					<eqn>0.27527630515</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.594269552626</eqn>
+					<eqn>0.469158275173</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>0.713761234185</eqn>
+					<eqn>-0.0653842272314</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>0.642474548825</eqn>
+					<eqn>0.120809891116</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.570064895483</eqn>
+					<eqn>0.233329905331</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.377496424061</eqn>
+					<eqn>0.207626532124</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.592731210791</eqn>
+					<eqn>-0.0826454401575</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.670759006929</eqn>
+					<eqn>0.292750397729</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.658227953502</eqn>
+					<eqn>0.69326444031</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.514465722966</eqn>
+					<eqn>0.577012744433</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.510532754774</eqn>
+					<eqn>0.425297846304</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.408191856968</eqn>
+					<eqn>0.146076337229</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.570617830992</eqn>
+					<eqn>0.227145600088</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.563728602094</eqn>
+					<eqn>0.447759980321</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.406417510013</eqn>
+					<eqn>0.329553871285</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>0.485801632973</eqn>
+					<eqn>0.0449525032481</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.499589027824</eqn>
+					<eqn>0.505823474475</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.389148624043</eqn>
+					<eqn>0.222539809884</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.499088761574</eqn>
+					<eqn>0.406954623033</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>0.428543193628</eqn>
+					<eqn>-0.0982687463483</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.494336951605</eqn>
+					<eqn>0.278945550763</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.345235416605</eqn>
+					<eqn>0.33611135544</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>0.486741178068</eqn>
+					<eqn>0.478319504035</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.409668296085</eqn>
+					<eqn>0.583590791783</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.507096895523</eqn>
+					<eqn>0.0698947325636</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.437547519217</eqn>
+					<eqn>0.739626409441</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.512151248565</eqn>
+					<eqn>0.493345705979</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>0.491110635178</eqn>
+					<eqn>0.463771794928</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.43406815789</eqn>
+					<eqn>0.175014008903</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.334049722085</eqn>
+					<eqn>0.242612142609</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.448552090558</eqn>
+					<eqn>-0.0446888545181</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.587222017297</eqn>
+					<eqn>0.404901172455</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.579618205371</eqn>
+					<eqn>0.4833605204</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.55098943839</eqn>
+					<eqn>-0.134757981063</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.307872027318</eqn>
+					<eqn>0.134112674595</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.630836052485</eqn>
+					<eqn>0.216224058181</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.389064722401</eqn>
+					<eqn>0.0803743571004</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.573407587412</eqn>
+					<eqn>0.715987812812</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>0.554132562523</eqn>
+					<eqn>0.208373297869</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.427421112313</eqn>
+					<eqn>0.110760757509</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.602925913704</eqn>
+					<eqn>0.497559469002</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.732031096825</eqn>
+					<eqn>0.140203578321</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.456075248807</eqn>
+					<eqn>0.458556789812</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.649068096987</eqn>
+					<eqn>-0.0398464606014</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.530424290479</eqn>
+					<eqn>0.323224973146</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>0.535908493302</eqn>
+					<eqn>0.432918577809</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.35066564357</eqn>
+					<eqn>0.606424391894</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.524365198242</eqn>
+					<eqn>0.401418507155</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.363805654916</eqn>
+					<eqn>0.447979781367</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.574894367833</eqn>
+					<eqn>0.651735763691</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.355567822907</eqn>
+					<eqn>0.171245989874</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>0.667097171903</eqn>
+					<eqn>0.586115645032</eqn>
 				</element>
 				<units>K</units>
 			</aux>
@@ -2345,304 +2347,304 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.0932350091614757</eqn>
+					<eqn>-0.0358440895807599</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.0689771413541725</eqn>
+					<eqn>0.0136317688105395</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.0639908337556305</eqn>
+					<eqn>0.00779451751215</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.0434897252315822</eqn>
+					<eqn>0.00811335842410241</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>0.031714772010631</eqn>
+					<eqn>-0.076457914851049</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.055172385492687</eqn>
+					<eqn>-0.0673982924414166</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.0241420785830278</eqn>
+					<eqn>-0.0839510033483622</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>0.0743727824042191</eqn>
+					<eqn>0.00899739764252375</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>0.0558388490988494</eqn>
+					<eqn>-0.0511098481030483</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>0.061860808016932</eqn>
+					<eqn>-0.0500605490008829</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>0.0728070427029637</eqn>
+					<eqn>-0.00896662969724392</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.0518310212521796</eqn>
+					<eqn>-0.031178445475109</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.0582359664088443</eqn>
+					<eqn>0.00146035640697353</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.0991389538874814</eqn>
+					<eqn>-0.00581558413146218</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.0826224625604676</eqn>
+					<eqn>-0.0361177866582883</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>0.0704584145053439</eqn>
+					<eqn>0.00265253885997298</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.0611160675618308</eqn>
+					<eqn>-0.0216525656908135</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.101539842087045</eqn>
+					<eqn>-0.0301875087192949</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.0325972853469798</eqn>
+					<eqn>-0.0190965262408873</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.0700940073926239</eqn>
+					<eqn>0.00101988842661255</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.0583953468837453</eqn>
+					<eqn>-0.0365782762237849</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.0525627524379151</eqn>
+					<eqn>0.00118300829493365</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.0778771114824451</eqn>
+					<eqn>-0.011248558433062</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>0.0769469455141798</eqn>
+					<eqn>-0.00575239283463529</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.0709857862335608</eqn>
+					<eqn>-0.0894415027290549</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.0601258809550916</eqn>
+					<eqn>-0.0348753150830601</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.070300590175002</eqn>
+					<eqn>-0.0203882817679079</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>0.0534312457737229</eqn>
+					<eqn>-0.0223250019451111</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.0579086363278735</eqn>
+					<eqn>0.0117204491774759</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.0608799774509947</eqn>
+					<eqn>-0.0036282317806853</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.0783601763373103</eqn>
+					<eqn>-0.0340948931642255</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.116271016911678</eqn>
+					<eqn>0.0300089345075537</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.055481392955381</eqn>
+					<eqn>-0.0286508729369742</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.067222452290631</eqn>
+					<eqn>-0.0316555186705665</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.0516027850152657</eqn>
+					<eqn>0.00806430102643451</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.0906579254653516</eqn>
+					<eqn>-0.0210060502199554</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.0945805471202274</eqn>
+					<eqn>-0.0424908915499024</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.0651867994211079</eqn>
+					<eqn>-0.000998013411277255</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.0850006995438843</eqn>
+					<eqn>-0.0187154828498496</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>0.0693674442086794</eqn>
+					<eqn>-0.0263474050595064</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>0.057553220032262</eqn>
+					<eqn>-0.0310397864697486</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.071889709952438</eqn>
+					<eqn>-0.0132478671706704</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.0786825617710526</eqn>
+					<eqn>-0.00182123317538412</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.0544610840008339</eqn>
+					<eqn>-0.00766373346875686</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>0.0660090759944479</eqn>
+					<eqn>-0.00753005478128216</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.0560573348141782</eqn>
+					<eqn>-0.0160395691010159</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.0643160186004767</eqn>
+					<eqn>-0.0371806114112254</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.0795561718411124</eqn>
+					<eqn>-0.0811705138922704</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.100857316285361</eqn>
+					<eqn>-0.0242468698856104</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.0651175489092806</eqn>
+					<eqn>-0.0122058718330254</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>0.0909830683156824</eqn>
+					<eqn>-0.113331365704249</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>0.0707842737392439</eqn>
+					<eqn>-0.0466378610368723</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.0778884531872551</eqn>
+					<eqn>-0.0424920246175456</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.042828555430031</eqn>
+					<eqn>-0.0714766910821006</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.0760747762155988</eqn>
+					<eqn>-0.0163988033471688</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.0886107066036588</eqn>
+					<eqn>-0.0225431336313354</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.0966367492111867</eqn>
+					<eqn>0.022695280912441</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.0758143612393812</eqn>
+					<eqn>-0.025394721587741</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.0607696947061357</eqn>
+					<eqn>-0.00153817167521118</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.0493924511760827</eqn>
+					<eqn>-0.0388480059121963</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.0938061599459723</eqn>
+					<eqn>-0.0201562208644645</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.0736010960691804</eqn>
+					<eqn>-0.0118912040155198</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.0902935830002549</eqn>
+					<eqn>-0.0328986343313635</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>0.0655671541520929</eqn>
+					<eqn>-0.0389318950233498</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.0610849123229137</eqn>
+					<eqn>0.00377057089167726</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.0850810224133098</eqn>
+					<eqn>-0.0359727465812541</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.0623751735571725</eqn>
+					<eqn>-0.000293309408863334</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>0.0602027272873033</eqn>
+					<eqn>-0.0408130233499434</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.0659438525086569</eqn>
+					<eqn>-0.0671139422396545</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.0447474602335526</eqn>
+					<eqn>-0.0416900008170029</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>0.0853683457191398</eqn>
+					<eqn>-0.00333995402663317</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.0601204323887688</eqn>
+					<eqn>0.021846011778718</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.0774574673656804</eqn>
+					<eqn>-0.0412325629615726</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.0449100550642028</eqn>
+					<eqn>0.0243118733122486</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.0521152242763222</eqn>
+					<eqn>0.0161425147541663</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>0.0421079597521077</eqn>
+					<eqn>-0.0179622166353762</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.0521022882195331</eqn>
+					<eqn>-0.0225193370827769</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.0533291339763149</eqn>
+					<eqn>-0.0340603558199636</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.047551716072799</eqn>
+					<eqn>-0.0726822620857459</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.0643133287497502</eqn>
+					<eqn>-0.00699427220422294</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.0582265991059406</eqn>
+					<eqn>-0.00858926350338302</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.06770864914711</eqn>
+					<eqn>-0.00942543761223098</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.0267138782138133</eqn>
+					<eqn>-0.0140991790787538</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.107690469793645</eqn>
+					<eqn>-0.0383446455870075</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.0260996488459035</eqn>
+					<eqn>0.00761509039907843</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.0631016451638804</eqn>
+					<eqn>-0.0109659628592916</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>0.0975320179884735</eqn>
+					<eqn>-0.0654033111514939</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.0548739709986004</eqn>
+					<eqn>-0.0960774928755118</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.0752687659739635</eqn>
+					<eqn>0.00631815724218</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.0767337301003439</eqn>
+					<eqn>-0.0512692924769894</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.0354019175963722</eqn>
+					<eqn>0.00718595111968784</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.100111120087335</eqn>
+					<eqn>-0.0726942633054624</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.0662461995425059</eqn>
+					<eqn>-0.0739855513693197</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>0.0723002649439526</eqn>
+					<eqn>-0.000801764384660275</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.0558906726447792</eqn>
+					<eqn>0.0298865694640018</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.0567572906880336</eqn>
+					<eqn>0.00882710288308336</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.0536903001702787</eqn>
+					<eqn>0.00533012713292118</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.0644866059849165</eqn>
+					<eqn>-0.0162151802768075</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.0306289805061512</eqn>
+					<eqn>-0.0353851406152647</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>0.06657139799134</eqn>
+					<eqn>0.0196437267180919</eqn>
 				</element>
 				<units>K</units>
 			</aux>
@@ -2653,304 +2655,304 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.609817676149</eqn>
+					<eqn>0.118480428628</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.280858697731</eqn>
+					<eqn>0.371458233637</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.144088571855</eqn>
+					<eqn>0.167011815649</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.257774046041</eqn>
+					<eqn>0.231109000683</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>0.2978436985</eqn>
+					<eqn>0.251139094773</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.276096330983</eqn>
+					<eqn>-0.0205654701645</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.181138706004</eqn>
+					<eqn>0.00735571694692</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>0.469634524064</eqn>
+					<eqn>0.178717714173</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>0.385646920955</eqn>
+					<eqn>0.0631439125946</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>0.271011756209</eqn>
+					<eqn>0.00658215803111</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>0.297451154254</eqn>
+					<eqn>-0.0169871725971</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.250235729222</eqn>
+					<eqn>0.0330149673543</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.267278275891</eqn>
+					<eqn>0.295354948537</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.264590551082</eqn>
+					<eqn>0.200726196178</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.378500327979</eqn>
+					<eqn>0.137552977419</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>0.419254513709</eqn>
+					<eqn>0.370514606164</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.364066509649</eqn>
+					<eqn>0.0880305037115</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.604180518439</eqn>
+					<eqn>0.0349175153968</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.0947980427532</eqn>
+					<eqn>0.0898068569347</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.388269493926</eqn>
+					<eqn>0.257996905295</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.264077370752</eqn>
+					<eqn>0.0588381069873</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.30212011077</eqn>
+					<eqn>0.270555582445</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.331323204189</eqn>
+					<eqn>0.0966273969609</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>0.300360455324</eqn>
+					<eqn>0.174542592551</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.268914862415</eqn>
+					<eqn>-0.123315121589</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.22956860239</eqn>
+					<eqn>-0.0425566821509</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.262335993576</eqn>
+					<eqn>0.100415175899</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>0.142749590576</eqn>
+					<eqn>0.0122140954863</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.24920339111</eqn>
+					<eqn>0.230382369112</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.522299232211</eqn>
+					<eqn>0.213451266843</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.588886671442</eqn>
+					<eqn>-0.0979633593843</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.295722479973</eqn>
+					<eqn>0.259925262106</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.225848229775</eqn>
+					<eqn>0.212532696422</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.337900161152</eqn>
+					<eqn>0.182947575968</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.113075765948</eqn>
+					<eqn>0.279650896051</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.242559293878</eqn>
+					<eqn>0.141168751388</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.288193074001</eqn>
+					<eqn>0.196873266004</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.209709822895</eqn>
+					<eqn>0.102517800526</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.254678965746</eqn>
+					<eqn>0.208153323826</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>0.355029890772</eqn>
+					<eqn>0.0584107548221</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>0.27433031551</eqn>
+					<eqn>0.287588985247</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.355511100861</eqn>
+					<eqn>0.304986813826</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.280598215206</eqn>
+					<eqn>0.128220497422</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.230208615271</eqn>
+					<eqn>0.204350875149</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>0.323214503557</eqn>
+					<eqn>0.201932131337</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.36779222275</eqn>
+					<eqn>0.0358292657585</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.322723672942</eqn>
+					<eqn>0.132291294894</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.308125574512</eqn>
+					<eqn>0.157376384493</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.421683417355</eqn>
+					<eqn>0.09935158292</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.340578070088</eqn>
+					<eqn>0.293556821238</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>0.480135537331</eqn>
+					<eqn>-0.170619996092</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>0.333572131047</eqn>
+					<eqn>0.0202932173204</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.305839766881</eqn>
+					<eqn>0.0715066594675</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.180678473098</eqn>
+					<eqn>0.0503118744877</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.328146833858</eqn>
+					<eqn>-0.0944677547003</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.241511490075</eqn>
+					<eqn>0.0777207383607</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.497392102462</eqn>
+					<eqn>0.498497491538</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.300529376721</eqn>
+					<eqn>0.376136799851</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.389486449264</eqn>
+					<eqn>0.249949106776</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.269496935833</eqn>
+					<eqn>0.0348646871246</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.452887493248</eqn>
+					<eqn>0.0936927348165</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.459241857265</eqn>
+					<eqn>0.296095290006</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.269631484928</eqn>
+					<eqn>0.0971837958536</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>0.249712689022</eqn>
+					<eqn>-0.0196856943682</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.33009285233</eqn>
+					<eqn>0.36969395807</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.227940957986</eqn>
+					<eqn>0.0702920500724</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.417813901511</eqn>
+					<eqn>0.223445461915</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>0.188356013618</eqn>
+					<eqn>-0.140907033894</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.23608539797</eqn>
+					<eqn>0.129344001089</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.212173780553</eqn>
+					<eqn>0.189960497105</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>0.193918988576</eqn>
+					<eqn>0.193629223615</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.287831750154</eqn>
+					<eqn>0.34059081898</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.370565810114</eqn>
+					<eqn>-0.0244335474786</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.274231301784</eqn>
+					<eqn>0.49379010158</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.128215812882</eqn>
+					<eqn>0.361699575075</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>0.306785502791</eqn>
+					<eqn>0.264085820221</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.106813041659</eqn>
+					<eqn>0.0863451962117</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.2336209689</eqn>
+					<eqn>0.0704698112378</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.296443511705</eqn>
+					<eqn>-0.128116679691</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.312847444393</eqn>
+					<eqn>0.24021184763</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.333396344915</eqn>
+					<eqn>0.269612354117</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.431417171973</eqn>
+					<eqn>-0.139991431559</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.192026079033</eqn>
+					<eqn>0.0487001305004</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.117820618897</eqn>
+					<eqn>0.132710962261</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.207159189054</eqn>
+					<eqn>0.0171017278727</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.446131926421</eqn>
+					<eqn>0.439623414363</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>0.277124798509</eqn>
+					<eqn>0.0466881045496</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.244881135237</eqn>
+					<eqn>-0.00880974441207</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.185649428721</eqn>
+					<eqn>0.325449523542</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.491798189874</eqn>
+					<eqn>0.0488449470235</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.159428371382</eqn>
+					<eqn>0.247571766328</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.482717029629</eqn>
+					<eqn>-0.0912921066155</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.418427597495</eqn>
+					<eqn>0.135938070278</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>0.273858179202</eqn>
+					<eqn>0.299839060979</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.198942047908</eqn>
+					<eqn>0.404128635146</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.383681957949</eqn>
+					<eqn>0.254130916044</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.278600598438</eqn>
+					<eqn>0.287915164461</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.426962864689</eqn>
+					<eqn>0.547237243938</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.257964275808</eqn>
+					<eqn>0.0423231069964</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>0.455809003349</eqn>
+					<eqn>0.375543908794</eqn>
 				</element>
 				<units>K</units>
 			</aux>
@@ -2979,304 +2981,304 @@ C2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.56330040708997</eqn>
+					<eqn>16.0447891010493</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>10.0267892738157</eqn>
+					<eqn>8.95079011079118</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>55.3166166747555</eqn>
+					<eqn>30.26804320988</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>49.243331233304</eqn>
+					<eqn>11.809948093191</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>21.9240547839268</eqn>
+					<eqn>15.1745342125389</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>10.0956495120716</eqn>
+					<eqn>9.36414060818547</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>20.1568211695412</eqn>
+					<eqn>26.7605980849984</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>9.4765035896776</eqn>
+					<eqn>18.1880163264418</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>23.1049739459329</eqn>
+					<eqn>20.6676780969843</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>34.2913288014741</eqn>
+					<eqn>10.4470355326881</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>17.9252956030495</eqn>
+					<eqn>16.7220419539515</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>8.85771837457534</eqn>
+					<eqn>28.7149228239997</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>63.9252857030096</eqn>
+					<eqn>17.4596268068778</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>26.4883278384978</eqn>
+					<eqn>15.2293494298834</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>15.0723718375127</eqn>
+					<eqn>42.1948675983185</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>8.05333692366022</eqn>
+					<eqn>6.92208069728413</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>5.45263695801106</eqn>
+					<eqn>5.08267101051319</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>10.0347393013251</eqn>
+					<eqn>27.0601271184563</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>58.2550994679872</eqn>
+					<eqn>18.8305058317072</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>28.5718403321342</eqn>
+					<eqn>9.67075734375711</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>21.2991869104314</eqn>
+					<eqn>7.56493765786266</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>14.687879943871</eqn>
+					<eqn>30.279042401497</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>31.0026532262191</eqn>
+					<eqn>10.774577876512</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>12.3595088646225</eqn>
+					<eqn>12.9334633867666</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>20.7064770910279</eqn>
+					<eqn>13.3695913948639</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>32.3811556952082</eqn>
+					<eqn>28.0316825564963</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>20.9781559060942</eqn>
+					<eqn>19.4319045262071</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>32.4863175196716</eqn>
+					<eqn>32.8521468934699</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>29.8760037235327</eqn>
+					<eqn>16.016584153511</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>2.79615208715916</eqn>
+					<eqn>15.2890436796642</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>5.07807748113274</eqn>
+					<eqn>25.8354093541367</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>6.43268808598686</eqn>
+					<eqn>24.1653698228713</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>10.3633801242046</eqn>
+					<eqn>22.5423406627917</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>27.6002139349973</eqn>
+					<eqn>9.88729127535561</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>47.0007881427803</eqn>
+					<eqn>44.2000156062621</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>61.252712807786</eqn>
+					<eqn>19.7787647210402</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>27.4282256115376</eqn>
+					<eqn>4.03821277401262</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>27.1403016491797</eqn>
+					<eqn>21.6399892278104</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>26.6584403781445</eqn>
+					<eqn>14.2328798394313</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>25.9545881709016</eqn>
+					<eqn>20.7057234612913</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>29.2606503946231</eqn>
+					<eqn>20.9649536430421</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>37.6425525159581</eqn>
+					<eqn>21.3276168348059</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>31.4186988524924</eqn>
+					<eqn>28.1916483796969</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>23.0697060399168</eqn>
+					<eqn>40.2783045107312</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>24.8237797919281</eqn>
+					<eqn>23.2231285640415</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>19.5265156556252</eqn>
+					<eqn>12.7103886746161</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>17.4597585109407</eqn>
+					<eqn>22.1928541334856</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>18.8571522798688</eqn>
+					<eqn>18.3460437086657</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>28.1996187069671</eqn>
+					<eqn>25.7128944410543</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>13.6614618480607</eqn>
+					<eqn>23.9841702501974</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>5.71279368345455</eqn>
+					<eqn>17.1305900691327</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>27.4907379030098</eqn>
+					<eqn>18.344997553633</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>36.6927467152089</eqn>
+					<eqn>26.4930647829462</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>33.3336360680239</eqn>
+					<eqn>32.5731543657708</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>23.8162829838919</eqn>
+					<eqn>5.8878478359823</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>51.7559413283336</eqn>
+					<eqn>33.239339901252</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>11.3212987598826</eqn>
+					<eqn>6.50866323116643</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>21.0066633863926</eqn>
+					<eqn>13.7305696437352</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>8.08814850199715</eqn>
+					<eqn>27.5331785694318</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>35.4631219170021</eqn>
+					<eqn>6.26631205951839</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>19.5568058350565</eqn>
+					<eqn>15.9124841119556</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>5.31895155576624</eqn>
+					<eqn>13.0548589141812</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>13.1261825735332</eqn>
+					<eqn>12.1431000961695</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>31.4404823374853</eqn>
+					<eqn>20.5346805363772</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>23.7087831029547</eqn>
+					<eqn>20.2267556392327</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>12.7852633058856</eqn>
+					<eqn>17.7202223574827</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>24.6993808381279</eqn>
+					<eqn>23.6223906441181</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>11.5976909805171</eqn>
+					<eqn>15.6097811535246</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>44.2324009676295</eqn>
+					<eqn>15.5357449491364</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>18.9232473143962</eqn>
+					<eqn>14.8959198389475</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>25.2675949749279</eqn>
+					<eqn>24.9346026795837</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>13.0533068630172</eqn>
+					<eqn>23.2123968641921</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>6.75380418038287</eqn>
+					<eqn>24.2567888648502</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>10.4367204820326</eqn>
+					<eqn>5.48098034084441</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>63.2048784456956</eqn>
+					<eqn>13.3228096676993</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>24.6356841813195</eqn>
+					<eqn>9.01525962683844</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>44.606854014036</eqn>
+					<eqn>13.9507879728249</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>17.717564945645</eqn>
+					<eqn>27.0791961173954</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>20.4871029268237</eqn>
+					<eqn>20.6195893508577</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>6.21342945442699</eqn>
+					<eqn>2.80958648977263</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>22.5555759402308</eqn>
+					<eqn>18.7482934776622</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>10.9661983127062</eqn>
+					<eqn>12.3344787374632</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>4.24140403727701</eqn>
+					<eqn>6.90317592248565</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>18.8044243218713</eqn>
+					<eqn>33.0546671594297</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>24.5739441877655</eqn>
+					<eqn>10.6121732351981</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>20.4326775401258</eqn>
+					<eqn>16.8558580332245</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>21.6215404661774</eqn>
+					<eqn>34.9606836681288</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>19.855842876424</eqn>
+					<eqn>27.1094437124605</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>56.7434656017471</eqn>
+					<eqn>9.95487686086019</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>19.0924562485312</eqn>
+					<eqn>11.8625281568037</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>40.5299027667969</eqn>
+					<eqn>26.785153146975</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>23.7226037588689</eqn>
+					<eqn>9.78227717048496</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>7.04836929457822</eqn>
+					<eqn>17.6735613754343</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>27.0100490762154</eqn>
+					<eqn>17.2084020182591</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>20.8655212106998</eqn>
+					<eqn>11.5312545309863</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>7.76705250721048</eqn>
+					<eqn>15.9903395942813</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>14.1014167497452</eqn>
+					<eqn>26.5811197996413</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>8.89818279584566</eqn>
+					<eqn>6.226958491813</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>13.2624291467981</eqn>
+					<eqn>11.5698910285314</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>16.4635497571373</eqn>
+					<eqn>11.5522140189243</eqn>
 				</element>
 				<units>W*year/metre^2/K</units>
 			</aux>
@@ -3287,304 +3289,304 @@ C3 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>427.258478288286</eqn>
+					<eqn>69.0874875294483</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>178.956790677747</eqn>
+					<eqn>363.392855024429</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>170.890564606479</eqn>
+					<eqn>132.899554139774</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>194.514436392146</eqn>
+					<eqn>52.0507806540366</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>38.2730198140959</eqn>
+					<eqn>37.6584764593348</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>140.702019135297</eqn>
+					<eqn>124.028206613769</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>147.676760797072</eqn>
+					<eqn>147.198303246796</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>74.6127377407594</eqn>
+					<eqn>101.722823680157</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>28.3390186286307</eqn>
+					<eqn>161.210402220925</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>35.3877278003601</eqn>
+					<eqn>84.9657106134896</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>185.129765212339</eqn>
+					<eqn>117.958551771129</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>85.0004853359342</eqn>
+					<eqn>68.4680479261818</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>162.194002482102</eqn>
+					<eqn>134.668782711615</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>104.467073162992</eqn>
+					<eqn>31.6052605505954</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>50.5458049184405</eqn>
+					<eqn>72.485376213184</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>166.464150551655</eqn>
+					<eqn>190.52511663072</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>138.399946588025</eqn>
+					<eqn>90.5132362690984</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>61.1309838945732</eqn>
+					<eqn>32.2024436414061</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>240.020406589355</eqn>
+					<eqn>60.3659703614799</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>385.864015828147</eqn>
+					<eqn>142.080359544957</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>39.8040649019636</eqn>
+					<eqn>100.813466430045</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>181.745318295645</eqn>
+					<eqn>75.0331188889496</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>285.354126965633</eqn>
+					<eqn>39.9713495437863</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>133.480819435068</eqn>
+					<eqn>36.1778079134659</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>177.20178887731</eqn>
+					<eqn>30.4432913069163</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>313.337247343346</eqn>
+					<eqn>106.159162640422</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>173.517085422641</eqn>
+					<eqn>49.3361029632768</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>100.274503938752</eqn>
+					<eqn>133.048263442237</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>217.712029507056</eqn>
+					<eqn>68.4309276883067</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>37.0072085829945</eqn>
+					<eqn>76.3747206737787</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>33.5546169595847</eqn>
+					<eqn>41.7345936564086</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>97.3691025376836</eqn>
+					<eqn>158.185187450671</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>61.9454309638334</eqn>
+					<eqn>138.618605836128</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>137.110216096467</eqn>
+					<eqn>100.784630871416</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>172.140268446752</eqn>
+					<eqn>127.229925477359</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>163.131387450131</eqn>
+					<eqn>169.551772094422</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>150.440715477629</eqn>
+					<eqn>44.0426031719429</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>81.7500930425793</eqn>
+					<eqn>88.6810037380557</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>139.150197396261</eqn>
+					<eqn>44.49155558322</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>144.904304034411</eqn>
+					<eqn>58.5031434809847</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>63.4189437769634</eqn>
+					<eqn>45.5003184753114</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>143.710475148699</eqn>
+					<eqn>96.1640767865357</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>221.575149955791</eqn>
+					<eqn>87.7260405410796</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>110.280689438866</eqn>
+					<eqn>136.375402013705</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>126.056514638142</eqn>
+					<eqn>32.855428044415</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>283.020702979734</eqn>
+					<eqn>247.865867745484</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>270.454070337018</eqn>
+					<eqn>378.406533948283</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>307.722305387687</eqn>
+					<eqn>83.2946007291726</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>308.140089906156</eqn>
+					<eqn>65.9844699931083</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>85.7312166459466</eqn>
+					<eqn>65.540343790892</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>168.740242285491</eqn>
+					<eqn>20.4755476045701</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>119.563183105709</eqn>
+					<eqn>116.61276389574</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>114.053484754168</eqn>
+					<eqn>114.784950611173</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>66.6124630988977</eqn>
+					<eqn>34.1690133542434</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>189.163087119299</eqn>
+					<eqn>108.365239293394</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>201.260754721993</eqn>
+					<eqn>156.619582779014</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>123.079850612519</eqn>
+					<eqn>165.074051429435</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>56.2308321127992</eqn>
+					<eqn>24.7325919548232</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>173.9300683593</eqn>
+					<eqn>102.907387298757</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>179.044974881543</eqn>
+					<eqn>56.4809389845578</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>53.3414685371369</eqn>
+					<eqn>107.987870475897</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>18.003907396017</eqn>
+					<eqn>127.965650076023</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>43.4356834090992</eqn>
+					<eqn>123.341984680674</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>43.3593761778321</eqn>
+					<eqn>59.1745139097048</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>67.046186137252</eqn>
+					<eqn>246.514618206319</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>222.142226273127</eqn>
+					<eqn>109.466742899597</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>186.446376667014</eqn>
+					<eqn>85.3363972637782</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>159.312230507914</eqn>
+					<eqn>23.2764823688862</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>314.682835733992</eqn>
+					<eqn>34.47241931895</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>94.3790669434361</eqn>
+					<eqn>42.6724489119211</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>86.6144447384397</eqn>
+					<eqn>99.8686282219829</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>62.1703432872609</eqn>
+					<eqn>78.7564028855466</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>141.160806118452</eqn>
+					<eqn>170.482429804146</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>243.644317244805</eqn>
+					<eqn>66.4993272046455</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>218.888780640923</eqn>
+					<eqn>90.5164386872814</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>82.7763026019913</eqn>
+					<eqn>65.6425694004566</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>315.382539625648</eqn>
+					<eqn>94.8897468362241</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>84.3817411108019</eqn>
+					<eqn>65.0893748993938</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>189.884989899027</eqn>
+					<eqn>111.171891467771</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>95.158943297888</eqn>
+					<eqn>196.370622366082</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>110.849469840574</eqn>
+					<eqn>40.0259693154611</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>239.369310467693</eqn>
+					<eqn>175.04892551961</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>99.0966058648622</eqn>
+					<eqn>160.779341188209</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>222.575720068404</eqn>
+					<eqn>104.151969893967</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>94.7707152350463</eqn>
+					<eqn>161.260193800569</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>353.578595319609</eqn>
+					<eqn>42.7428296669898</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>94.0795159180738</eqn>
+					<eqn>136.769170421145</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>65.9379054196215</eqn>
+					<eqn>34.2647596621135</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>222.989742565134</eqn>
+					<eqn>183.941449204095</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>398.106539986871</eqn>
+					<eqn>50.2635186657848</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>210.277883418604</eqn>
+					<eqn>74.1328521875438</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>155.266857683822</eqn>
+					<eqn>189.875583054807</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>144.167733290565</eqn>
+					<eqn>54.7756155707088</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>135.651225296263</eqn>
+					<eqn>56.2124339488359</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>110.99318916017</eqn>
+					<eqn>224.792317114608</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>7.77165225824444</eqn>
+					<eqn>36.5827239458477</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>67.5308369700677</eqn>
+					<eqn>309.663362703924</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>242.887183004322</eqn>
+					<eqn>49.4531559537389</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>36.9660729472398</eqn>
+					<eqn>105.766560419432</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>19.3513570319719</eqn>
+					<eqn>84.0627400082209</eqn>
 				</element>
 				<units>W*year/metre^2/K</units>
 			</aux>
@@ -3595,304 +3597,304 @@ C1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>4.54952392781237</eqn>
+					<eqn>5.89278558196898</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>4.89452274876851</eqn>
+					<eqn>4.49288144553806</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>5.00644346550715</eqn>
+					<eqn>4.19403344987402</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>5.42653401668631</eqn>
+					<eqn>2.72744179185912</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>5.6532458984396</eqn>
+					<eqn>3.43010386126268</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>3.73406485115142</eqn>
+					<eqn>3.40040326542647</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>3.41046761597079</eqn>
+					<eqn>4.17259537413889</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>4.75623458942261</eqn>
+					<eqn>4.91412055119692</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>2.09737112256504</eqn>
+					<eqn>3.61408822903111</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>5.93654497175069</eqn>
+					<eqn>4.17835630214691</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>3.70145851889498</eqn>
+					<eqn>4.87816292245334</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>3.09182762975964</eqn>
+					<eqn>4.12765057544616</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>6.6449017352586</eqn>
+					<eqn>2.05501273154705</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>6.437874507036</eqn>
+					<eqn>3.29990193292153</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>4.50199260044498</eqn>
+					<eqn>4.72531862017987</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>2.29796850410785</eqn>
+					<eqn>3.84546811450548</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>2.93008804936432</eqn>
+					<eqn>3.54559904278992</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>3.11985045523136</eqn>
+					<eqn>5.41783719714541</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>8.36479249236325</eqn>
+					<eqn>3.5909705742068</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>5.33831172211925</eqn>
+					<eqn>6.67249597742245</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>3.42701802779745</eqn>
+					<eqn>2.34532247018477</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>3.56706526992322</eqn>
+					<eqn>5.22046372087359</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>4.28641571595348</eqn>
+					<eqn>3.74504798470222</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>7.60080249213455</eqn>
+					<eqn>5.55826582969632</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>4.39704450058487</eqn>
+					<eqn>3.31319627962286</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>7.12602898782931</eqn>
+					<eqn>3.77729373820083</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>4.13219922153587</eqn>
+					<eqn>4.80428145494675</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>4.54693683184056</eqn>
+					<eqn>5.29612591562116</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>2.45880539599178</eqn>
+					<eqn>3.73156229735866</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>2.31863621068144</eqn>
+					<eqn>4.17486600689823</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>2.88367365321972</eqn>
+					<eqn>4.14993159196308</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>6.15908809405764</eqn>
+					<eqn>6.48299606978749</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>5.37606736564988</eqn>
+					<eqn>3.41459838127395</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>5.0908142416927</eqn>
+					<eqn>5.05470211423952</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>6.37474985637251</eqn>
+					<eqn>3.53150654872598</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>6.70509838719795</eqn>
+					<eqn>5.1161471666945</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>3.45811216095639</eqn>
+					<eqn>3.05854026548457</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>5.09804259806612</eqn>
+					<eqn>3.33543684133261</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>3.1878114560301</eqn>
+					<eqn>3.4692982777426</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>3.72892587107732</eqn>
+					<eqn>4.03000456851126</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>5.36808565257865</eqn>
+					<eqn>3.10842389514276</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>5.58198046317134</eqn>
+					<eqn>2.422403012225</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>5.93531307886647</eqn>
+					<eqn>4.18479169430215</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>3.73259664296078</eqn>
+					<eqn>5.51531241086417</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>5.576093146989</eqn>
+					<eqn>3.84197757053092</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>3.30661390868407</eqn>
+					<eqn>3.39565896635969</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>4.58255325749022</eqn>
+					<eqn>3.9951737406388</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>4.46540014815838</eqn>
+					<eqn>3.66586354564541</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>4.82561871895646</eqn>
+					<eqn>5.03723309584626</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>3.85884663116363</eqn>
+					<eqn>3.72598797345908</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>5.37106047428347</eqn>
+					<eqn>4.78181715803223</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>4.48011493511708</eqn>
+					<eqn>3.9640191570363</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>5.50152570127947</eqn>
+					<eqn>4.02924083918539</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>3.80382210009199</eqn>
+					<eqn>2.95144642216107</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>3.56439337955712</eqn>
+					<eqn>4.58877335008185</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>6.81965295190585</eqn>
+					<eqn>4.47497795722648</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>2.6603182345818</eqn>
+					<eqn>3.17757682422926</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>3.92499705146469</eqn>
+					<eqn>3.36980241224352</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>3.92812011587515</eqn>
+					<eqn>4.51406834002666</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>6.75265764710142</eqn>
+					<eqn>5.4083824325288</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>2.25237539092253</eqn>
+					<eqn>4.04545113168495</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>4.39910351958149</eqn>
+					<eqn>2.08345652955338</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>3.70139497107499</eqn>
+					<eqn>4.82929286040017</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>3.74152064252757</eqn>
+					<eqn>5.27953832878572</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>3.29852932724434</eqn>
+					<eqn>2.11904896747953</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>3.69905492867308</eqn>
+					<eqn>5.43058534390029</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>2.8355031995877</eqn>
+					<eqn>4.22477797953334</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>4.04016610002209</eqn>
+					<eqn>3.22719497441453</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>6.83266635430196</eqn>
+					<eqn>4.51362414368012</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>4.25493016116685</eqn>
+					<eqn>4.42893516470786</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>5.57709256373502</eqn>
+					<eqn>4.27280773276087</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>3.82265239576259</eqn>
+					<eqn>3.83993037856723</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>3.77403120636102</eqn>
+					<eqn>4.38954165041184</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>3.05110677100576</eqn>
+					<eqn>5.01619219729019</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>7.74567480451504</eqn>
+					<eqn>4.12684194507365</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>3.20529969367278</eqn>
+					<eqn>4.68435316351656</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>4.16032001311195</eqn>
+					<eqn>4.87208843283313</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>4.82164176339763</eqn>
+					<eqn>4.74109155013341</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>3.80191556636934</eqn>
+					<eqn>5.36494522614239</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>3.66674657894515</eqn>
+					<eqn>2.11300384025043</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>3.62726134510173</eqn>
+					<eqn>3.24566802240387</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>3.342582914155</eqn>
+					<eqn>3.83813025716725</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>3.42844913806112</eqn>
+					<eqn>4.89171806147969</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>6.85239817063612</eqn>
+					<eqn>3.30477522143974</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>4.4983852077491</eqn>
+					<eqn>5.33645301890801</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>3.61005761286501</eqn>
+					<eqn>4.4506597091523</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>6.07120891415484</eqn>
+					<eqn>4.98634967966216</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>5.48677327889389</eqn>
+					<eqn>2.84176924857758</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>7.43286536236989</eqn>
+					<eqn>2.28013290408752</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>4.19649540848672</eqn>
+					<eqn>2.02869295968651</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>6.45730754951493</eqn>
+					<eqn>5.73345401301716</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>2.57594868844557</eqn>
+					<eqn>4.07713831245013</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>3.54346911008464</eqn>
+					<eqn>5.01924630217032</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>4.34278613799934</eqn>
+					<eqn>3.95400507165231</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>4.03452176386904</eqn>
+					<eqn>4.0007597868685</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>4.9065195821287</eqn>
+					<eqn>2.10776148519459</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>4.6585576332127</eqn>
+					<eqn>4.18500176962202</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>3.53595874361446</eqn>
+					<eqn>5.20350537174994</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>3.38102450158145</eqn>
+					<eqn>5.53624163606554</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>4.61458581303435</eqn>
+					<eqn>4.56683642226968</eqn>
 				</element>
 				<units>W*year/metre^2/K</units>
 			</aux>
@@ -3903,304 +3905,304 @@ kappa1 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.28905782160854</eqn>
+					<eqn>1.0922719055872</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>1.3181948439362</eqn>
+					<eqn>2.17910190951135</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>1.99977593931721</eqn>
+					<eqn>2.01142270216061</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>1.8615333092998</eqn>
+					<eqn>1.4361850985983</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>1.16285485271257</eqn>
+					<eqn>1.06100726876441</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>1.03792848785147</eqn>
+					<eqn>1.01702138358689</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>1.13043086600295</eqn>
+					<eqn>0.713146034780519</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>1.0950910886621</eqn>
+					<eqn>1.22730659361547</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>1.12647937882347</eqn>
+					<eqn>1.72541885198023</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>1.77597463277617</eqn>
+					<eqn>0.522578661294085</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>1.20139451615002</eqn>
+					<eqn>1.60681174066814</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>1.07519948697987</eqn>
+					<eqn>1.2222345750547</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>1.50747729532988</eqn>
+					<eqn>1.30889575999172</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.803168978848665</eqn>
+					<eqn>1.24854685342283</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>2.05048890401808</eqn>
+					<eqn>1.61795516240849</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>1.09474123273744</eqn>
+					<eqn>1.56729030347697</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>1.86589428198085</eqn>
+					<eqn>1.72334249120719</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>2.10110511227061</eqn>
+					<eqn>1.4168303556487</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>1.71945173443582</eqn>
+					<eqn>1.30425329427635</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>2.3245790315627</eqn>
+					<eqn>1.32076495113922</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.81517168832987</eqn>
+					<eqn>1.50156738035718</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>1.83556517209259</eqn>
+					<eqn>1.75443945695754</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>1.29475184303874</eqn>
+					<eqn>1.13892329165897</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>1.0181639866421</eqn>
+					<eqn>0.998125270003324</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>1.10170782674494</eqn>
+					<eqn>0.734606438211071</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>2.07784512302322</eqn>
+					<eqn>0.936380853663429</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>1.22069882599088</eqn>
+					<eqn>1.74279062774294</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>1.44751161856785</eqn>
+					<eqn>1.9444604450109</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>1.95282679604775</eqn>
+					<eqn>1.90989565556044</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>1.38330546008391</eqn>
+					<eqn>1.13613802915768</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>1.6394763130814</eqn>
+					<eqn>1.52417909862904</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>1.31428736468896</eqn>
+					<eqn>1.89935161406858</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>1.24966559194908</eqn>
+					<eqn>1.91115026958638</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>1.67367300046753</eqn>
+					<eqn>1.51645637739751</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>1.95633322419868</eqn>
+					<eqn>2.05305771380365</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>1.73495008304436</eqn>
+					<eqn>1.13822901178517</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>1.41251946842713</eqn>
+					<eqn>0.657845971423027</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.993659635061557</eqn>
+					<eqn>1.16968651019056</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>1.09230138521833</eqn>
+					<eqn>1.5082356118564</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>1.54896380777721</eqn>
+					<eqn>1.41410116504181</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>1.29892318484008</eqn>
+					<eqn>1.27858559949003</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>1.82320277350188</eqn>
+					<eqn>1.63873700373312</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>1.49967872608521</eqn>
+					<eqn>1.52932555039845</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>1.62453853129676</eqn>
+					<eqn>1.42608133187786</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>1.5450594992045</eqn>
+					<eqn>1.15247478440914</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>2.05442649296804</eqn>
+					<eqn>1.88422022565818</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>1.90211188334818</eqn>
+					<eqn>1.68360419430409</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>2.02447696348707</eqn>
+					<eqn>1.03016318637398</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>1.88594099928228</eqn>
+					<eqn>1.15747173851054</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>1.36147301388949</eqn>
+					<eqn>1.43575950088106</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>1.26247362615035</eqn>
+					<eqn>0.737088241755079</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>1.36192863959486</eqn>
+					<eqn>1.05747882751008</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>1.40771451429048</eqn>
+					<eqn>1.08206048029527</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>1.28127993531026</eqn>
+					<eqn>1.02589059070366</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>1.80256860384832</eqn>
+					<eqn>0.627706924223466</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>1.65614920122519</eqn>
+					<eqn>1.9038044917254</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>1.84204056759869</eqn>
+					<eqn>1.89601896400601</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>1.25320221339722</eqn>
+					<eqn>0.950948562468352</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.952987841519172</eqn>
+					<eqn>1.95789558079926</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>1.48723558817654</eqn>
+					<eqn>1.33127980458499</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>1.70351476126908</eqn>
+					<eqn>1.15766747606103</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>1.36063155351894</eqn>
+					<eqn>1.62758633098506</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.898627602264138</eqn>
+					<eqn>1.1721052309544</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>1.18011932047066</eqn>
+					<eqn>0.943027883926536</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>1.19856727794581</eqn>
+					<eqn>1.62615435861873</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>1.73530946651262</eqn>
+					<eqn>1.44161520852386</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>2.43546344593371</eqn>
+					<eqn>1.17896012797567</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>1.30108615623365</eqn>
+					<eqn>1.63736904979524</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>2.13286388429425</eqn>
+					<eqn>1.19539877635938</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>1.19028747842353</eqn>
+					<eqn>1.17131899047909</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>1.38752331799759</eqn>
+					<eqn>0.832743045768762</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.90913426919622</eqn>
+					<eqn>1.8948477792869</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>1.06659212046034</eqn>
+					<eqn>1.00544929780195</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>1.80745097086502</eqn>
+					<eqn>0.945316935314751</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>2.01234262492245</eqn>
+					<eqn>1.39013098108058</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>1.15960326843921</eqn>
+					<eqn>1.62465550317861</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>1.51635191745777</eqn>
+					<eqn>0.803731236802848</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.727851576311536</eqn>
+					<eqn>1.24392237924865</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>2.37108584942781</eqn>
+					<eqn>0.864358133572252</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>2.12180921164146</eqn>
+					<eqn>1.67798931626498</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>1.45699044639278</eqn>
+					<eqn>1.35267940580748</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>2.4005190054589</eqn>
+					<eqn>1.21460715149761</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>1.55996072064164</eqn>
+					<eqn>0.827639891064437</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>1.57682270783802</eqn>
+					<eqn>1.9837261940064</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.952104520908914</eqn>
+					<eqn>0.924160275556606</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>2.63969435274986</eqn>
+					<eqn>1.33986247515308</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>1.33928494119538</eqn>
+					<eqn>1.43287589881985</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>1.89990518200678</eqn>
+					<eqn>0.780721184666987</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>1.50306376986636</eqn>
+					<eqn>1.52130317007951</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>2.02722017319807</eqn>
+					<eqn>1.14686618154939</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>1.69288247272506</eqn>
+					<eqn>1.3523344469448</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>1.69947141873054</eqn>
+					<eqn>0.60555981822681</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>1.08930131745773</eqn>
+					<eqn>0.725143432273199</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>1.68605808578442</eqn>
+					<eqn>1.61792999942287</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.84165459766141</eqn>
+					<eqn>1.83829976640734</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>1.81871373179921</eqn>
+					<eqn>1.19380189469397</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.557779480905624</eqn>
+					<eqn>1.66962816106114</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>1.93093251225205</eqn>
+					<eqn>0.582475491174739</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.848618148644247</eqn>
+					<eqn>1.48597032167274</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>1.25664369757355</eqn>
+					<eqn>2.22942691885993</eqn>
 				</element>
 				<units>W/metre^2/K</units>
 			</aux>
@@ -4211,304 +4213,304 @@ epsilon in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.246907918225551</eqn>
+					<eqn>1.66963865825059</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.853426936374536</eqn>
+					<eqn>0.342238916644824</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.203648360228199</eqn>
+					<eqn>0.813883065348614</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.846490513500915</eqn>
+					<eqn>1.25566029806212</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>1.74975402456924</eqn>
+					<eqn>1.47523408621687</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>1.28201472084742</eqn>
+					<eqn>1.08577764934398</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>1.01062703740502</eqn>
+					<eqn>1.21000435863539</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>1.53363142569093</eqn>
+					<eqn>1.04591285677262</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>1.16163309903366</eqn>
+					<eqn>0.687468593583791</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>1.60426974516556</eqn>
+					<eqn>1.3745960167253</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>1.26184757563286</eqn>
+					<eqn>1.12404878975318</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>1.35948570239202</eqn>
+					<eqn>0.941629774705509</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.450597278089097</eqn>
+					<eqn>0.864188226172977</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>1.35617256309111</eqn>
+					<eqn>0.967374608435546</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>1.26206003057882</eqn>
+					<eqn>1.40460969540209</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>1.28117320273072</eqn>
+					<eqn>0.971051631684699</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>1.19926132405521</eqn>
+					<eqn>1.52304903764127</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>1.26825326492207</eqn>
+					<eqn>1.586939307008</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.147968847465122</eqn>
+					<eqn>1.01071640936508</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.256781899569777</eqn>
+					<eqn>1.58915550637442</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>1.20424537140514</eqn>
+					<eqn>1.07694854790971</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.974829758118058</eqn>
+					<eqn>1.09591462454821</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.0098511560146534</eqn>
+					<eqn>1.24121407398192</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>1.55760629624081</eqn>
+					<eqn>1.51386746226347</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>1.30448193805515</eqn>
+					<eqn>1.18541512723061</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.135377362729695</eqn>
+					<eqn>0.721586799250795</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.635047590141218</eqn>
+					<eqn>1.31201879161002</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>1.32026410729815</eqn>
+					<eqn>1.19619147873494</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.10572287844959</eqn>
+					<eqn>1.29800270849429</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>1.54146252207757</eqn>
+					<eqn>0.844301814685784</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>1.36138638025175</eqn>
+					<eqn>0.892347881289907</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>1.55993214014747</eqn>
+					<eqn>1.16397643012751</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.857312703611363</eqn>
+					<eqn>0.764784730392246</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.885000686784203</eqn>
+					<eqn>1.4470419357502</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.402859083384378</eqn>
+					<eqn>0.535157159824449</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.378945167055106</eqn>
+					<eqn>1.23179717245164</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.948255127667927</eqn>
+					<eqn>1.40756290877447</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>1.39710457097389</eqn>
+					<eqn>1.3679681243597</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>1.25604923454578</eqn>
+					<eqn>1.20764852406518</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>1.08534708346464</eqn>
+					<eqn>1.30564591918621</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>1.48841590043085</eqn>
+					<eqn>1.2834601579067</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.796683245960406</eqn>
+					<eqn>1.2254118470806</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.558887828965709</eqn>
+					<eqn>0.863828602312008</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>1.15125285508333</eqn>
+					<eqn>0.567437181504621</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>1.63497472279454</eqn>
+					<eqn>1.5582910789034</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.31135741144858</eqn>
+					<eqn>0.594808836897749</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.646004257684287</eqn>
+					<eqn>0.309658398836632</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.666253180775041</eqn>
+					<eqn>1.17758022966687</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.608414245083019</eqn>
+					<eqn>1.03786204854382</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>1.29060370442859</eqn>
+					<eqn>1.4087775348898</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>1.62783425647859</eqn>
+					<eqn>1.84597966018065</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>1.1857416120048</eqn>
+					<eqn>1.59408154317543</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>1.01669525529473</eqn>
+					<eqn>1.07979816630276</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>1.02982384993312</eqn>
+					<eqn>1.17233544125477</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.630762886914012</eqn>
+					<eqn>1.65620770500273</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.556356757922086</eqn>
+					<eqn>0.87915013336044</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.921103101485937</eqn>
+					<eqn>1.04572252495831</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.771893999662891</eqn>
+					<eqn>1.55660956283682</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>1.2611247756689</eqn>
+					<eqn>1.20527553654689</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.763434541908825</eqn>
+					<eqn>1.46950112269738</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.993453700045116</eqn>
+					<eqn>1.1630256711169</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>1.66651530600106</eqn>
+					<eqn>1.02375478395061</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>1.21833587770303</eqn>
+					<eqn>1.1919098180864</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>1.19910337043257</eqn>
+					<eqn>1.45527477171219</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>1.02483651754643</eqn>
+					<eqn>0.70710826030332</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.673603275999133</eqn>
+					<eqn>1.01590788772729</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.596514699703276</eqn>
+					<eqn>0.957569266733589</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>1.3337084346723</eqn>
+					<eqn>1.05793000643758</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.238949025761887</eqn>
+					<eqn>1.44380477030311</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.924819702245411</eqn>
+					<eqn>1.17669900137536</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>1.19173408645776</eqn>
+					<eqn>0.964558197360687</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>1.10845363168086</eqn>
+					<eqn>1.0794536224135</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>1.07654925323587</eqn>
+					<eqn>0.963604263238754</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.822119724975096</eqn>
+					<eqn>1.66307100530911</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.314736398506369</eqn>
+					<eqn>1.18455731094319</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>1.62673294270529</eqn>
+					<eqn>1.40885047120178</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.124729220881437</eqn>
+					<eqn>1.42971813495025</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>1.54775021183486</eqn>
+					<eqn>1.30274278857313</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.740029607035539</eqn>
+					<eqn>1.04016075651312</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>1.22971446850451</eqn>
+					<eqn>1.00439181794896</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>1.0004411689757</eqn>
+					<eqn>1.28168613298783</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.48680911722749</eqn>
+					<eqn>1.08831818754363</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>1.22717509942425</eqn>
+					<eqn>1.46545525342968</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>1.03079697070494</eqn>
+					<eqn>1.12562863919705</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>1.11349844877325</eqn>
+					<eqn>1.17887148734646</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.164339150943833</eqn>
+					<eqn>1.88827183038923</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>1.37623425074934</eqn>
+					<eqn>0.699895619158665</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>1.33740557116883</eqn>
+					<eqn>0.725896520022619</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.265429988657934</eqn>
+					<eqn>0.891420475518477</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.025119916126976</eqn>
+					<eqn>1.49900317967302</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.504408613344114</eqn>
+					<eqn>1.6734849755051</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.426027877612878</eqn>
+					<eqn>1.10952649499927</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>1.33818574001526</eqn>
+					<eqn>1.66392789468617</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>1.4888996850208</eqn>
+					<eqn>1.32865870972929</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>1.05244420668163</eqn>
+					<eqn>0.81414402780439</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>1.64755678783651</eqn>
+					<eqn>1.23256964923924</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>1.63965661901838</eqn>
+					<eqn>0.422727070982976</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.525140818925851</eqn>
+					<eqn>1.84242052288764</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>1.60883127341602</eqn>
+					<eqn>1.68235268443647</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>1.76390117565835</eqn>
+					<eqn>1.32340146979807</eqn>
 				</element>
 				<units>Dimensionless</units>
 			</aux>
@@ -4519,304 +4521,304 @@ kappa2 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>2.22572601206407</eqn>
+					<eqn>2.6347151011153</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>2.17510374115149</eqn>
+					<eqn>2.77753963070572</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.453183081038102</eqn>
+					<eqn>1.62132146226565</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>2.26432997682912</eqn>
+					<eqn>2.84357121486524</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>3.62728420622019</eqn>
+					<eqn>6.33934670478094</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>3.12593920008115</eqn>
+					<eqn>2.56562859519894</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>3.66896590427713</eqn>
+					<eqn>3.10171099346284</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>5.35413193915166</eqn>
+					<eqn>2.2453123988684</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>3.63767931624107</eqn>
+					<eqn>2.93125928505686</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>1.89657314412581</eqn>
+					<eqn>1.38846428427127</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>3.4201435811041</eqn>
+					<eqn>1.47523224821158</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>2.26255775032614</eqn>
+					<eqn>1.92533019537105</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>1.48236975037079</eqn>
+					<eqn>2.9907964608541</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>2.48413210450526</eqn>
+					<eqn>2.40939639308948</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>1.3284568137248</eqn>
+					<eqn>3.0374511191536</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>4.31852196508274</eqn>
+					<eqn>2.81313706022229</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>3.42479986043928</eqn>
+					<eqn>3.57830574579511</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>3.76400055745815</eqn>
+					<eqn>0.61970556157135</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.565353154295891</eqn>
+					<eqn>2.15928357621286</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>1.03126854850078</eqn>
+					<eqn>2.86693776943386</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>3.17979305853809</eqn>
+					<eqn>2.88204616623933</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>2.11549042093065</eqn>
+					<eqn>1.83506967470585</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>1.81477571754069</eqn>
+					<eqn>1.55386449373829</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>1.81311299988315</eqn>
+					<eqn>1.55029534669498</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>2.68486833886962</eqn>
+					<eqn>2.9512289158909</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.884673851905372</eqn>
+					<eqn>1.95294206853688</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>2.97304822873695</eqn>
+					<eqn>2.2363956329709</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>1.2970861593664</eqn>
+					<eqn>0.668499962870365</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.867711400465279</eqn>
+					<eqn>2.41089254850068</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>5.88511076848969</eqn>
+					<eqn>1.78073865850514</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>6.13503537027931</eqn>
+					<eqn>1.44715844191035</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>2.47635479506443</eqn>
+					<eqn>1.32270571189187</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>1.76806504459989</eqn>
+					<eqn>2.29457610991197</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>2.04792626225991</eqn>
+					<eqn>2.75600238540575</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.394918069311544</eqn>
+					<eqn>2.16229887499475</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>1.01946304739228</eqn>
+					<eqn>4.59331088630044</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>1.73421238054314</eqn>
+					<eqn>2.41778656750456</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>2.8594502981458</eqn>
+					<eqn>2.96865849209768</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>2.81603248160763</eqn>
+					<eqn>3.09908083782934</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>2.69422043826282</eqn>
+					<eqn>1.78988875840254</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>2.19963928686184</eqn>
+					<eqn>4.45494245091234</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>2.61353044441927</eqn>
+					<eqn>4.80475990968904</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.904257981957669</eqn>
+					<eqn>0.985299951512312</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>2.80113761530547</eqn>
+					<eqn>1.32087274161584</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>3.1626815706935</eqn>
+					<eqn>3.92612860097095</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>3.12106513454517</eqn>
+					<eqn>1.68193536091113</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>1.98284255751859</eqn>
+					<eqn>1.96655114974603</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.989974102379901</eqn>
+					<eqn>3.765391909821</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>1.60189332770896</eqn>
+					<eqn>1.96003618446251</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>2.11053860077181</eqn>
+					<eqn>3.48831937834599</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>3.5449792154336</eqn>
+					<eqn>2.94024076978217</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>2.04133407388699</eqn>
+					<eqn>2.91661600762357</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>1.8092551960945</eqn>
+					<eqn>1.99165670101853</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>1.85440234160154</eqn>
+					<eqn>3.23682645220765</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>1.57690874757231</eqn>
+					<eqn>3.62459587954354</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.829812857139116</eqn>
+					<eqn>1.24978517484231</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>2.5708979504432</eqn>
+					<eqn>2.81687481266063</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>1.66477075052653</eqn>
+					<eqn>2.4146592615493</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>4.64834492306747</eqn>
+					<eqn>2.36416182327187</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>3.25853452832088</eqn>
+					<eqn>1.44268305280567</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>4.38824834947186</eqn>
+					<eqn>1.57677975295224</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>2.77345642077214</eqn>
+					<eqn>3.6163544898739</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>2.47421089568031</eqn>
+					<eqn>1.27314097324124</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>1.84716293453553</eqn>
+					<eqn>2.27591160933366</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>2.86826374300036</eqn>
+					<eqn>3.61057431734824</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>1.33721035104253</eqn>
+					<eqn>2.05273989112714</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>5.26810312585356</eqn>
+					<eqn>2.18236064847602</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>1.66536511128381</eqn>
+					<eqn>1.46958228060609</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>1.07719843805303</eqn>
+					<eqn>2.31848387583036</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>2.6290320631335</eqn>
+					<eqn>2.98516098092926</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>1.15029514754243</eqn>
+					<eqn>1.14636049980728</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>3.37513707438218</eqn>
+					<eqn>2.20442049939949</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>3.03101340650275</eqn>
+					<eqn>2.12487315997718</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>2.72410523035069</eqn>
+					<eqn>2.46767826282806</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.610119418788218</eqn>
+					<eqn>3.07092254891938</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>4.1863199826813</eqn>
+					<eqn>2.47780173444974</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.604238022615661</eqn>
+					<eqn>3.7338464329456</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>4.63729730395197</eqn>
+					<eqn>2.16060021541552</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>2.67408120371297</eqn>
+					<eqn>0.917738026150404</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.762439279313236</eqn>
+					<eqn>1.8673326910727</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>2.12405972248955</eqn>
+					<eqn>2.1250353166912</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>2.55223698161239</eqn>
+					<eqn>4.07527319778388</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>1.99827915691059</eqn>
+					<eqn>2.65655935920385</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.37767728573132</eqn>
+					<eqn>5.14291018028926</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>2.83074625729233</eqn>
+					<eqn>2.74705265480092</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>2.97911843569842</eqn>
+					<eqn>3.14043632220191</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>1.76496407583417</eqn>
+					<eqn>2.20171121642269</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>2.01215280570671</eqn>
+					<eqn>3.16046905292499</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.753799284262163</eqn>
+					<eqn>2.42388277662064</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>1.23332318736988</eqn>
+					<eqn>3.40349218914369</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.831654556572157</eqn>
+					<eqn>3.27800581917303</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>2.94961323362113</eqn>
+					<eqn>2.49176189914025</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>5.34228521599757</eqn>
+					<eqn>3.40187339196905</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>2.55755531540411</eqn>
+					<eqn>3.389614430244</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>2.9063530955003</eqn>
+					<eqn>2.08789278439284</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>1.82007428649523</eqn>
+					<eqn>2.19127999418806</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>7.4642860457434</eqn>
+					<eqn>2.33070589278482</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>2.2740056545838</eqn>
+					<eqn>7.81774751003183</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>5.00073549605544</eqn>
+					<eqn>1.78518778599844</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>2.34963073381844</eqn>
+					<eqn>2.16701367125034</eqn>
 				</element>
 				<units>W/metre^2/K</units>
 			</aux>
@@ -4827,304 +4829,304 @@ kappa3 in Cummins et al 2020 https://doi.org/10.1175/JCLI-D-19-0589.1</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.731377350130062</eqn>
+					<eqn>1.47235522552198</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.968664432407944</eqn>
+					<eqn>0.594527810825008</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.25419825639119</eqn>
+					<eqn>1.02391315039107</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>1.2219725445288</eqn>
+					<eqn>0.739555981995401</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>1.54709128489589</eqn>
+					<eqn>0.919483807817058</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.767508174374944</eqn>
+					<eqn>0.591576976710869</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.942699546491079</eqn>
+					<eqn>0.744761142356235</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>1.23291777662265</eqn>
+					<eqn>1.06565176515208</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>1.08225239547684</eqn>
+					<eqn>0.827261398997992</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>1.69410682152661</eqn>
+					<eqn>0.932943647619907</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>1.00546520290003</eqn>
+					<eqn>0.487654395393529</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.862121808883809</eqn>
+					<eqn>0.75838110961504</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.0845753481956863</eqn>
+					<eqn>0.565697254598102</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>1.06737041914038</eqn>
+					<eqn>0.587031069204122</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.453919210254866</eqn>
+					<eqn>0.99867449936081</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>1.40191188960498</eqn>
+					<eqn>0.721315238264532</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.820900858526505</eqn>
+					<eqn>0.821034255921544</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.416786829933512</eqn>
+					<eqn>0.716424025863967</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.203278080556589</eqn>
+					<eqn>0.601477835298026</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.694084766274786</eqn>
+					<eqn>1.57845897692615</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>1.0687660422262</eqn>
+					<eqn>0.988908088053302</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>1.17233342605312</eqn>
+					<eqn>0.639029973049662</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.456158470365453</eqn>
+					<eqn>0.196472687478085</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>1.52862156363896</eqn>
+					<eqn>0.939089147744265</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.865823140309666</eqn>
+					<eqn>0.965767048884208</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.227354561424021</eqn>
+					<eqn>0.641376551449876</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.651031518009649</eqn>
+					<eqn>0.679247585711228</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>1.34212845971707</eqn>
+					<eqn>0.680246496408028</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.385684736390687</eqn>
+					<eqn>0.511308652778032</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.678406740577667</eqn>
+					<eqn>0.77144690223216</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.551493950235416</eqn>
+					<eqn>0.494493758846672</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.943626372071031</eqn>
+					<eqn>1.33902561737039</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.460363535410413</eqn>
+					<eqn>0.86467707943062</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>1.30619267218758</eqn>
+					<eqn>1.23358558626323</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.450891251486242</eqn>
+					<eqn>1.19650690809472</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.35592406480705</eqn>
+					<eqn>0.439286539735498</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.86442992416878</eqn>
+					<eqn>0.434194173246742</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.882049333506011</eqn>
+					<eqn>0.984874805631108</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.931125781397559</eqn>
+					<eqn>0.748081569749771</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>1.17964373031701</eqn>
+					<eqn>1.3989768197938</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>1.43265704752279</eqn>
+					<eqn>0.860461655796591</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.278676120448121</eqn>
+					<eqn>1.11724636369647</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.0487774007249141</eqn>
+					<eqn>0.859737747581273</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.803445924259703</eqn>
+					<eqn>0.832302591055767</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>1.17112553997291</eqn>
+					<eqn>1.31894202145589</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.766023956661443</eqn>
+					<eqn>0.62740376705739</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>1.24401944659363</eqn>
+					<eqn>0.693272835930555</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.803789708057302</eqn>
+					<eqn>1.03469111937505</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.776784462542076</eqn>
+					<eqn>0.990764984970958</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.898821604426768</eqn>
+					<eqn>0.978713386659473</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>1.17493804087338</eqn>
+					<eqn>1.52683541517709</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>1.15209881973472</eqn>
+					<eqn>1.36177127472295</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.513301822414187</eqn>
+					<eqn>0.634761716301616</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.876068167759063</eqn>
+					<eqn>0.926936128638952</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.991094382023604</eqn>
+					<eqn>0.99324334278915</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.433062199317963</eqn>
+					<eqn>1.28943117572856</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.560986533771398</eqn>
+					<eqn>0.930974312412486</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.831719295691053</eqn>
+					<eqn>0.652574955452649</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.916148224860332</eqn>
+					<eqn>0.578998692220244</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.310519532915753</eqn>
+					<eqn>0.5588142037461</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.518847556017276</eqn>
+					<eqn>0.570795240431557</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.579856097561293</eqn>
+					<eqn>1.13065497213798</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.921040933684762</eqn>
+					<eqn>1.31476767392355</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>1.42907115627383</eqn>
+					<eqn>0.790665104294433</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.867277136913506</eqn>
+					<eqn>0.664331211090875</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.468349363099723</eqn>
+					<eqn>1.19080131306052</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.49472048384304</eqn>
+					<eqn>0.756786604090072</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>1.4072380580911</eqn>
+					<eqn>0.494791092420766</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.15865444356439</eqn>
+					<eqn>0.694189954551021</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.783793492811872</eqn>
+					<eqn>0.893481874342768</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>1.03270839441143</eqn>
+					<eqn>0.741814722321877</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.809268513923104</eqn>
+					<eqn>0.862078955840716</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.831585662240133</eqn>
+					<eqn>0.892385868440459</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>1.40866646946809</eqn>
+					<eqn>0.76956452176513</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.174311633000825</eqn>
+					<eqn>0.446466771660742</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>1.25084682917315</eqn>
+					<eqn>1.39037292319629</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.954895707743202</eqn>
+					<eqn>0.905243695199112</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.925243476943806</eqn>
+					<eqn>1.58209218460166</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.797302962493754</eqn>
+					<eqn>0.832174456168936</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.351024846100824</eqn>
+					<eqn>1.08640506934349</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.9413361200715</eqn>
+					<eqn>0.579199829061919</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.606651805710768</eqn>
+					<eqn>0.641395794673764</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.583073141496455</eqn>
+					<eqn>1.10034043053484</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>1.25337189252582</eqn>
+					<eqn>1.00543269805247</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.826897909598771</eqn>
+					<eqn>0.748054690572966</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.658395060170932</eqn>
+					<eqn>1.56099052240421</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>1.36613173683446</eqn>
+					<eqn>0.864636505154638</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.762545126022484</eqn>
+					<eqn>0.684855419030874</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.279012472014193</eqn>
+					<eqn>0.900327104374949</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.263531505470732</eqn>
+					<eqn>0.922637738557977</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.462645498625479</eqn>
+					<eqn>1.61534142715469</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.734483286268523</eqn>
+					<eqn>1.10978839388355</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.94880664299689</eqn>
+					<eqn>1.3408517857372</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>1.25353883410372</eqn>
+					<eqn>0.575576246445985</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.959866342949864</eqn>
+					<eqn>0.775226218914656</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.791102191603489</eqn>
+					<eqn>0.322870014458061</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>1.11785758237062</eqn>
+					<eqn>0.671820674132821</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.808531396809065</eqn>
+					<eqn>0.90872113971478</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>1.11002514857256</eqn>
+					<eqn>0.912343793040633</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>1.30510123009072</eqn>
+					<eqn>0.746037623340113</eqn>
 				</element>
 				<units>W/metre^2/K</units>
 			</aux>
@@ -5324,304 +5326,304 @@ N = -k1T1 + (1-epsilon)*k3*(T2-T3)</doc>
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>0.374629668293</eqn>
+					<eqn>0.066788181381</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>0.197204268812</eqn>
+					<eqn>0.137357303469</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>0.199040097181</eqn>
+					<eqn>0.145371229001</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>0.396495837032</eqn>
+					<eqn>0.107005119858</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>0.261244064726</eqn>
+					<eqn>0.114657855632</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>0.158775540901</eqn>
+					<eqn>-0.156320375546</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>0.112811200311</eqn>
+					<eqn>-0.14273728477</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>0.350607336744</eqn>
+					<eqn>0.117064131293</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>0.267841638312</eqn>
+					<eqn>-0.0742420489057</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>0.30600007414</eqn>
+					<eqn>-0.107929823401</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>0.275600862694</eqn>
+					<eqn>-0.0548325169405</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>0.151584080293</eqn>
+					<eqn>-0.0145479024013</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>0.346342861003</eqn>
+					<eqn>0.112811785498</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>0.29500889057</eqn>
+					<eqn>0.0887947769932</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>0.226552804349</eqn>
+					<eqn>0.120414533554</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>0.333670794982</eqn>
+					<eqn>0.115426841008</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>0.190502401545</eqn>
+					<eqn>-0.000324410747653</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>0.266856503143</eqn>
+					<eqn>0.0333153712067</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>0.158028045434</eqn>
+					<eqn>0.0127761698998</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>0.402015105878</eqn>
+					<eqn>0.204565695505</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>0.200353870161</eqn>
+					<eqn>-0.0684429115014</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>0.265979899186</eqn>
+					<eqn>0.222757476815</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>0.28885384827</eqn>
+					<eqn>0.00703758773855</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>0.340349824435</eqn>
+					<eqn>0.094678592403</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>0.232333736</eqn>
+					<eqn>-0.114070616445</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>0.200073719264</eqn>
+					<eqn>-0.0934343627001</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>0.206680105119</eqn>
+					<eqn>0.0485871659135</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>0.182356034851</eqn>
+					<eqn>-0.0157086858136</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>0.193594063882</eqn>
+					<eqn>0.112640114277</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>0.166725485587</eqn>
+					<eqn>0.107269282709</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>0.198024439903</eqn>
+					<eqn>-0.0867798338163</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>0.240642409985</eqn>
+					<eqn>0.293525776192</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>0.11085776562</eqn>
+					<eqn>0.0971233050476</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>0.411367867954</eqn>
+					<eqn>0.0631397363772</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>0.162405324103</eqn>
+					<eqn>0.331122229539</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>0.358710540951</eqn>
+					<eqn>0.0245711989214</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>0.293400345732</eqn>
+					<eqn>-0.00801293638328</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>0.210253790992</eqn>
+					<eqn>0.0493219138747</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>0.260331687444</eqn>
+					<eqn>0.0922215499117</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>0.382769530558</eqn>
+					<eqn>0.023642764749</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>0.303481674554</eqn>
+					<eqn>0.176367977447</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>0.325943666355</eqn>
+					<eqn>0.209877138571</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>0.202038009292</eqn>
+					<eqn>0.0929347520755</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>0.196366506637</eqn>
+					<eqn>0.186308695108</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>0.350626304704</eqn>
+					<eqn>0.154461892515</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>0.28248484601</eqn>
+					<eqn>-0.0641276562575</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>0.331153217942</eqn>
+					<eqn>-0.0177125872736</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>0.29417168116</eqn>
+					<eqn>0.0167346951103</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>0.458544293245</eqn>
+					<eqn>0.0556710840284</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>0.234750036606</eqn>
+					<eqn>0.216665200507</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>0.386467664365</eqn>
+					<eqn>-0.121650730684</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>0.375124280726</eqn>
+					<eqn>-0.0687673925604</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>0.315214504382</eqn>
+					<eqn>-0.0198189501073</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>0.184017803587</eqn>
+					<eqn>0.00639959824498</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>0.344329461147</eqn>
+					<eqn>-0.14695275437</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>0.326548213933</eqn>
+					<eqn>0.0367685336314</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>0.277503835036</eqn>
+					<eqn>0.256592605886</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>0.243629007407</eqn>
+					<eqn>0.173523515125</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>0.252076055264</eqn>
+					<eqn>0.168460079935</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>0.235487457238</eqn>
+					<eqn>-0.0329480530645</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>0.279479987954</eqn>
+					<eqn>0.0121437392284</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>0.156554940036</eqn>
+					<eqn>0.127241405519</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>0.181481278679</eqn>
+					<eqn>0.0111712138898</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>0.263958979297</eqn>
+					<eqn>-0.0481056150221</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>0.279919165768</eqn>
+					<eqn>0.187355851334</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>0.137680662893</eqn>
+					<eqn>-0.00955524914962</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>0.312009655257</eqn>
+					<eqn>0.147537707711</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>0.172461251541</eqn>
+					<eqn>-0.0813394756411</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>0.243569079382</eqn>
+					<eqn>0.0426521541417</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>0.152495175403</eqn>
+					<eqn>0.0776850028744</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>0.215942269815</eqn>
+					<eqn>0.120738354828</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>0.178388942506</eqn>
+					<eqn>0.262638961192</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>0.248181897215</eqn>
+					<eqn>-0.143103718885</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>0.236714189033</eqn>
+					<eqn>0.223574542397</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>0.202427635777</eqn>
+					<eqn>0.154139366007</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>0.277764807698</eqn>
+					<eqn>0.151583975385</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>0.137312594077</eqn>
+					<eqn>-0.0100669904949</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>0.188251695359</eqn>
+					<eqn>0.0425723305886</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>0.244198627193</eqn>
+					<eqn>-0.199509342397</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>0.120183766689</eqn>
+					<eqn>0.0373891126681</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>0.293892253605</eqn>
+					<eqn>0.13724218844</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>0.25654624875</eqn>
+					<eqn>-0.159227069802</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>0.0446984067331</eqn>
+					<eqn>-0.0628709047906</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>0.190015543681</eqn>
+					<eqn>0.074788681391</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>0.148720705462</eqn>
+					<eqn>-0.0642774722919</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>0.356445911878</eqn>
+					<eqn>0.331300086643</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>0.326784362295</eqn>
+					<eqn>-0.0640365806863</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>0.197726619676</eqn>
+					<eqn>-0.0519126173278</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>0.262511114265</eqn>
+					<eqn>0.134249222571</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>0.276392011143</eqn>
+					<eqn>-0.0230442131618</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>0.17966956527</eqn>
+					<eqn>0.263841922622</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>0.423506437773</eqn>
+					<eqn>-0.292243849392</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>0.264926834281</eqn>
+					<eqn>0.0431014379133</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>0.322189052089</eqn>
+					<eqn>0.15440459797</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>0.150455091857</eqn>
+					<eqn>0.220985393784</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>0.125815337098</eqn>
+					<eqn>0.0937017459196</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>0.190581464294</eqn>
+					<eqn>0.178582011938</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>0.28027451468</eqn>
+					<eqn>0.237929521353</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>0.144216642217</eqn>
+					<eqn>-0.0343667252723</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>0.27781357965</eqn>
+					<eqn>0.21233806641</eqn>
 				</element>
 				<units>YJ</units>
 			</aux>
@@ -5705,7 +5707,7 @@ N = -k1T1 + (1-epsilon)*k3*(T2-T3)</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="592.5" isee:scroll_y="403.125" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="215" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6658,304 +6660,304 @@ Should only ever be varied with soil carbon adaptation time scales  This paramet
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.95965703618</eqn>
+					<eqn>6.81315733369</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>3.73708079613</eqn>
+					<eqn>3.29157179865</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>4.56285057177</eqn>
+					<eqn>3.04629148136</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>4.99024012484</eqn>
+					<eqn>4.68460335148</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>3.0589050629</eqn>
+					<eqn>5.1580942345</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>3.97512437992</eqn>
+					<eqn>6.39587228951</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>6.01492330762</eqn>
+					<eqn>6.77251291005</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>5.39197197046</eqn>
+					<eqn>2.94810561679</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>3.26230265327</eqn>
+					<eqn>7.67034055084</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>4.64516824946</eqn>
+					<eqn>6.47242124254</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>2.9887843162</eqn>
+					<eqn>5.21121055398</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>6.08650955591</eqn>
+					<eqn>6.56150364164</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>3.23846495007</eqn>
+					<eqn>6.4442996649</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>7.15602389125</eqn>
+					<eqn>5.46295178092</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>6.34266993463</eqn>
+					<eqn>4.18468724231</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>6.84490391934</eqn>
+					<eqn>3.29572127612</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>4.79892292528</eqn>
+					<eqn>5.28449287958</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>5.38894507107</eqn>
+					<eqn>6.43606920677</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>6.97282223318</eqn>
+					<eqn>6.60045596311</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>7.34340107213</eqn>
+					<eqn>6.67990166</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>5.99232911617</eqn>
+					<eqn>4.70429942022</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>5.71204145367</eqn>
+					<eqn>3.98688296416</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>4.8052004121</eqn>
+					<eqn>6.90385212862</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>5.01053570834</eqn>
+					<eqn>5.64599478899</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>5.64832356971</eqn>
+					<eqn>6.49913576765</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>4.29724474831</eqn>
+					<eqn>6.0374023059</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>5.23180163623</eqn>
+					<eqn>3.27939147829</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>6.31715839083</eqn>
+					<eqn>4.33448117211</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>4.90431963335</eqn>
+					<eqn>8.1725302187</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>5.21809936416</eqn>
+					<eqn>5.88661832225</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>7.04268582841</eqn>
+					<eqn>4.4208713985</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>5.36574814974</eqn>
+					<eqn>4.27902805844</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>6.09734661421</eqn>
+					<eqn>3.07113563547</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>4.72026414396</eqn>
+					<eqn>5.69595885377</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>4.97426416255</eqn>
+					<eqn>7.46650776074</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>8.67594530311</eqn>
+					<eqn>6.75686044489</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>6.85500613014</eqn>
+					<eqn>9.52958588682</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>4.00533751861</eqn>
+					<eqn>3.85294273645</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>3.32020079256</eqn>
+					<eqn>6.50339519223</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>4.00032089049</eqn>
+					<eqn>6.09558355222</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>4.98783226636</eqn>
+					<eqn>3.88564265707</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>6.69436750357</eqn>
+					<eqn>6.59662992938</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>6.03872607376</eqn>
+					<eqn>5.48520083789</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>6.80327884086</eqn>
+					<eqn>4.66260633969</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>4.65140215109</eqn>
+					<eqn>3.4730168874</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>4.90741255598</eqn>
+					<eqn>4.10704624426</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>4.39513146472</eqn>
+					<eqn>3.38886822202</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>6.31597515158</eqn>
+					<eqn>3.94648450599</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>6.12507781901</eqn>
+					<eqn>3.43362901531</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>4.91460586649</eqn>
+					<eqn>3.12768445942</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>5.90700415092</eqn>
+					<eqn>6.16000614021</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>4.53422001339</eqn>
+					<eqn>4.45143390948</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>6.02231132908</eqn>
+					<eqn>5.77499900558</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>5.68148393193</eqn>
+					<eqn>5.95358096185</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>6.51515237812</eqn>
+					<eqn>3.72134788752</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>6.55873234882</eqn>
+					<eqn>4.67207818838</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>6.37171860588</eqn>
+					<eqn>6.5213432894</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>6.275508539</eqn>
+					<eqn>4.16949162053</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>6.74220691599</eqn>
+					<eqn>2.87090447177</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>6.0664838578</eqn>
+					<eqn>4.40493241812</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>5.10442430442</eqn>
+					<eqn>4.89258431454</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>4.52375020312</eqn>
+					<eqn>3.73470583657</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>4.70175874645</eqn>
+					<eqn>4.90215707351</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>7.06956890714</eqn>
+					<eqn>4.29600999527</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>4.01535301186</eqn>
+					<eqn>4.04248223936</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>6.29139383419</eqn>
+					<eqn>7.46824936057</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>6.6444523877</eqn>
+					<eqn>5.84993031845</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>5.32662375964</eqn>
+					<eqn>4.60140128796</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>4.90295104283</eqn>
+					<eqn>4.55736428756</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>7.28736157113</eqn>
+					<eqn>5.1706247093</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>5.48161871241</eqn>
+					<eqn>4.23924896441</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>4.55609107284</eqn>
+					<eqn>6.00493064836</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>5.86165907156</eqn>
+					<eqn>3.78203636266</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>6.11954512563</eqn>
+					<eqn>8.83743538962</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>4.59806538278</eqn>
+					<eqn>7.29593126169</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>4.98644808438</eqn>
+					<eqn>3.79285779341</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>5.78558062783</eqn>
+					<eqn>4.97795049406</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>6.30229906608</eqn>
+					<eqn>5.41291392238</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>3.74692328054</eqn>
+					<eqn>7.51767299597</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>5.24344956007</eqn>
+					<eqn>8.36061373914</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>5.86851409115</eqn>
+					<eqn>3.77372519007</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>7.20447345132</eqn>
+					<eqn>6.12860411696</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>4.59754808327</eqn>
+					<eqn>6.45491811567</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>4.83793040068</eqn>
+					<eqn>5.27306356322</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>6.42055112362</eqn>
+					<eqn>6.89820028882</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>5.30589509259</eqn>
+					<eqn>5.50488335511</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>5.00161570619</eqn>
+					<eqn>6.56569793001</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>5.14375552615</eqn>
+					<eqn>4.88946202993</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>3.94857647733</eqn>
+					<eqn>6.1777861703</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>5.53334213722</eqn>
+					<eqn>7.37192106901</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>5.90510322948</eqn>
+					<eqn>9.12851322299</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>3.91889647021</eqn>
+					<eqn>3.68690788559</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>4.90480610899</eqn>
+					<eqn>6.31109432906</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>5.30842648348</eqn>
+					<eqn>6.18058742706</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>5.58222009737</eqn>
+					<eqn>8.30842323366</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>6.72334952492</eqn>
+					<eqn>5.50108841908</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>7.05128536715</eqn>
+					<eqn>4.93579287023</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>5.27135089511</eqn>
+					<eqn>4.2419810531</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>4.39890869615</eqn>
+					<eqn>3.22011740422</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>6.22858673093</eqn>
+					<eqn>8.2454527345</eqn>
 				</element>
 				<units>GtC</units>
 			</aux>
@@ -6982,304 +6984,304 @@ Should only ever be varied with soil carbon adaptation time scales  This paramet
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>5.52737288633</eqn>
+					<eqn>8.01173323664</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>4.90336565634</eqn>
+					<eqn>5.28811412261</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>7.23954158139</eqn>
+					<eqn>6.91005242694</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>6.071949611</eqn>
+					<eqn>8.89439561239</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>5.34033859158</eqn>
+					<eqn>3.46696264056</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>4.72671190456</eqn>
+					<eqn>5.91527902364</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>6.29805178857</eqn>
+					<eqn>8.29732397228</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>7.23560194329</eqn>
+					<eqn>6.94595106218</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>3.53860128493</eqn>
+					<eqn>7.753142454</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>3.5430144137</eqn>
+					<eqn>10.4262066115</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>3.29010858425</eqn>
+					<eqn>9.4689920518</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>4.48680766958</eqn>
+					<eqn>9.06207570935</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>5.03314585996</eqn>
+					<eqn>4.80938423467</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>6.70015333266</eqn>
+					<eqn>5.51069571981</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>6.49830003742</eqn>
+					<eqn>8.94146151779</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>4.61892352505</eqn>
+					<eqn>6.88360835275</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>5.81966310294</eqn>
+					<eqn>5.80903188716</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>5.42401026135</eqn>
+					<eqn>3.60858518489</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>7.77593324952</eqn>
+					<eqn>6.07908041883</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>4.00943382112</eqn>
+					<eqn>6.50815044169</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>6.64717337041</eqn>
+					<eqn>8.84667504816</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>7.56754485563</eqn>
+					<eqn>7.38908814811</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>8.49643874547</eqn>
+					<eqn>7.83018443654</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>8.92155614527</eqn>
+					<eqn>6.32035923997</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>5.71941988814</eqn>
+					<eqn>9.78183455329</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>2.72067191514</eqn>
+					<eqn>8.9723424499</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>2.97882275663</eqn>
+					<eqn>7.79318584579</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>7.66979262914</eqn>
+					<eqn>3.93200404444</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>2.63757228519</eqn>
+					<eqn>3.34336751577</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>6.90323301278</eqn>
+					<eqn>3.85372741187</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>7.91272326085</eqn>
+					<eqn>7.70334018564</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>3.52014664333</eqn>
+					<eqn>6.91103277223</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>7.09148717227</eqn>
+					<eqn>7.02301890357</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>2.95089187431</eqn>
+					<eqn>7.30039756605</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>9.63984357023</eqn>
+					<eqn>7.88302675005</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>8.6679523344</eqn>
+					<eqn>3.59781883983</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>4.99734342888</eqn>
+					<eqn>8.67531681491</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>4.68369524842</eqn>
+					<eqn>10.2012129077</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>5.98938929688</eqn>
+					<eqn>2.99600546178</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>3.65892991909</eqn>
+					<eqn>8.04893433697</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>4.16956131652</eqn>
+					<eqn>6.65412217468</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>8.18711394002</eqn>
+					<eqn>8.39817858671</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>5.13724522924</eqn>
+					<eqn>3.05776018718</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>6.17497580358</eqn>
+					<eqn>9.36392138717</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>5.03711023573</eqn>
+					<eqn>8.12805542875</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>6.46563606277</eqn>
+					<eqn>6.71243311695</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>2.22297036627</eqn>
+					<eqn>11.1191074533</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>4.4184524153</eqn>
+					<eqn>2.87027781411</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>2.31469846673</eqn>
+					<eqn>8.14084225134</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>8.48146852631</eqn>
+					<eqn>6.82524216383</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>10.5119227712</eqn>
+					<eqn>7.85941481114</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>5.02215945717</eqn>
+					<eqn>4.48417854673</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>5.80328455832</eqn>
+					<eqn>7.01114436282</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>7.53867906546</eqn>
+					<eqn>8.04694190001</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>2.70931550785</eqn>
+					<eqn>8.99251272269</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>6.62174055761</eqn>
+					<eqn>8.91000288514</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>2.61348188245</eqn>
+					<eqn>5.73979860045</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>4.96638539529</eqn>
+					<eqn>7.42941425839</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>8.61674771676</eqn>
+					<eqn>7.78250539427</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>3.47219995531</eqn>
+					<eqn>5.58129054131</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>6.69055496886</eqn>
+					<eqn>3.49114473123</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>9.15949587322</eqn>
+					<eqn>11.3902072426</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>8.99633695343</eqn>
+					<eqn>3.55685334752</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>4.15111279055</eqn>
+					<eqn>7.67671103085</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>9.21898425371</eqn>
+					<eqn>3.52986603389</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>7.26560171157</eqn>
+					<eqn>6.8013394846</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>7.65272610885</eqn>
+					<eqn>5.15936894597</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>7.81607123943</eqn>
+					<eqn>6.26340901707</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>5.82928032953</eqn>
+					<eqn>3.3456126238</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>5.23352643591</eqn>
+					<eqn>7.46575445137</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>2.99064030134</eqn>
+					<eqn>7.28858314674</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>5.7851734679</eqn>
+					<eqn>3.60486077556</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>5.26428091059</eqn>
+					<eqn>9.00899484605</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>5.01159094714</eqn>
+					<eqn>3.10921205636</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>3.52018967583</eqn>
+					<eqn>8.74243474489</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>4.0529438485</eqn>
+					<eqn>8.55980501187</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>9.30830197796</eqn>
+					<eqn>3.58982582518</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>2.41080822303</eqn>
+					<eqn>9.19387073133</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>8.17943121104</eqn>
+					<eqn>9.41536341087</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>4.1714501987</eqn>
+					<eqn>5.85489889446</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>9.02014499375</eqn>
+					<eqn>6.92196828447</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>5.77087544506</eqn>
+					<eqn>6.63239919315</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>5.78473876621</eqn>
+					<eqn>9.11602336176</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>11.1015503367</eqn>
+					<eqn>5.73258941419</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>9.15836862649</eqn>
+					<eqn>5.18095665844</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>7.62398409861</eqn>
+					<eqn>3.37014321716</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>6.95457814388</eqn>
+					<eqn>4.31245091725</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>7.2354611291</eqn>
+					<eqn>8.35088887834</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>8.28972528901</eqn>
+					<eqn>7.57904790856</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>3.24417043046</eqn>
+					<eqn>9.08755558374</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>8.09437591679</eqn>
+					<eqn>6.90201673333</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>8.17220085058</eqn>
+					<eqn>10.3177655179</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>3.51171523876</eqn>
+					<eqn>7.20719953499</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>8.40448821608</eqn>
+					<eqn>5.96333121111</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>9.46563775564</eqn>
+					<eqn>5.82612763399</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>3.71583873455</eqn>
+					<eqn>5.32196019035</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>7.60195729672</eqn>
+					<eqn>4.37271556443</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>5.29195908584</eqn>
+					<eqn>3.46514594765</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>9.05326145759</eqn>
+					<eqn>7.03230806252</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>6.39587804189</eqn>
+					<eqn>2.67138313263</eqn>
 				</element>
 				<units>GtC</units>
 			</aux>
@@ -7297,304 +7299,304 @@ Should only ever be varied with soil carbon adaptation time scales  This paramet
 					<dim name="ClimateCase"/>
 				</dimensions>
 				<element subscript="1">
-					<eqn>26.2780327318026</eqn>
+					<eqn>32.9381981978998</eqn>
 				</element>
 				<element subscript="2">
-					<eqn>22.9764979803735</eqn>
+					<eqn>22.3780883782445</eqn>
 				</element>
 				<element subscript="3">
-					<eqn>38.6443997803548</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="4">
-					<eqn>29.5463866999761</eqn>
+					<eqn>34.4672015647159</eqn>
 				</element>
 				<element subscript="5">
-					<eqn>25.744805326753</eqn>
+					<eqn>14.2037452147041</eqn>
 				</element>
 				<element subscript="6">
-					<eqn>23.3852471877146</eqn>
+					<eqn>23.0316758430113</eqn>
 				</element>
 				<element subscript="7">
-					<eqn>35.4110988974406</eqn>
+					<eqn>43.3203248107214</eqn>
 				</element>
 				<element subscript="8">
-					<eqn>37.487166927914</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="9">
-					<eqn>12.7461012526833</eqn>
+					<eqn>36.8839489718599</eqn>
 				</element>
 				<element subscript="10">
-					<eqn>15.4814110898912</eqn>
+					<eqn>47.7656582249854</eqn>
 				</element>
 				<element subscript="11">
-					<eqn>13.157394134229</eqn>
+					<eqn>38.2598164673728</eqn>
 				</element>
 				<element subscript="12">
-					<eqn>21.685323261623</eqn>
+					<eqn>36.3336373591497</eqn>
 				</element>
 				<element subscript="13">
-					<eqn>21.2597321421768</eqn>
+					<eqn>23.9155528126023</eqn>
 				</element>
 				<element subscript="14">
-					<eqn>35.0375411746747</eqn>
+					<eqn>22.9279934672753</eqn>
 				</element>
 				<element subscript="15">
-					<eqn>35.3658201180881</eqn>
+					<eqn>34.3228144443729</eqn>
 				</element>
 				<element subscript="16">
-					<eqn>17.727654107149</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="17">
-					<eqn>30.2901500855475</eqn>
+					<eqn>24.9489526292701</eqn>
 				</element>
 				<element subscript="18">
-					<eqn>26.7469127152288</eqn>
+					<eqn>17.7072513969911</eqn>
 				</element>
 				<element subscript="19">
-					<eqn>38.8108805383226</eqn>
+					<eqn>24.3054108916048</eqn>
 				</element>
 				<element subscript="20">
-					<eqn>19.3819649678767</eqn>
+					<eqn>38.4628031114891</eqn>
 				</element>
 				<element subscript="21">
-					<eqn>37.6074188576619</eqn>
+					<eqn>44.3331801511775</eqn>
 				</element>
 				<element subscript="22">
-					<eqn>41.8828376035718</eqn>
+					<eqn>39.1527354040948</eqn>
 				</element>
 				<element subscript="23">
-					<eqn>38.9917752443991</eqn>
+					<eqn>43.3203248107214</eqn>
 				</element>
 				<element subscript="24">
-					<eqn>48.1644003804564</eqn>
+					<eqn>27.4881256166031</eqn>
 				</element>
 				<element subscript="25">
-					<eqn>28.8901756847073</eqn>
+					<eqn>36.3336373591497</eqn>
 				</element>
 				<element subscript="26">
-					<eqn>10.8644294523207</eqn>
+					<eqn>48.2116524649283</eqn>
 				</element>
 				<element subscript="27">
-					<eqn>11.1494351582018</eqn>
+					<eqn>34.0590211377853</eqn>
 				</element>
 				<element subscript="28">
-					<eqn>39.9911498101856</eqn>
+					<eqn>12.66921888759</eqn>
 				</element>
 				<element subscript="29">
-					<eqn>11.333006169803</eqn>
+					<eqn>16.9435448226501</eqn>
 				</element>
 				<element subscript="30">
-					<eqn>40.8623120947487</eqn>
+					<eqn>19.2569539463653</eqn>
 				</element>
 				<element subscript="31">
-					<eqn>38.4860682883818</eqn>
+					<eqn>34.6151450520036</eqn>
 				</element>
 				<element subscript="32">
-					<eqn>17.7940769297274</eqn>
+					<eqn>24.9958477944509</eqn>
 				</element>
 				<element subscript="33">
-					<eqn>37.3617737059941</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="34">
-					<eqn>12.3499214634726</eqn>
+					<eqn>26.6086663721322</eqn>
 				</element>
 				<element subscript="35">
-					<eqn>49.7769144498438</eqn>
+					<eqn>29.3707153040793</eqn>
 				</element>
 				<element subscript="36">
-					<eqn>41.0984741040387</eqn>
+					<eqn>16.0799771302828</eqn>
 				</element>
 				<element subscript="37">
-					<eqn>22.1981797380568</eqn>
+					<eqn>38.462867035496</eqn>
 				</element>
 				<element subscript="38">
-					<eqn>27.3169716735783</eqn>
+					<eqn>47.91499839539</eqn>
 				</element>
 				<element subscript="39">
-					<eqn>26.7175485919988</eqn>
+					<eqn>15.1495549613088</eqn>
 				</element>
 				<element subscript="40">
-					<eqn>16.777219659344</eqn>
+					<eqn>41.1224034361174</eqn>
 				</element>
 				<element subscript="41">
-					<eqn>16.8353070890011</eqn>
+					<eqn>28.3163194839796</eqn>
 				</element>
 				<element subscript="42">
-					<eqn>39.099139235464</eqn>
+					<eqn>42.2312294999595</eqn>
 				</element>
 				<element subscript="43">
-					<eqn>24.0196044333023</eqn>
+					<eqn>10.4789295756617</eqn>
 				</element>
 				<element subscript="44">
-					<eqn>38.1139578995212</eqn>
+					<eqn>47.642065732123</eqn>
 				</element>
 				<element subscript="45">
-					<eqn>22.6961849867278</eqn>
+					<eqn>37.481956313832</eqn>
 				</element>
 				<element subscript="46">
-					<eqn>31.538633459717</eqn>
+					<eqn>28.3163194839796</eqn>
 				</element>
 				<element subscript="47">
-					<eqn>10.08093373799</eqn>
+					<eqn>49.5099501939675</eqn>
 				</element>
 				<element subscript="48">
-					<eqn>21.8924916033879</eqn>
+					<eqn>10.3673787154958</eqn>
 				</element>
 				<element subscript="49">
-					<eqn>10.616956420432</eqn>
+					<eqn>44.2764131983901</eqn>
 				</element>
 				<element subscript="50">
-					<eqn>39.3033502263774</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="51">
-					<eqn>48.1908234605996</eqn>
+					<eqn>31.8012883003597</eqn>
 				</element>
 				<element subscript="52">
-					<eqn>27.1339262195441</eqn>
+					<eqn>16.0662092665115</eqn>
 				</element>
 				<element subscript="53">
-					<eqn>33.3026843767426</eqn>
+					<eqn>36.790757083883</eqn>
 				</element>
 				<element subscript="54">
-					<eqn>46.5334968632676</eqn>
+					<eqn>36.1139373864768</eqn>
 				</element>
 				<element subscript="55">
-					<eqn>12.260640927565</eqn>
+					<eqn>37.7977644830191</eqn>
 				</element>
 				<element subscript="56">
-					<eqn>40.5043777836594</eqn>
+					<eqn>38.6905997937767</eqn>
 				</element>
 				<element subscript="57">
-					<eqn>10.6384262319963</eqn>
+					<eqn>26.3773184625231</eqn>
 				</element>
 				<element subscript="58">
-					<eqn>22.8830311455198</eqn>
+					<eqn>34.6151450520036</eqn>
 				</element>
 				<element subscript="59">
-					<eqn>44.9943225131797</eqn>
+					<eqn>28.2944005295482</eqn>
 				</element>
 				<element subscript="60">
-					<eqn>15.7111872529958</eqn>
+					<eqn>17.7579700160243</eqn>
 				</element>
 				<element subscript="61">
-					<eqn>30.5450513606955</eqn>
+					<eqn>10.6371445531698</eqn>
 				</element>
 				<element subscript="62">
-					<eqn>39.7247819411559</eqn>
+					<eqn>45.998644972746</eqn>
 				</element>
 				<element subscript="63">
-					<eqn>46.7980163863647</eqn>
+					<eqn>10.6371445531698</eqn>
 				</element>
 				<element subscript="64">
-					<eqn>17.7045914163467</eqn>
+					<eqn>34.6151450520036</eqn>
 				</element>
 				<element subscript="65">
-					<eqn>38.5912147780127</eqn>
+					<eqn>12.01128753759</eqn>
 				</element>
 				<element subscript="66">
-					<eqn>36.4813792584807</eqn>
+					<eqn>33.0749968250231</eqn>
 				</element>
 				<element subscript="67">
-					<eqn>47.327758193341</eqn>
+					<eqn>19.921082057971</eqn>
 				</element>
 				<element subscript="68">
-					<eqn>35.5056989154645</eqn>
+					<eqn>23.6567147395727</eqn>
 				</element>
 				<element subscript="69">
-					<eqn>29.5277149981119</eqn>
+					<eqn>11.0024424010524</eqn>
 				</element>
 				<element subscript="70">
-					<eqn>24.6846166998041</eqn>
+					<eqn>39.1285222692526</eqn>
 				</element>
 				<element subscript="71">
-					<eqn>11.5940865246722</eqn>
+					<eqn>34.6151450520036</eqn>
 				</element>
 				<element subscript="72">
-					<eqn>29.2681207004973</eqn>
+					<eqn>15.9591131285766</eqn>
 				</element>
 				<element subscript="73">
-					<eqn>27.0517895242682</eqn>
+					<eqn>37.7977644830191</eqn>
 				</element>
 				<element subscript="74">
-					<eqn>24.4839631622162</eqn>
+					<eqn>14.6850731848704</eqn>
 				</element>
 				<element subscript="75">
-					<eqn>16.0168962060277</eqn>
+					<eqn>41.1647639550091</eqn>
 				</element>
 				<element subscript="76">
-					<eqn>16.4428875427423</eqn>
+					<eqn>33.7538698665331</eqn>
 				</element>
 				<element subscript="77">
-					<eqn>49.8888308750857</eqn>
+					<eqn>12.2588101484929</eqn>
 				</element>
 				<element subscript="78">
-					<eqn>13.2420901299543</eqn>
+					<eqn>38.2598164673728</eqn>
 				</element>
 				<element subscript="79">
-					<eqn>33.55873386625</eqn>
+					<eqn>48.1409131292784</eqn>
 				</element>
 				<element subscript="80">
-					<eqn>26.6256664069353</eqn>
+					<eqn>22.5586610007904</eqn>
 				</element>
 				<element subscript="81">
-					<eqn>38.1824946275913</eqn>
+					<eqn>23.848686235482</eqn>
 				</element>
 				<element subscript="82">
-					<eqn>32.5739198156537</eqn>
+					<eqn>31.7559969815386</eqn>
 				</element>
 				<element subscript="83">
-					<eqn>27.8893642696415</eqn>
+					<eqn>36.3336373591497</eqn>
 				</element>
 				<element subscript="84">
-					<eqn>45.7087804044955</eqn>
+					<eqn>24.9489526292701</eqn>
 				</element>
 				<element subscript="85">
-					<eqn>46.0894893210527</eqn>
+					<eqn>24.5684226544348</eqn>
 				</element>
 				<element subscript="86">
-					<eqn>34.0955787901699</eqn>
+					<eqn>14.4094585378781</eqn>
 				</element>
 				<element subscript="87">
-					<eqn>33.4560049745344</eqn>
+					<eqn>19.2295476769935</eqn>
 				</element>
 				<element subscript="88">
-					<eqn>39.3764374989794</eqn>
+					<eqn>41.7701508536621</eqn>
 				</element>
 				<element subscript="89">
-					<eqn>33.8599551267349</eqn>
+					<eqn>38.205443800282</eqn>
 				</element>
 				<element subscript="90">
-					<eqn>13.5616857647873</eqn>
+					<eqn>42.4922814023522</eqn>
 				</element>
 				<element subscript="91">
-					<eqn>44.3984780271493</eqn>
+					<eqn>34.8078401197066</eqn>
 				</element>
 				<element subscript="92">
-					<eqn>38.1106359023751</eqn>
+					<eqn>47.8383175868251</eqn>
 				</element>
 				<element subscript="93">
-					<eqn>14.1213071974511</eqn>
+					<eqn>33.8058558857628</eqn>
 				</element>
 				<element subscript="94">
-					<eqn>44.9222585251395</eqn>
+					<eqn>28.0075702701876</eqn>
 				</element>
 				<element subscript="95">
-					<eqn>47.0746806550091</eqn>
+					<eqn>28.3210010765725</eqn>
 				</element>
 				<element subscript="96">
-					<eqn>20.0021140630741</eqn>
+					<eqn>19.921082057971</eqn>
 				</element>
 				<element subscript="97">
-					<eqn>48.4129990639234</eqn>
+					<eqn>18.0204388870378</eqn>
 				</element>
 				<element subscript="98">
-					<eqn>28.3337540886561</eqn>
+					<eqn>13.541521539773</eqn>
 				</element>
 				<element subscript="99">
-					<eqn>44.1338003698936</eqn>
+					<eqn>26.1902403614055</eqn>
 				</element>
 				<element subscript="100">
-					<eqn>28.069325828027</eqn>
+					<eqn>12.7672302782937</eqn>
 				</element>
 				<units>years</units>
 			</aux>
@@ -7696,7 +7698,7 @@ Should only ever be varied with soil carbon adaptation time scales  This paramet
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="808" page_height="561" isee:page_cols="5" isee:page_rows="3" isee:scroll_x="217.857" isee:scroll_y="870" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="5" isee:page_rows="3" isee:scroll_x="1782.86" isee:scroll_y="928.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
