@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2" isee:build_number="3874" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -232,18 +232,6 @@
 			<alias>dmnl</alias>
 			<alias>unitless</alias>
 		</unit>
-		<unit name="G">
-			<eqn>Giga</eqn>
-		</unit>
-		<unit name="GtCO2">
-			<eqn>Giga*tCO2</eqn>
-		</unit>
-		<unit name="GtCH4">
-			<eqn>Giga*tCH4</eqn>
-		</unit>
-		<unit name="GtN2O">
-			<eqn>Giga*tN2O</eqn>
-		</unit>
 	</model_units>
 	<model name="Resources">
 		<variables>
@@ -290,8 +278,12 @@
 				<connect2 to="Fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect to="Fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect2 to="Fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="Energy_demand.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect2 to="Energy_demand.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect2 to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect to="Energy_demand.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect2 to="Energy_demand.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment_1" from="CCS.share_of_ccs_costs_covered_by_the_goverment_1"/>
 				<connect2 to="Fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment_1" from="CCS.share_of_ccs_costs_covered_by_the_goverment_1"/>
 				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
@@ -308,6 +300,8 @@
 				<connect2 to="Fossil_energy_oil.UNIT_ton_to_Mton" from="CCS.UNIT_ton_to_Mton"/>
 				<connect to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
 				<connect2 to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
+				<connect to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
+				<connect2 to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="CCS.CO2_emissions_from_biofuels_processes" from="Emissions.CO2_emissions_from_biofuels_processes"/>
 				<connect2 to="CCS.CO2_emissions_from_biofuels_processes" from="Emissions.CO2_emissions_from_biofuels_processes"/>
 				<connect to="CCS.CO2_emissions_from_burning_biofuels" from="Emissions.CO2_emissions_from_burning_biofuels"/>
@@ -344,6 +338,10 @@
 				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
 				<connect2 to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
+				<connect to="CCS.UNIT_GJ_to_TWh_1" from="Energy_Units.UNIT_GJ_to_TWh"/>
+				<connect2 to="CCS.UNIT_GJ_to_TWh_1" from="Energy_Units.UNIT_GJ_to_TWh"/>
+				<connect to="CCS.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect2 to="CCS.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 			</module>
 		</variables>
 		<views>
@@ -394,7 +392,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="608.889" isee:scroll_y="241.667" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="524.444" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1584,7 +1582,7 @@ Fajardy, M., Koeberle, A., MacDowell, N. I. A. L. L., &amp;amp; Fantuzzi, A. (20
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>desired_budget_for_BECC_capacity+desired_budget_for_end_of_pipe_capacity+desired_budget_for_DACC_capacity</eqn>
+				<eqn>desired_budget_for_BECC_capacity+desired_budget_for_end_of_pipe_capacity+desired_budget_for_DACC_capacity_and_energy</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="fraction of desired capture budget\nspent">
@@ -1813,6 +1811,50 @@ ELSE
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtCO2</units>
 			</stock>
+			<aux name="cost of extra energy needed to\ncapture CO2 per unit with\ndirect air carbon capture">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>DACC_energy_useage_per_tCO2_in_TWh*average_marginal_net_cost_of_energy_with_historical_cost_adjustment*UNIT_TWh_to_kWh</eqn>
+				<units>c$/(tCO2/year)</units>
+			</aux>
+			<aux name="average marginal\nnet cost of energy with historical cost adjustment" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/(kWh/Years)</units>
+			</aux>
+			<aux name="DACC energy usage per tCO2">
+				<eqn>10</eqn>
+				<units>GJ/tCO2</units>
+			</aux>
+			<aux name="DACC energy useage per tCO2 in TWh" access="output" isee:autocreated="true">
+				<eqn>DACC_energy_usage_per_tCO2*UNIT_GJ_to_TWh_1</eqn>
+				<units>TWh/tCO2</units>
+			</aux>
+			<aux name="desired budget for DACC energy supply">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>desired_additional_DACC_capacity * cost_of_extra_energy_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</eqn>
+				<units>c$/Year</units>
+			</aux>
+			<aux name="desired budget for DACC\ncapacity and energy">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>desired_budget_for_DACC_energy_supply + desired_budget_for_DACC_capacity</eqn>
+				<units>c$/Year</units>
+			</aux>
+			<aux name="UNIT GJ to TWh 1" access="input">
+				<eqn>0.0000002777777777778</eqn>
+				<units>TWh/GJ</units>
+			</aux>
+			<aux name="UNIT TWh to kWh" access="input">
+				<eqn>1000000000</eqn>
+				<units>kWh/TWh</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1862,7 +1904,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="865.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="752.143" isee:scroll_y="243.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3152,11 +3194,7 @@ ELSE
 					</from>
 					<to>share_of_capturable_biofuel_emissions_captured</to>
 				</connector>
-				<aux x="1085.23" y="1172.57" name="desired budget for DACC capacity"/>
-				<connector uid="1002" angle="176.992">
-					<from>desired_budget_for_DACC_capacity</from>
-					<to>total_desired_capture_budget</to>
-				</connector>
+				<aux x="1085.94" y="1229" name="desired budget for DACC capacity"/>
 				<aux x="1373.38" y="321.08" name="Actual additional investment in direct air\nCarbon Capture"/>
 				<connector uid="1003" angle="296.371">
 					<from>
@@ -3210,15 +3248,63 @@ ELSE
 					<from>time_to_build_capture_capacity</from>
 					<to>desired_additional_DACC_capacity</to>
 				</connector>
-				<connector uid="1021" angle="98.6933">
+				<connector uid="1021" angle="106.119">
 					<from>desired_additional_DACC_capacity</from>
 					<to>desired_budget_for_DACC_capacity</to>
 				</connector>
-				<connector uid="1022" angle="157.773">
+				<connector uid="1022" angle="185.012">
 					<from>
 						<alias uid="1023"/>
 					</from>
 					<to>desired_budget_for_DACC_capacity</to>
+				</connector>
+				<aux x="1103.94" y="977.641" name="cost of extra energy needed to\ncapture CO2 per unit with\ndirect air carbon capture"/>
+				<aux font_style="italic" font_weight="bold" x="1259.76" y="898.571" name="average marginal\nnet cost of energy with historical cost adjustment"/>
+				<aux x="1076.65" y="751.455" name="DACC energy usage per tCO2"/>
+				<aux x="1076.65" y="908.641" name="DACC energy useage per tCO2 in TWh"/>
+				<connector uid="1024" angle="270">
+					<from>DACC_energy_usage_per_tCO2</from>
+					<to>DACC_energy_useage_per_tCO2_in_TWh</to>
+				</connector>
+				<connector uid="1026" angle="289.344">
+					<from>DACC_energy_useage_per_tCO2_in_TWh</from>
+					<to>cost_of_extra_energy_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
+				</connector>
+				<connector uid="1027" angle="200.824">
+					<from>average_marginal_net_cost_of_energy_with_historical_cost_adjustment</from>
+					<to>cost_of_extra_energy_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
+				</connector>
+				<aux x="1094.65" y="1060.07" name="desired budget for DACC energy supply"/>
+				<connector uid="1029" angle="267.231">
+					<from>cost_of_extra_energy_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</from>
+					<to>desired_budget_for_DACC_energy_supply</to>
+				</connector>
+				<connector uid="1030" angle="66.554">
+					<from>desired_additional_DACC_capacity</from>
+					<to>desired_budget_for_DACC_energy_supply</to>
+				</connector>
+				<aux x="1076.65" y="1158.89" name="desired budget for DACC\ncapacity and energy"/>
+				<connector uid="1031" angle="265.97">
+					<from>desired_budget_for_DACC_energy_supply</from>
+					<to>desired_budget_for_DACC_capacity_and_energy</to>
+				</connector>
+				<connector uid="1032" angle="100.645">
+					<from>desired_budget_for_DACC_capacity</from>
+					<to>desired_budget_for_DACC_capacity_and_energy</to>
+				</connector>
+				<connector uid="1033" angle="179.312">
+					<from>desired_budget_for_DACC_capacity_and_energy</from>
+					<to>total_desired_capture_budget</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1138.94" y="832.143" name="UNIT GJ to TWh 1"/>
+				<connector uid="1034" angle="235.795">
+					<from>UNIT_GJ_to_TWh_1</from>
+					<to>DACC_energy_useage_per_tCO2_in_TWh</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1259.76" y="983.571" name="UNIT TWh to kWh"/>
+				<connector uid="1035" angle="177.821">
+					<from>UNIT_TWh_to_kWh</from>
+					<to>cost_of_extra_energy_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="4765.3" y="1109.64" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
