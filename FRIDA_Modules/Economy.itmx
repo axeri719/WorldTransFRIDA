@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -32,6 +32,7 @@
 			<isee:tag_style tag="Assumption"/>
 			<isee:tag_style tag="Calibrated Output"/>
 			<isee:tag_style tag="Climate Impact Parameter"/>
+			<isee:tag_style tag="Discrete Outflow"/>
 			<isee:tag_style tag="Explanatory Variable"/>
 			<isee:tag_style tag="External Parameter"/>
 			<isee:tag_style tag="Interface"/>
@@ -236,6 +237,18 @@
 			<eqn>1</eqn>
 			<alias>dmnl</alias>
 			<alias>unitless</alias>
+		</unit>
+		<unit name="G">
+			<eqn>Giga</eqn>
+		</unit>
+		<unit name="GtCO2">
+			<eqn>Giga*tCO2</eqn>
+		</unit>
+		<unit name="GtCH4">
+			<eqn>Giga*tCH4</eqn>
+		</unit>
+		<unit name="GtN2O">
+			<eqn>Giga*tN2O</eqn>
 		</unit>
 	</model_units>
 	<model name="Economy">
@@ -1166,7 +1179,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/home/benjamin/Documents/UHH/FNU/FNK/WordTrans/FRIDA/fridaGitWD-MyFork-upstream-development/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/Frida/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -13599,7 +13612,8 @@ ELSE
 				<units>b$</units>
 			</aux>
 			<aux name="objective evaluation\nstart year">
-				<doc>It is to define the year when the composite policy objective begins to be evaluated.</doc>
+				<doc>${No Sensi}
+It is to define the year when the composite policy objective begins to be evaluated.</doc>
 				<eqn>2030</eqn>
 				<units>Year</units>
 			</aux>
@@ -13670,10 +13684,14 @@ ELSE 0</eqn>
 				<units>dmnl/year</units>
 			</aux>
 			<aux name="ramp converter">
+				<doc>${No Sensi}
+</doc>
 				<eqn>0.000155</eqn>
 				<units>1/year^2</units>
 			</aux>
 			<aux name="fixed discount rate">
+				<doc>${No Sensi}
+</doc>
 				<eqn>0.025</eqn>
 				<units>dmnl/year</units>
 			</aux>
@@ -13729,11 +13747,13 @@ ELSE 0</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME &gt;= objective_evaluation_start_year
-THEN (instantaneous_welfare_from_real_GDP*welfare_discount_factor) / time_unit_correction
+THEN (instantaneous_welfare_from_real_GDP*welfare_discount_factor) / time_to_accumulate_discounted_welfare
 ELSE 0</eqn>
 				<units>1/year</units>
 			</flow>
-			<aux name="time unit correction">
+			<aux name="time to accumulate discounted welfare">
+				<doc>${No Sensi}
+</doc>
 				<eqn>1</eqn>
 				<units>Year</units>
 			</aux>
@@ -13744,7 +13764,7 @@ ELSE 0</eqn>
 				<entity name="discounted_welfare"/>
 				<entity name="Discounted_Welfare_of_Real_GDP"/>
 				<entity name="instantaneous_welfare_from_real_GDP"/>
-				<entity name="time_unit_correction"/>
+				<entity name="time_to_accumulate_discounted_welfare"/>
 				<entity name="welfare_discount_factor"/>
 				<entity name="welfare_discount_rate_accumulation"/>
 			</group>
@@ -13805,7 +13825,7 @@ ELSE 0</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1236.67" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="1844.17" isee:scroll_y="1389.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14387,9 +14407,9 @@ ELSE 0</eqn>
 					<from>welfare_discount_factor</from>
 					<to>discounted_welfare</to>
 				</connector>
-				<aux color="black" font_color="black" x="2306.37" y="1787.37" name="time unit correction"/>
+				<aux color="black" font_color="black" x="2306.37" y="1787.37" name="time to accumulate discounted welfare"/>
 				<connector uid="136" angle="41.4757">
-					<from>time_unit_correction</from>
+					<from>time_to_accumulate_discounted_welfare</from>
 					<to>discounted_welfare</to>
 				</connector>
 				<group locked="true" color="black" font_color="black" x="2029.25" y="1439.88" width="546.195" height="504.447" name="Objective 3:\nMaximize Welfare of Real GDP">
@@ -16288,10 +16308,14 @@ This is effectively a controller gain. It tunes aggressiveness rather than repre
 				<units>c$/Year</units>
 			</aux>
 			<aux name="time to consume budget">
+				<doc>${No Sensi}
+</doc>
 				<eqn>1</eqn>
 				<units>year</units>
 			</aux>
 			<aux name="Time to Smooth Subsidy Realisation">
+				<doc>${No Sensi}
+</doc>
 				<eqn>2</eqn>
 				<units>Year</units>
 			</aux>
@@ -17179,7 +17203,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="9" isee:page_rows="7" isee:scroll_x="4040" isee:scroll_y="1069.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="9" isee:page_rows="7" isee:scroll_x="4628.33" isee:scroll_y="185" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
