@@ -1826,7 +1826,8 @@ ELSE
 				<units>c$/(kWh/Years)</units>
 			</aux>
 			<aux name="DACC energy usage per tCO2">
-				<doc>Ranges based on Table 8 in https://ieaghg.org/publications/global-assessment-of-direct-air-capture-costs/
+				<doc>${External Parameter}
+Ranges based on Table 8 in https://ieaghg.org/publications/global-assessment-of-direct-air-capture-costs/
 
 Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 				<eqn>8</eqn>
