@@ -8,9 +8,9 @@
 		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1778684042" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="iNNep9lB1aCEzNfw7rB20iGzzhnP/sUvWmku1XMh/6Qf2x7r4XD7kqNp2nsTervTPrHq44QtZzR6zGH3Mt4dCw=="/>
+		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1779475487" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="XfGnCKngz9C3KILCnpSpZRZwXHK2/Zw8SuDknDC8ZOwW/aG67u4kblAYK87fzw9zSBBOM3Nlo7sslsnkqnrmBQ=="/>
 	</ai_information>
-	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
+	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
 		<stop>Simulation_End</stop>
 		<dt reciprocal="true">8</dt>
@@ -974,10 +974,10 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="Energy Demand" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Energy_demand.energy_demand_for_Buildings[1]" weight="9.8902899873225e-18">
+			<isee:payoff_element name="Energy_demand.energy_demand_for_Buildings[1]" weight="1.8367960352319e-17">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Energy_demand.energy_demand_for_Industry_and_Other[1]" weight="9.56543119681247e-19">
+			<isee:payoff_element name="Energy_demand.energy_demand_for_Industry_and_Other[1]" weight="6.63869451674692e-19">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
@@ -1786,6 +1786,10 @@
 				<connect2 to="Emissions.CDD" from="Energy_demand.CDD"/>
 				<connect to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
 				<connect2 to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
+				<connect to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect2 to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
+				<connect2 to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect2 to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Energy_demand.average_yearly_demand_per_capita" from="Transportation_Energy_Demand.average_yearly_demand_per_capita"/>
@@ -1812,8 +1816,6 @@
 				<connect2 to="Energy_demand.switch_energy_demand_policy" from="Behavioral_Choices.switch_energy_demand_policy"/>
 				<connect to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
-				<connect to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
-				<connect2 to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect2 to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital"/>
@@ -1838,6 +1840,12 @@
 				<connect2 to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
+				<connect2 to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
+				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect2 to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -3246,6 +3254,8 @@
 				<connect2 to="Government.Max_Share_of_GDP_expended_for_Coal_Extraction_Subsidies" from="Government_Regulations.Max_Share_of_GDP_expended_for_Coal_Extraction_Subsidies"/>
 				<connect to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
+				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
+				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect2 to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect to="Energy_investments.Moratorium_on_fossil_energy_year" from="Government_Regulations.Moratorium_on_fossil_energy_year"/>
@@ -3506,6 +3516,8 @@
 			</module>
 			<module name="Resources" isee:label="" url="r../FRIDA_Modules/Resources.itmx">
 				<format scale_by="auto"/>
+				<connect to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
+				<connect2 to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect2 to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect to="Emissions.CO2_Energy_emissions_captured" from="CCS.CO2_Energy_emissions_captured"/>
@@ -3522,6 +3534,8 @@
 				<connect2 to="Fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect to="Energy_demand.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect2 to="Energy_demand.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect2 to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect2 to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Energy_demand.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
@@ -3542,8 +3556,6 @@
 				<connect2 to="Fossil_energy_oil.UNIT_ton_to_Mton" from="CCS.UNIT_ton_to_Mton"/>
 				<connect to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
 				<connect2 to="CCS.Atmospheric_CO2_mass_anomaly_since_1750" from="CO2_Forcing.Atmospheric_CO2_mass_anomaly_since_1750"/>
-				<connect to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
-				<connect2 to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="CCS.CO2_emissions_from_biofuels_processes" from="Emissions.CO2_emissions_from_biofuels_processes"/>
 				<connect2 to="CCS.CO2_emissions_from_biofuels_processes" from="Emissions.CO2_emissions_from_biofuels_processes"/>
 				<connect to="CCS.CO2_emissions_from_burning_biofuels" from="Emissions.CO2_emissions_from_burning_biofuels"/>
@@ -3554,8 +3566,16 @@
 				<connect2 to="CCS.CO2_emissions_from_gas" from="Emissions.CO2_emissions_from_gas"/>
 				<connect to="CCS.CO2_emissions_from_oil" from="Emissions.CO2_emissions_from_oil"/>
 				<connect2 to="CCS.CO2_emissions_from_oil" from="Emissions.CO2_emissions_from_oil"/>
+				<connect to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect2 to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
+				<connect2 to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
+				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
+				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect2 to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>
@@ -4998,6 +5018,7 @@ Lorem ipsum dolor sit amet</text_box>
 		<ent name="Government Regulations.share of public investments financed by wealth taxation" preserve="true" lock="false"/>
 		<ent name="Government Regulations.growth rate target for government public investments" preserve="true" lock="false"/>
 		<ent name="Government Regulations.share of excess atmospheric CO2 stored" preserve="true" lock="false"/>
+		<ent name="Government Regulations.Maximum share of energy used for DACC" preserve="true" lock="false"/>
 	</isee:user_controlled>
 	<macro name="INFLATION_IMPACT_GROWTH_RATE">
 		<eqn>trend in input</eqn>

@@ -277,6 +277,10 @@
 				<connect2 to="Emissions.CDD" from="Energy_demand.CDD"/>
 				<connect to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
 				<connect2 to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
+				<connect to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect2 to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
+				<connect to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
+				<connect2 to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Energy_supply_vs_demand.demand_for_energy_1" from="Energy_demand.demand_for_energy"/>
 				<connect2 to="Energy_supply_vs_demand.demand_for_energy_1" from="Energy_demand.demand_for_energy"/>
 				<connect to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
@@ -309,11 +313,11 @@
 				<connect2 to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Energy_demand.UNIT_GJ_to_MWh" from="Energy_Units.UNIT_GJ_to_MWh"/>
 				<connect2 to="Energy_demand.UNIT_GJ_to_MWh" from="Energy_Units.UNIT_GJ_to_MWh"/>
+				<connect to="Energy_demand.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect2 to="Energy_demand.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
 			</module>
 			<module name="Energy investments" isee:label="">
 				<format scale_by="auto"/>
-				<connect to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
-				<connect2 to="CCS.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="Energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect2 to="Energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="Fossil_energy_coal.Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
@@ -364,8 +368,12 @@
 				<connect2 to="Fossil_energy_oil.Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to="Energy_investments.average_energy_margins" from="Energy_demand.average_energy_margins"/>
 				<connect2 to="Energy_investments.average_energy_margins" from="Energy_demand.average_energy_margins"/>
+				<connect to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
+				<connect2 to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
 				<connect to="Energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="Hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect2 to="Energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="Hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect to="Energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_6" from="Nuclear_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
@@ -388,6 +396,8 @@
 				<connect2 to="Energy_investments.cost_of_extra_energy_output_through_fuel_extraction_per_unit_1" from="Fossil_energy_gas.cost_net_of_taxes_of_extra_energy_output_through_fuel_extraction_per_unit"/>
 				<connect to="Energy_investments.cost_of_extra_energy_output_through_fuel_extraction_per_unit_2" from="Fossil_energy_oil.cost_net_of_taxes_of_extra_energy_output_through_fuel_extraction_per_unit"/>
 				<connect2 to="Energy_investments.cost_of_extra_energy_output_through_fuel_extraction_per_unit_2" from="Fossil_energy_oil.cost_net_of_taxes_of_extra_energy_output_through_fuel_extraction_per_unit"/>
+				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect2 to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -454,6 +464,10 @@
 				<connect2 to="Energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
 				<connect to='Energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
 				<connect2 to='Energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
+				<connect to="Energy_investments.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect2 to="Energy_investments.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect to="Energy_investments.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect2 to="Energy_investments.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 			</module>
 			<module name="Energy supply" isee:label="">
 				<format scale_by="auto"/>
@@ -893,6 +907,10 @@
 				<connect2 to="Solar_energy.kW_to_TW" from="Energy_Units.UNIT_kW_to_TW"/>
 				<connect to="Wind_energy.kW_to_TW" from="Energy_Units.UNIT_kW_to_TW"/>
 				<connect2 to="Wind_energy.kW_to_TW" from="Energy_Units.UNIT_kW_to_TW"/>
+				<connect to="Energy_demand.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect2 to="Energy_demand.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect to="Energy_investments.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
+				<connect2 to="Energy_investments.UNIT_MtCO2_to_tCO2_1" from="Energy_Units.UNIT_MtCO2_to_tCO2"/>
 				<connect to="Fossil_energy_coal.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect2 to="Fossil_energy_coal.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="Fossil_energy_gas.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
@@ -903,6 +921,8 @@
 				<connect2 to="Bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="CCS.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="CCS.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to="Energy_investments.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect2 to="Energy_investments.UNIT_TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="Fossil_energy_coal.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="Fossil_energy_coal.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="Fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
@@ -977,7 +997,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="12" isee:page_rows="8" isee:scroll_x="344.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="12" isee:page_rows="8" isee:scroll_x="344.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1111,7 +1131,7 @@
 				<text_box font_size="36pt" uid="502" x="5212.35" y="1383.92" width="256.25" height="90.9167">Nuclear Capacity</text_box>
 				<text_box font_size="36pt" uid="504" x="5212.35" y="952.154" width="256.25" height="79.25">Nuclear Energy Investment</text_box>
 				<text_box font_size="36pt" uid="507" x="4396.93" y="982.153" width="309.583" height="79.25">Hydropower energy investment</text_box>
-				<module x="597.88" y="468.948" name="Energy demand"/>
+				<module x="602.88" y="467.718" name="Energy demand"/>
 				<module x="602.88" y="100.833" name="Energy investments"/>
 				<text_box border_color="aqua" border_width="thick" border_style="solid" uid="1103" x="15.707" y="13.4997" width="260" height="20.7778">Entries in cyan require more data</text_box>
 				<text_box border_color="#FFAAFF" border_width="thick" border_style="solid" uid="1104" x="15.707" y="39.912" width="260" height="23.5556">Pink nodes have data provided</text_box>
@@ -1131,7 +1151,7 @@
 					<from>Energy_supply</from>
 					<to>Energy_supply_vs_demand</to>
 				</connector>
-				<connector uid="1173" isee:thickness="2" angle="87.0338">
+				<connector uid="1173" isee:thickness="2" angle="90">
 					<from>Energy_demand</from>
 					<to>Energy_supply_vs_demand</to>
 				</connector>
@@ -1290,37 +1310,37 @@
 				<stacked_container uid="1301" x="332" y="3137.4" width="553.333" height="618.698">
 					<graph width="553.333" height="618.698" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="black" pen_style="dashed" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Coal_fuel_extraction]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Coal_fuel_extraction]"/>
 						</plot>
 						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Coal_energy_conversion]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Coal_energy_conversion]"/>
 						</plot>
 						<plot color="#552B00" pen_style="dashed" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Oil_fuel_extraction]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Oil_fuel_extraction]"/>
 						</plot>
 						<plot color="#552B00" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Oil_energy_conversion]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Oil_energy_conversion]"/>
 						</plot>
 						<plot color="#9C4E00" pen_style="dashed" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Gas_fuel_extraction]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Gas_fuel_extraction]"/>
 						</plot>
 						<plot color="#9C4E00" isee:keep_zero_visible="true" pen_width="1" index="5" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Gas_energy_conversion]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Gas_energy_conversion]"/>
 						</plot>
 						<plot color="#FFE54F" isee:keep_zero_visible="true" pen_width="1" index="6" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Wind]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Wind]"/>
 						</plot>
 						<plot color="#00AAFF" isee:keep_zero_visible="true" pen_width="1" index="7" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Hydropower]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Hydropower]"/>
 						</plot>
 						<plot color="#FF55FF" isee:keep_zero_visible="true" pen_width="1" index="8" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Bio]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Bio]"/>
 						</plot>
 						<plot color="#00AA00" isee:keep_zero_visible="true" pen_width="1" index="9" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Nuclear]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Nuclear]"/>
 						</plot>
 						<plot color="#00D900" isee:keep_zero_visible="true" pen_width="1" index="10" show_y_axis="true">
-							<entity name="Energy_investments.investment_by_source[1, Solar]"/>
+							<entity name="Energy_investments.total_investment_by_source[1, Solar]"/>
 						</plot>
 						<plot color="#AAAAFF" isee:keep_zero_visible="true" pen_width="1" index="11" show_y_axis="true"/>
 					</graph>
@@ -1772,7 +1792,7 @@
 					<from>Energy_Units</from>
 					<to>Energy_investments</to>
 				</connector>
-				<connector uid="1478" color="#E5E5E5" font_color="#E5E5E5" isee:thickness="2" angle="230.813" isee:autocreated="true">
+				<connector uid="1478" color="#E5E5E5" font_color="#E5E5E5" isee:thickness="2" angle="231.409" isee:autocreated="true">
 					<from>Energy_Units</from>
 					<to>Energy_demand</to>
 				</connector>
@@ -1783,11 +1803,11 @@
 						</plot>
 					</graph>
 				</stacked_container>
-				<connector uid="1468" isee:thickness="2" angle="161.464" isee:autocreated="true">
+				<connector uid="1468" isee:thickness="2" angle="162.242" isee:autocreated="true">
 					<from>Energy_demand</from>
 					<to>Energy_investments</to>
 				</connector>
-				<connector uid="1467" isee:thickness="2" angle="332.169" isee:autocreated="true">
+				<connector uid="1467" isee:thickness="2" angle="332.947" isee:autocreated="true">
 					<from>Energy_investments</from>
 					<to>Energy_demand</to>
 				</connector>
@@ -1976,7 +1996,7 @@ Based on GCM output of the past</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>10000000000</eqn>
-				<range min="10000000000" max="90000000000"/>
+				<range min="5000000000" max="90000000000"/>
 				<units>MWh/year</units>
 			</aux>
 			<aux name="normal energy demand\nfor buildings necessities">
@@ -1995,7 +2015,7 @@ Based on GCM output of the past</doc>
 				</dimensions>
 				<units>bc$/year</units>
 			</aux>
-			<aux name="relative global\nreal GDP in 2021" access="output" isee:autocreated="true">
+			<aux name="relative global\nreal GDP in 2021">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -2008,7 +2028,7 @@ Based on GCM output of the past</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.15879750638763</eqn>
+				<eqn>1.16276948713442</eqn>
 				<range min="0.5" max="1.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2049,8 +2069,8 @@ per_person_use_of_energy_policy</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.00215480970079067</eqn>
-				<range min="0.001" max="0.2"/>
+				<eqn>0.001</eqn>
+				<range min="0.001" max="0.015"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="energy demand for\nIndustry and Other">
@@ -2073,8 +2093,8 @@ per_person_use_of_energy_policy</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.124405662201714</eqn>
-				<range min="0.001" max="0.2"/>
+				<eqn>0.015</eqn>
+				<range min="0.001" max="0.015"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Converter 2" access="input">
@@ -2103,7 +2123,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.27065891726265</eqn>
+				<eqn>0.270457943693798</eqn>
 				<range min="0" max="1.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2113,7 +2133,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.792611023584767</eqn>
+				<eqn>0.731010722394</eqn>
 				<range min="0" max="2.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2123,7 +2143,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1.77601779925771</eqn>
+				<eqn>1.7757720145759</eqn>
 				<range min="0.5" max="2.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -2283,18 +2303,23 @@ https://ourworldindata.org/grapher/fossil-fuel-primary-energy?tab=chart&amp;coun
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>direct_air_capture_CO2_Captured*DACC_energy_useage_per_tCO2_in_TWh*UNIT_MtCO2_to_tCO2</eqn>
+				<eqn>direct_air_capture_CO2_Captured*DACC_energy_useage_per_tCO2_in_TWh*UNIT_MtCO2_to_tCO2_1</eqn>
 				<units>TWh/Year</units>
 			</aux>
 			<aux name="DACC energy useage per tCO2 in TWh" access="input">
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>TWh/tCO2</units>
 			</aux>
-			<aux name="UNIT MtCO2 to tCO2">
-				<doc>${Unit}
-</doc>
+			<aux name="UNIT MtCO2 to tCO2 1" access="input">
 				<eqn>1e6</eqn>
 				<units>tCO2/MtCO2</units>
+			</aux>
+			<aux name="DACC share of energy demand" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>DACC_energy_usage/demand_for_energy</eqn>
+				<units>dmnl</units>
 			</aux>
 		</variables>
 		<views>
@@ -2345,7 +2370,7 @@ https://ourworldindata.org/grapher/fossil-fuel-primary-energy?tab=chart&amp;coun
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="4" isee:scroll_x="1166.43" isee:scroll_y="1107.14" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="4" isee:scroll_x="896.429" isee:scroll_y="993.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2761,11 +2786,11 @@ This affects the energy use per CCD, energy use per HDD variables. Any change in
 					<from>relative_change_in_energy_prices</from>
 					<to>effect_of_energy_prices_on_Industry_and_Other_demand</to>
 				</connector>
-				<connector uid="229" angle="331.029">
+				<connector uid="229" angle="322.627">
 					<from>Population</from>
 					<to>demand_for_energy</to>
 				</connector>
-				<connector uid="230" angle="355.57">
+				<connector uid="230" angle="358.515">
 					<from>per_person_energy_demand</from>
 					<to>demand_for_energy</to>
 				</connector>
@@ -2794,18 +2819,27 @@ This affects the energy use per CCD, energy use per HDD variables. Any change in
 					<to>DACC_energy_usage</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1569.11" y="1347.14" name="DACC energy useage per tCO2 in TWh"/>
-				<aux x="1563.2" y="1448.5" name="UNIT MtCO2 to tCO2"/>
-				<connector uid="246" angle="160.907">
-					<from>UNIT_MtCO2_to_tCO2</from>
-					<to>DACC_energy_usage</to>
-				</connector>
 				<connector uid="247" angle="178.755">
 					<from>DACC_energy_useage_per_tCO2_in_TWh</from>
 					<to>DACC_energy_usage</to>
 				</connector>
-				<connector uid="248" angle="107.942">
+				<connector uid="248" angle="116.329">
 					<from>DACC_energy_usage</from>
 					<to>demand_for_energy</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1551.7" y="1508.94" name="UNIT MtCO2 to tCO2 1"/>
+				<connector uid="249" angle="117.861">
+					<from>UNIT_MtCO2_to_tCO2_1</from>
+					<to>DACC_energy_usage</to>
+				</connector>
+				<aux x="1304.87" y="1338.32" name="DACC share of energy demand"/>
+				<connector uid="250" angle="164.057">
+					<from>DACC_energy_usage</from>
+					<to>DACC_share_of_energy_demand</to>
+				</connector>
+				<connector uid="251" angle="229.179">
+					<from>demand_for_energy</from>
+					<to>DACC_share_of_energy_demand</to>
 				</connector>
 			</view>
 		</views>
@@ -2829,7 +2863,7 @@ Negative values of P causes compensation of differences, positive values would c
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Nuclear]</eqn>
+				<eqn>total_investment_by_source[Run,Nuclear]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Investments Allocated to Capacity Construction in\nHydropower\nEnergy capacity" access="output" isee:autocreated="true">
@@ -2838,7 +2872,7 @@ Negative values of P causes compensation of differences, positive values would c
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Hydropower]</eqn>
+				<eqn>total_investment_by_source[Run,Hydropower]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="World GDP">
@@ -3096,12 +3130,12 @@ adaptive_energy_investments_integrating_factor[Run] * Cumulative_Relative_Energy
 adaptive_energy_investments_differntiating_factor[Run] * Differentiating_Relative_Energy_Supply_Missmatch[Run]</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="investment by\nsource">
+			<aux name="total investment by\nsource">
 				<dimensions>
 					<dim name="Run"/>
 					<dim name="EnergySource"/>
 				</dimensions>
-				<eqn>ALLOCATE(Energy_Investment_Allocated_to_Capacity_Construction[Run], EnergySource, desired_investment_by_source[Run,*],  priority_by_source[Run,*], priority_spread[Run], shape)</eqn>
+				<eqn>investment_by_source + additional_investment_by_source_for_DACC</eqn>
 				<units>c$/year</units>
 			</aux>
 			<aux name="cost to build\nper unit">
@@ -3229,7 +3263,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Coal_fuel_extraction]</eqn>
+				<eqn>total_investment_by_source[Run,Coal_fuel_extraction]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Coal Investments Allocated to Capacity Construction in\nFossil Energy Capital" access="output" isee:autocreated="true">
@@ -3238,14 +3272,14 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Coal_energy_conversion]</eqn>
+				<eqn>total_investment_by_source[Run,Coal_energy_conversion]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Oil Gross\nInvestments in\nFossil Energy Capital" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Oil_energy_conversion]</eqn>
+				<eqn>total_investment_by_source[Run,Oil_energy_conversion]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Oil Gross\nInvestments in Fossil\nFuel Extraction Capital" access="output" isee:autocreated="true">
@@ -3254,14 +3288,14 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Oil_fuel_extraction]</eqn>
+				<eqn>total_investment_by_source[Run,Oil_fuel_extraction]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Gas Gross\nInvestments in\nFossil Energy Capital" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Gas_energy_conversion]</eqn>
+				<eqn>total_investment_by_source[Run,Gas_energy_conversion]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Gas Gross\nInvestments in Fossil\nFuel Extraction Capital" access="output" isee:autocreated="true">
@@ -3270,7 +3304,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Gas_fuel_extraction]</eqn>
+				<eqn>total_investment_by_source[Run,Gas_fuel_extraction]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="baseline energy investments" access="output" isee:autocreated="true">
@@ -3691,7 +3725,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Bio]</eqn>
+				<eqn>total_investment_by_source[Run,Bio]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in bio energy">
@@ -4002,7 +4036,7 @@ expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity[Run]</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Solar]</eqn>
+				<eqn>total_investment_by_source[Run,Solar]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in Solar">
@@ -4040,7 +4074,7 @@ expenditure_on_subsidies_for_investments_in_Solar_energy_capacity[Run]</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>investment_by_source[Run,Wind]</eqn>
+				<eqn>total_investment_by_source[Run,Wind]</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in wind">
@@ -4236,6 +4270,102 @@ expenditure_on_subsidies_for_investments_in_coal_energy_conversion[Run]</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>bc$/year</units>
 			</aux>
+			<aux name="perceived average cost\nof DACC usable energy capacity per unit" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>MEAN(perceived_share_of_investment_into_DACC_usable_energy_source[Run,*] * cost_to_build_per_unit[Run,*])</eqn>
+				<units>c$/(kWh/Years)</units>
+			</aux>
+			<aux name="perceived share of investment\ninto DACC usable energy source">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>perceived_investment_by_DACC_usable_energy_source//SUM(perceived_investment_by_DACC_usable_energy_source[Run,*])</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="investment by DACC\nusable energy source" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>IF (EnergySource = EnergySource.Nuclear OR
+EnergySource = EnergySource.Hydropower OR
+EnergySource = EnergySource.Solar OR 
+EnergySource = EnergySource.Wind) THEN
+investment_by_source
+ELSE
+0</eqn>
+				<units>c$/Year</units>
+			</aux>
+			<aux name="UNIT TWh to kWh" access="input">
+				<eqn>1000000000</eqn>
+				<units>kWh/TWh</units>
+			</aux>
+			<aux name="additional investment\nby source for DACC">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>MAX(0, DACC_energy_usage_by_source* cost_to_build_per_unit*UNIT_TWh_to_kWh)</eqn>
+				<units>c$/year</units>
+			</aux>
+			<aux name="perceived investment\nby DACC usable\nenergy source">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>SMTH1(investment_by_DACC_usable_energy_source, time_to_percieve_changes_in_energy_investment_allocation, 
+IF EnergySource = EnergySource.Nuclear THEN .9 ELSE IF EnergySource = EnergySource.Hydropower THEN 0.1 ELSE 0)</eqn>
+				<isee:delay_aux/>
+				<units>c$/year</units>
+			</aux>
+			<aux name="time to percieve changes\nin energy investment allocation">
+				<doc>${Assumption}
+</doc>
+				<eqn>2</eqn>
+				<range min="1" max="3"/>
+				<units>years</units>
+			</aux>
+			<aux name="DACC energy usage by source">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>change_in_DACC_energy_usage[Run]*perceived_share_of_investment_into_DACC_usable_energy_source</eqn>
+				<units>TWh/Year/Year</units>
+			</aux>
+			<aux name="change in DACC CO2 captured" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>MtCO2/Year/Year</units>
+			</aux>
+			<aux name="change in DACC energy usage">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>change_in_DACC_CO2_captured*DACC_energy_useage_per_tCO2_in_TWh*UNIT_MtCO2_to_tCO2_1</eqn>
+				<units>TWh/Year/Year</units>
+			</aux>
+			<aux name="DACC energy useage per tCO2 in TWh" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>TWh/tCO2</units>
+			</aux>
+			<aux name="UNIT MtCO2 to tCO2 1" access="input">
+				<eqn>1e6</eqn>
+				<units>tCO2/MtCO2</units>
+			</aux>
+			<aux name="investment by\nsource">
+				<dimensions>
+					<dim name="Run"/>
+					<dim name="EnergySource"/>
+				</dimensions>
+				<eqn>ALLOCATE(Energy_Investment_Allocated_to_Capacity_Construction[Run], EnergySource, desired_investment_by_source[Run,*],  priority_by_source[Run,*], priority_spread[Run], shape)</eqn>
+				<units>c$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -4285,7 +4415,7 @@ expenditure_on_subsidies_for_investments_in_coal_energy_conversion[Run]</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="930" isee:scroll_y="609.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="1718.33" isee:scroll_y="1786.67" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4488,28 +4618,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 						</plot>
 					</graph>
 				</stacked_container>
-				<aux x="1204.38" y="1448.05" name="investment by\nsource"/>
+				<aux x="1204.38" y="1427.56" name="total investment by\nsource"/>
 				<aux x="1235.88" y="1757.31" name="cost to build\nper unit"/>
 				<aux x="1316.63" y="1477.3" name="priority spread"/>
-				<connector uid="342" angle="165.395">
-					<from>priority_spread</from>
-					<to>investment_by_source</to>
-				</connector>
 				<aux x="1279.63" y="1541.81" name="shape"/>
-				<connector uid="343" angle="128.753">
-					<from>shape</from>
-					<to>investment_by_source</to>
-				</connector>
 				<aux x="1156.13" y="1545.31" name="desired investment\nby source"/>
-				<connector uid="345" angle="63.612">
-					<from>desired_investment_by_source</from>
-					<to>investment_by_source</to>
-				</connector>
 				<aux x="1229.13" y="1612.64" name="priority by source"/>
-				<connector uid="347" angle="98.5522">
-					<from>priority_by_source</from>
-					<to>investment_by_source</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" x="807.792" y="1907.57" name="cost of extra energy output through fuel extraction per unit"/>
 				<aux font_style="italic" font_weight="bold" x="807.792" y="1987.57" name="Cost of Extra Energy Output through Capital per Unit"/>
 				<aux font_style="italic" font_weight="bold" x="1229.13" y="1907.57" name="cost of extra energy output through fuel extraction per unit 1"/>
@@ -4597,40 +4711,36 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital_oil_and_gas</to>
 				</connector>
 				<aux x="623.972" y="1444.14" name="baseline energy investments"/>
-				<connector uid="425" angle="359.133">
-					<from>Energy_Investment_Allocated_to_Capacity_Construction</from>
-					<to>investment_by_source</to>
-				</connector>
 				<connector uid="426" angle="343.838">
 					<from>Energy_Investment_Allocated_to_Capacity_Construction</from>
 					<to>desired_investment_by_source</to>
 				</connector>
-				<connector uid="427" angle="160.244">
-					<from>investment_by_source</from>
+				<connector uid="427" angle="161.303">
+					<from>total_investment_by_source</from>
 					<to>Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital</to>
 				</connector>
-				<connector uid="428" angle="152.533">
-					<from>investment_by_source</from>
+				<connector uid="428" angle="153.898">
+					<from>total_investment_by_source</from>
 					<to>Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital</to>
 				</connector>
-				<connector uid="429" angle="142.484">
-					<from>investment_by_source</from>
+				<connector uid="429" angle="144.12">
+					<from>total_investment_by_source</from>
 					<to>Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital</to>
 				</connector>
-				<connector uid="430" angle="123.064">
-					<from>investment_by_source</from>
+				<connector uid="430" angle="124.644">
+					<from>total_investment_by_source</from>
 					<to>Oil_Gross_Investments_in_Fossil_Energy_Capital</to>
 				</connector>
-				<connector uid="431" angle="72.4037">
-					<from>investment_by_source</from>
+				<connector uid="431" angle="71.3942">
+					<from>total_investment_by_source</from>
 					<to>Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital</to>
 				</connector>
-				<connector uid="432" angle="41.3153">
-					<from>investment_by_source</from>
+				<connector uid="432" angle="39.6273">
+					<from>total_investment_by_source</from>
 					<to>Gas_Gross_Investments_in_Fossil_Energy_Capital</to>
 				</connector>
-				<connector uid="434" angle="15.9996">
-					<from>investment_by_source</from>
+				<connector uid="434" angle="15.1164">
+					<from>total_investment_by_source</from>
 					<to>Investments_Allocated_to_Capacity_Construction_in_Hydropower_Energy_capacity</to>
 				</connector>
 				<connector uid="436" angle="161.991">
@@ -4641,8 +4751,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<from>Energy_Investment_Allocated_to_Capacity_Construction</from>
 					<to>&quot;Share_of_Gross_Energy_Expenditure_invested_in_fossil_energy,_coal&quot;</to>
 				</connector>
-				<connector uid="448" angle="11.649">
-					<from>investment_by_source</from>
+				<connector uid="448" angle="10.9911">
+					<from>total_investment_by_source</from>
 					<to>Investments_in_Nuclear_Capacity</to>
 				</connector>
 				<stacked_container uid="450" x="927.506" y="2228.76">
@@ -4854,8 +4964,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<from>World_GDP</from>
 					<to>share_of_GDP_invested_in_bio_power</to>
 				</connector>
-				<connector uid="505" angle="13.4145">
-					<from>investment_by_source</from>
+				<connector uid="505" angle="12.6632">
+					<from>total_investment_by_source</from>
 					<to>Investments_Allocated_to_Capacity_Construction_in_Biofuel_Capacity</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1516.15" y="2149.85" name="Cost of Extra Energy Output\nthrough Capital per Unit 7"/>
@@ -5267,12 +5377,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<from>Energy_Investment_Allocated_to_Capacity_Construction</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_wind</to>
 				</connector>
-				<connector uid="640" angle="52.8263">
-					<from>investment_by_source</from>
+				<connector uid="640" angle="51.4389">
+					<from>total_investment_by_source</from>
 					<to>Investments_Allocated_to_Capacity_Construction_in_Solar_Energy_Capacity</to>
 				</connector>
-				<connector uid="641" angle="45.275">
-					<from>investment_by_source</from>
+				<connector uid="641" angle="44.1887">
+					<from>total_investment_by_source</from>
 					<to>Investments_Allocated_to_Capacity_Construction_in_wind_Energy_Capacity</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1516.15" y="2228.76" name="Cost of Extra Energy Output\nthrough Capital per Unit 8"/>
@@ -5476,6 +5586,120 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Coal_Investments_Including_Taxes_Paid_and_Subsidies_Received_in_Energy_Conversion_Capital</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="285.133" y="1423.07" name="Real GDP in 2021c$ 1"/>
+				<aux x="1969.36" y="1984.88" name="perceived average cost\nof DACC usable energy capacity per unit"/>
+				<aux x="2109.33" y="1948.25" name="perceived share of investment\ninto DACC usable energy source"/>
+				<aux x="2361.4" y="1867.64" name="investment by DACC\nusable energy source"/>
+				<connector uid="709" angle="194.663">
+					<from>perceived_share_of_investment_into_DACC_usable_energy_source</from>
+					<to>perceived_average_cost_of_DACC_usable_energy_capacity_per_unit</to>
+				</connector>
+				<connector uid="710" angle="128.619">
+					<from>
+						<alias uid="711"/>
+					</from>
+					<to>perceived_average_cost_of_DACC_usable_energy_capacity_per_unit</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1882.67" y="2123.79" name="UNIT TWh to kWh"/>
+				<aux x="2074.78" y="2126.8" name="additional investment\nby source for DACC"/>
+				<connector uid="713" angle="310.329">
+					<from>perceived_share_of_investment_into_DACC_usable_energy_source</from>
+					<to>DACC_energy_usage_by_source</to>
+				</connector>
+				<connector uid="714" angle="304.556">
+					<from>
+						<alias uid="711"/>
+					</from>
+					<to>additional_investment_by_source_for_DACC</to>
+				</connector>
+				<connector uid="715" angle="359.103">
+					<from>UNIT_TWh_to_kWh</from>
+					<to>additional_investment_by_source_for_DACC</to>
+				</connector>
+				<aux x="2231.85" y="1907.19" name="perceived investment\nby DACC usable\nenergy source"/>
+				<connector uid="717" angle="196.979">
+					<from>investment_by_DACC_usable_energy_source</from>
+					<to>perceived_investment_by_DACC_usable_energy_source</to>
+				</connector>
+				<connector uid="718" angle="198.528">
+					<from>perceived_investment_by_DACC_usable_energy_source</from>
+					<to>perceived_share_of_investment_into_DACC_usable_energy_source</to>
+				</connector>
+				<aux x="2205.93" y="1839.08" name="time to percieve changes\nin energy investment allocation"/>
+				<connector uid="719" angle="290.364">
+					<from>time_to_percieve_changes_in_energy_investment_allocation</from>
+					<to>perceived_investment_by_DACC_usable_energy_source</to>
+				</connector>
+				<aux x="2249.85" y="2113.78" name="DACC energy usage by source"/>
+				<connector uid="723" angle="179.528">
+					<from>DACC_energy_usage_by_source</from>
+					<to>additional_investment_by_source_for_DACC</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="2249.85" y="2321.33" name="change in DACC CO2 captured"/>
+				<aux x="2307.88" y="2254.83" name="change in DACC energy usage"/>
+				<aux font_style="italic" font_weight="bold" x="2405.2" y="2189.67" name="DACC energy useage per tCO2 in TWh"/>
+				<connector uid="724" angle="213.804">
+					<from>DACC_energy_useage_per_tCO2_in_TWh</from>
+					<to>change_in_DACC_energy_usage</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="2441.82" y="2318.06" name="UNIT MtCO2 to tCO2 1"/>
+				<connector uid="725" angle="154.728">
+					<from>UNIT_MtCO2_to_tCO2_1</from>
+					<to>change_in_DACC_energy_usage</to>
+				</connector>
+				<connector uid="726" angle="48.894">
+					<from>change_in_DACC_CO2_captured</from>
+					<to>change_in_DACC_energy_usage</to>
+				</connector>
+				<connector uid="727" angle="110.651">
+					<from>change_in_DACC_energy_usage</from>
+					<to>DACC_energy_usage_by_source</to>
+				</connector>
+				<aux x="1217.88" y="1503.8" name="investment by\nsource"/>
+				<connector uid="728" angle="49.6958">
+					<from>
+						<alias uid="720"/>
+					</from>
+					<to>total_investment_by_source</to>
+				</connector>
+				<connector uid="729" angle="94.1058">
+					<from>priority_by_source</from>
+					<to>investment_by_source</to>
+				</connector>
+				<connector uid="730" angle="108.219">
+					<from>investment_by_source</from>
+					<to>total_investment_by_source</to>
+				</connector>
+				<connector uid="731" angle="16.589">
+					<from>Energy_Investment_Allocated_to_Capacity_Construction</from>
+					<to>investment_by_source</to>
+				</connector>
+				<connector uid="732" angle="58.91">
+					<from>desired_investment_by_source</from>
+					<to>investment_by_source</to>
+				</connector>
+				<connector uid="733" angle="220.022">
+					<from>priority_spread</from>
+					<to>investment_by_source</to>
+				</connector>
+				<connector uid="734" angle="173.386">
+					<from>shape</from>
+					<to>investment_by_source</to>
+				</connector>
+				<connector uid="735" angle="200.688">
+					<from>
+						<alias uid="736"/>
+					</from>
+					<to>investment_by_DACC_usable_energy_source</to>
+				</connector>
+				<alias font_style="italic" uid="711" x="2016.06" y="2045.6" width="18" height="18">
+					<of>cost_to_build_per_unit</of>
+				</alias>
+				<alias font_style="italic" uid="720" x="1109.31" y="1483.16" width="18" height="18">
+					<of>additional_investment_by_source_for_DACC</of>
+				</alias>
+				<alias font_style="italic" uid="736" x="2475.69" y="1812.08" width="18" height="18">
+					<of>investment_by_source</of>
+				</alias>
 			</view>
 		</views>
 	</model>
@@ -19428,6 +19652,12 @@ https://en.wikipedia.org/wiki/British_thermal_unit</doc>
 				<eqn>0.0000002777777777778</eqn>
 				<units>TWh/GJ</units>
 			</aux>
+			<aux name="UNIT MtCO2 to tCO2" access="output" isee:autocreated="true">
+				<doc>${Unit}
+</doc>
+				<eqn>1e6</eqn>
+				<units>tCO2/MtCO2</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -19528,6 +19758,7 @@ https://en.wikipedia.org/wiki/British_thermal_unit</doc>
 				<aux x="362" y="32" name="UNIT deg C to dmnl"/>
 				<aux x="70" y="316.345" name="UNIT TWh to MWh"/>
 				<aux x="340.66" y="328.375" name="UNIT GJ to TWh"/>
+				<aux x="495.2" y="433.5" name="UNIT MtCO2 to tCO2"/>
 			</view>
 		</views>
 	</model>
