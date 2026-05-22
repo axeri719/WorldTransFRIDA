@@ -8234,7 +8234,7 @@ GtC_to_MtCO2</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME &gt; Policy_Start_Year THEN 
-Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies * 
+Effective_tax_rate_on_newly_installed_extraction_capacity_with_budgeted_subsidies * 
 cost_of_extra_energy_output_through_fuel_extraction_per_unit
 ELSE
 0</eqn>
@@ -8244,7 +8244,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(IF TIME &gt; Policy_Start_Year THEN Effective_tax_rate_on_newly_installed_coal_energy_conversion_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
+				<eqn>(IF TIME &gt; Policy_Start_Year THEN Effective_tax_rate_on_newly_installed_energy_conversion_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
 ELSE
 0)</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -8484,7 +8484,7 @@ We apply this independent of fuel for now.</doc>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled extraction\ncapacity with budgeted subsidies">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -8494,7 +8494,7 @@ ELSE
 tax_for_newly_installed_coal_extraction_capacity</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Effective tax rate on newly\ninstalled coal energy conversion capacity\nwith budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy conversion capacity\nwith budgeted subsidies">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -9498,31 +9498,31 @@ tax_for_newly_installed_coal_energy_production_capacity</eqn>
 					</graph>
 				</stacked_container>
 				<aux font_style="italic" font_weight="bold" x="847" y="1467.5" name="ratio of fulfilled subsidy requests to unfulfilled subsidy requests for investments into coal extraction"/>
-				<aux x="847" y="1382.96" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="847" y="1382.96" name="Effective tax rate on newly\ninstalled extraction\ncapacity with budgeted subsidies"/>
 				<connector uid="295" angle="90">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_coal_extraction</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_extraction_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="296" angle="270">
 					<from>tax_for_newly_installed_coal_extraction_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_extraction_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="307" angle="0.35163">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_extraction_capacity_with_budgeted_subsidies</from>
 					<to>fuel_extraction_installation_tax_burden</to>
 				</connector>
-				<aux x="1924.17" y="966.877" name="Effective tax rate on newly\ninstalled coal energy conversion capacity\nwith budgeted subsidies"/>
+				<aux x="1924.17" y="966.877" name="Effective tax rate on newly\ninstalled energy conversion capacity\nwith budgeted subsidies"/>
 				<aux font_style="italic" font_weight="bold" x="1924.17" y="1047.8" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Coal energy conversion"/>
 				<connector uid="308" angle="90">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Coal_energy_conversion</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_energy_conversion_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_conversion_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="309" angle="272.366">
 					<from>tax_for_newly_installed_coal_energy_production_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_energy_conversion_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_conversion_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="310" angle="180.631">
-					<from>Effective_tax_rate_on_newly_installed_coal_energy_conversion_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_conversion_capacity_with_budgeted_subsidies</from>
 					<to>energy_conversion_installation_tax_burden</to>
 				</connector>
 				<alias uid="47" x="1592.04" y="153.5" width="18" height="18">
@@ -13897,7 +13897,7 @@ tax_burden_on_installing_capacity</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME &gt; start_year THEN
-Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_Capital_per_Unit
+Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_Capital_per_Unit
 ELSE
 0</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -14049,7 +14049,7 @@ We apply this independent of fuel for now.</doc>
 				<range min="1000" max="3000"/>
 				<units>c$/kW</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -14383,18 +14383,18 @@ tax_for_newly_installed_nuclear</eqn>
 					<from>Installation_of_Nuclear_Capacity</from>
 					<to>accumulating_Nuclear_Energy_Construction</to>
 				</connector>
-				<aux x="1085.43" y="679.531" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="1085.43" y="679.531" name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies"/>
 				<connector uid="63" angle="279.267">
 					<from>tax_for_newly_installed_nuclear</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1082.86" y="775.714" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Nuclear energy"/>
 				<connector uid="64" angle="84.9204">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Nuclear_energy</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="65" angle="180.773">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</from>
 					<to>tax_burden_on_installing_capacity</to>
 				</connector>
 				<alias background="#AAAAFF" font_style="italic" uid="60" x="451.714" y="838.857" width="18" height="18">
@@ -15379,7 +15379,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(IF TIME &gt; Policy_Start_Year THEN Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_bio_fuel_production_capacity_per_Unit
+				<eqn>(IF TIME &gt; Policy_Start_Year THEN Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_bio_fuel_production_capacity_per_Unit
 ELSE
 0)</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -15414,7 +15414,7 @@ ELSE
 				<eqn>bio_fuel_primary_energy_content*bio_fuel_production</eqn>
 				<units>zJ/Year</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -15980,18 +15980,18 @@ tax_for_newly_installed_other_energy_capacity</eqn>
 					<from>bio_fuel_primary_energy_content</from>
 					<to>bio_fuel_primary_energy</to>
 				</connector>
-				<aux x="378.43" y="971.698" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="378.43" y="971.698" name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies"/>
 				<connector uid="137" angle="270">
 					<from>tax_for_newly_installed_other_energy_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="379.167" y="1082.5" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Bio energy"/>
 				<connector uid="138" angle="90.3809">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Bio_energy</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="139" angle="7.79375">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</from>
 					<to>bio_fuel_production_capacity_installation_tax_burden</to>
 				</connector>
 			</view>
@@ -16194,7 +16194,7 @@ tax_burden_on_installing_capacity</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME &gt; start_year THEN
-Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_Capital_per_Unit
+Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies*Cost_of_Extra_Energy_Output_through_Capital_per_Unit
 ELSE
 0</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -16217,7 +16217,7 @@ ELSE
 				<eqn>2025</eqn>
 				<units>Year</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -16485,18 +16485,18 @@ tax_for_newly_installed_hydropower_capacity</eqn>
 					<from>Cost_of_Extra_Energy_Output_through_Capital_per_Unit</from>
 					<to>tax_burden_on_installing_capacity</to>
 				</connector>
-				<aux x="1094.06" y="665.031" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="1094.06" y="665.031" name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies"/>
 				<aux font_style="italic" font_weight="bold" x="1094.06" y="767.5" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Hydropower\nEnergy"/>
 				<connector uid="45" angle="90">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Hydropower_Energy</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="46" angle="273.238">
 					<from>tax_for_newly_installed_hydropower_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="47" angle="173.299">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</from>
 					<to>tax_burden_on_installing_capacity</to>
 				</connector>
 			</view>
@@ -16867,7 +16867,7 @@ tax_burden_per_Unit</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME&gt;=start_year THEN
-Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
+Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
 ELSE
 0</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -16957,7 +16957,7 @@ These parameters are set so that the effect of having to build grid energy stora
 				<eqn>0.000001</eqn>
 				<units>GW/kW</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -17340,18 +17340,18 @@ subsidy_for_newly_installed_solar_and_wind_energy_capacity</eqn>
 					<from>kW_to_GW</from>
 					<to>Renewable_Energy_Capacity_Construction</to>
 				</connector>
-				<aux x="1263.43" y="896.642" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="1263.43" y="896.642" name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies"/>
 				<aux font_style="italic" font_weight="bold" x="1263.43" y="972" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Solar Energy"/>
 				<connector uid="63" angle="82.1887">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Solar_Energy</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="64" angle="278.885">
 					<from>subsidy_for_newly_installed_solar_and_wind_energy_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="65" angle="180.093">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</from>
 					<to>tax_burden_per_Unit</to>
 				</connector>
 			</view>
@@ -17716,7 +17716,7 @@ tax_burden_per_Unit</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF TIME&gt;=start_year THEN
-Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
+Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies * Cost_of_Extra_Energy_Output_through_Capital_per_Unit
 ELSE
 0</eqn>
 				<units>c$/(kWh/Years)</units>
@@ -17813,7 +17813,7 @@ Wind_Energy_Capacity * gWh_to_TWh
 				<range min="5" max="20"/>
 				<units>years</units>
 			</aux>
-			<aux name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies">
+			<aux name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -18196,18 +18196,18 @@ subsidy_for_newly_installed_solar_and_wind_energy_capacity</eqn>
 					<from>reference_installation_cost</from>
 					<to>actual_renewable_energy_floor_costs</to>
 				</connector>
-				<aux x="1256.1" y="893.864" name="Effective tax rate on newly installed coal extraction capacity with budgeted subsidies"/>
+				<aux x="1256.1" y="893.864" name="Effective tax rate on newly\ninstalled energy\ncapacity with budgeted subsidies"/>
 				<connector uid="59" angle="277.819">
 					<from>subsidy_for_newly_installed_solar_and_wind_energy_capacity</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1262.22" y="1001.11" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Wind energy"/>
 				<connector uid="60" angle="87.7974">
 					<from>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Wind_energy</from>
-					<to>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</to>
+					<to>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</to>
 				</connector>
 				<connector uid="61" angle="180.141">
-					<from>Effective_tax_rate_on_newly_installed_coal_extraction_capacity_with_budgeted_subsidies</from>
+					<from>Effective_tax_rate_on_newly_installed_energy_capacity_with_budgeted_subsidies</from>
 					<to>tax_burden_per_Unit</to>
 				</connector>
 			</view>
