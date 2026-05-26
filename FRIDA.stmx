@@ -1816,6 +1816,8 @@
 				<connect2 to="Energy_demand.switch_energy_demand_policy" from="Behavioral_Choices.switch_energy_demand_policy"/>
 				<connect to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect2 to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital"/>
@@ -1840,8 +1842,6 @@
 				<connect2 to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
 				<connect2 to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
 				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
@@ -3574,8 +3574,8 @@
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect2 to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>

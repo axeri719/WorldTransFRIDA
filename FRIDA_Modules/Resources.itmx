@@ -335,8 +335,8 @@
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.perceived_average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect2 to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>
@@ -1881,7 +1881,7 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/(kWh/Years)</units>
+				<units>c$*Years/kWh</units>
 			</aux>
 			<aux name="change in DACC capacity">
 				<dimensions>
@@ -1985,7 +1985,7 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="643.571" isee:scroll_y="857.143" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="685" isee:scroll_y="789.286" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3128,7 +3128,7 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					</from>
 					<to>storage_we_cannot_afford</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="906.17" y="878.634" name="UNIT c$ per Bc$"/>
+				<aux font_style="italic" font_weight="bold" x="870.749" y="739.82" name="UNIT c$ per Bc$"/>
 				<connector uid="962" angle="168.04">
 					<from>
 						<alias uid="963"/>
@@ -3159,7 +3159,7 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					</from>
 					<to>accumulating_carbon_storage_Construction</to>
 				</connector>
-				<connector uid="976" angle="216.121">
+				<connector uid="976" angle="263.425">
 					<from>&quot;UNIT_c$_per_Bc$&quot;</from>
 					<to>Available_total_budget_for_Carbon_Capture_and_Storage</to>
 				</connector>
@@ -3340,13 +3340,13 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					<to>desired_budget_for_DACC_capacity</to>
 				</connector>
 				<aux x="1103.94" y="977.641" name="cost of energy capacity needed to\ncapture CO2 per unit with\ndirect air carbon capture"/>
-				<aux x="1076.65" y="751.455" name="DACC energy usage per tCO2"/>
-				<aux x="1076.65" y="908.641" name="DACC energy useage per tCO2 in TWh"/>
-				<connector uid="1024" angle="270">
+				<aux x="1025.79" y="630.166" name="DACC energy usage per tCO2"/>
+				<aux x="1070.08" y="780.78" name="DACC energy useage per tCO2 in TWh"/>
+				<connector uid="1024" angle="286.387">
 					<from>DACC_energy_usage_per_tCO2</from>
 					<to>DACC_energy_useage_per_tCO2_in_TWh</to>
 				</connector>
-				<connector uid="1026" angle="289.344">
+				<connector uid="1026" angle="279.761">
 					<from>DACC_energy_useage_per_tCO2_in_TWh</from>
 					<to>cost_of_energy_capacity_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
@@ -3372,18 +3372,18 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					<from>desired_budget_for_DACC_capacity_and_energy</from>
 					<to>total_desired_capture_budget</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1138.94" y="832.143" name="UNIT GJ to TWh 1"/>
-				<connector uid="1034" angle="235.795">
+				<aux font_style="italic" font_weight="bold" x="1088.08" y="710.854" name="UNIT GJ to TWh 1"/>
+				<connector uid="1034" angle="255.565">
 					<from>UNIT_GJ_to_TWh_1</from>
 					<to>DACC_energy_useage_per_tCO2_in_TWh</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1259.76" y="983.571" name="UNIT TWh to kWh"/>
-				<connector uid="1035" angle="177.821">
+				<aux font_style="italic" font_weight="bold" x="1232.77" y="890.384" name="UNIT TWh to kWh"/>
+				<connector uid="1035" angle="214.111">
 					<from>UNIT_TWh_to_kWh</from>
 					<to>cost_of_energy_capacity_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1259.76" y="878.634" name="perceived average cost of DACC\nusable energy per unit"/>
-				<connector uid="1036" angle="212.432">
+				<aux font_style="italic" font_weight="bold" x="1017.49" y="854.384" name="perceived average cost of DACC\nusable energy per unit"/>
+				<connector uid="1036" angle="305.046">
 					<from>perceived_average_cost_of_DACC_usable_energy_per_unit</from>
 					<to>cost_of_energy_capacity_needed_to_capture_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
@@ -3428,7 +3428,7 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					<to>maximum_energy_used_for_DACC</to>
 				</connector>
 				<aux x="1291.6" y="1129.2" name="maximum DACC capacity"/>
-				<connector uid="1052" angle="230.36">
+				<connector uid="1052" angle="230.356">
 					<from>maximum_energy_used_for_DACC</from>
 					<to>maximum_DACC_capacity</to>
 				</connector>
@@ -3449,13 +3449,13 @@ Thermal and Electrical energy costs summed, pending demand dissagregation.</doc>
 					<from>maximum_DACC_capacity</from>
 					<to>maximum_additional_DACC_capacity</to>
 				</connector>
-				<connector uid="1059" angle="217.504">
-					<from>maximum_additional_DACC_capacity</from>
-					<to>desired_budget_for_DACC_capacity</to>
-				</connector>
 				<connector uid="1060" angle="19.5242">
 					<from>time_to_build_capture_capacity</from>
 					<to>maximum_additional_DACC_capacity</to>
+				</connector>
+				<connector uid="1059" angle="217.504">
+					<from>maximum_additional_DACC_capacity</from>
+					<to>desired_budget_for_DACC_capacity</to>
 				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="4765.3" y="1109.64" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
