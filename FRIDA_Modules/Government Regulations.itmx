@@ -912,7 +912,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<doc>${Policy,No Sensi}
 </doc>
 				<eqn>.1</eqn>
-				<range min="0" max="0.5"/>
+				<range min="0" max="0.35"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="sustainable farming policy" access="output" isee:autocreated="true">

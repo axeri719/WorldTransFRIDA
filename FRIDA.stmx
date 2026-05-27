@@ -8,7 +8,7 @@
 		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1779475487" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="XfGnCKngz9C3KILCnpSpZRZwXHK2/Zw8SuDknDC8ZOwW/aG67u4kblAYK87fzw9zSBBOM3Nlo7sslsnkqnrmBQ=="/>
+		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1779884577" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="l6+NvBUYHDdxN6FALMi2V4Ji7T44ZSwTem1EmbD6wwP2/nUa6iuq0oUgNK1KRLv7d+WjCOykQIvLmszXGqq1AQ=="/>
 	</ai_information>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -1816,8 +1816,8 @@
 				<connect2 to="Energy_demand.switch_energy_demand_policy" from="Behavioral_Choices.switch_energy_demand_policy"/>
 				<connect to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Energy_demand.today" from="Climate.climate_impact_stoptime"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect2 to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital"/>
@@ -3574,8 +3574,8 @@
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect2 to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
 				<connect to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>

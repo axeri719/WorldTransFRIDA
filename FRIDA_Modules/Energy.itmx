@@ -318,8 +318,8 @@
 			</module>
 			<module name="Energy investments" isee:label="">
 				<format scale_by="auto"/>
-				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
-				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
+				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to="Energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect2 to="Energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="Energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="Fossil_energy_coal.Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
@@ -4270,14 +4270,14 @@ expenditure_on_subsidies_for_investments_in_coal_energy_conversion[Run]</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>bc$/year</units>
 			</aux>
-			<aux name="average cost\nof DACC usable energy\ncapacity per unit" access="output" isee:autocreated="true">
+			<aux name="average adjusted cost\nof DACC usable energy\ncapacity per unit" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>cost_to_build_per_unit[Run,Hydropower] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Hydropower] + 
-cost_to_build_per_unit[Run,Nuclear] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Nuclear] + 
-cost_to_build_per_unit[Run,Solar] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Solar] + 
-cost_to_build_per_unit[Run,Wind] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Wind]</eqn>
+				<eqn>adjusted_cost[Run,Hydropower] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Hydropower] + 
+adjusted_cost[Run,Nuclear] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Nuclear] + 
+adjusted_cost[Run,Solar] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Solar] + 
+adjusted_cost[Run,Wind] *perceived_share_of_investment_into_DACC_usable_energy_source[Run,Wind]</eqn>
 				<units>c$*Years/kWh</units>
 			</aux>
 			<aux name="perceived share of investment\ninto DACC usable energy source">
@@ -4440,7 +4440,7 @@ IF EnergySource = EnergySource.Nuclear THEN .9 ELSE IF EnergySource = EnergySour
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="1802.5" isee:scroll_y="1759.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="1599.17" isee:scroll_y="1659.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5611,7 +5611,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Coal_Investments_Including_Taxes_Paid_and_Subsidies_Received_in_Energy_Conversion_Capital</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="285.133" y="1423.07" name="Real GDP in 2021c$ 1"/>
-				<aux x="2136.71" y="1965.85" name="average cost\nof DACC usable energy\ncapacity per unit"/>
+				<aux x="2136.71" y="1965.85" name="average adjusted cost\nof DACC usable energy\ncapacity per unit"/>
 				<aux x="2359.98" y="2013.64" name="perceived share of investment\ninto DACC usable energy source"/>
 				<aux x="2483.18" y="1871.39" name="investment by DACC\nusable energy source"/>
 				<aux font_style="italic" font_weight="bold" x="1882.67" y="2123.79" name="UNIT TWh to kWh"/>
@@ -5707,34 +5707,34 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				</connector>
 				<connector uid="748" angle="167.918">
 					<from>perceived_share_of_investment_into_DACC_usable_energy_source</from>
-					<to>average_cost_of_DACC_usable_energy_capacity_per_unit</to>
+					<to>average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit</to>
 				</connector>
-				<connector uid="749" angle="60.2787">
-					<from>
-						<alias uid="750"/>
-					</from>
-					<to>average_cost_of_DACC_usable_energy_capacity_per_unit</to>
-				</connector>
-				<connector uid="751" angle="265.953">
+				<connector uid="751" angle="247.771">
 					<from>
 						<alias uid="750"/>
 					</from>
 					<to>additional_investment_by_source_for_DACC</to>
 				</connector>
 				<stock x="2230.38" y="2289.57" name="Cumulative DACC Energy Usage"/>
-				<aux x="1954.56" y="2253.17" name="average depreciation\nrate of DACC energy\nproduction technology"/>
+				<aux x="1981.63" y="2237.46" name="average depreciation\nrate of DACC energy\nproduction technology"/>
 				<aux x="2132.31" y="2189.35" name="DACC energy needed\nto replace depreciation"/>
 				<connector uid="752" angle="166.564">
 					<from>Cumulative_DACC_Energy_Usage</from>
 					<to>DACC_energy_needed_to_replace_depreciation</to>
 				</connector>
-				<connector uid="753" angle="2.38264">
+				<connector uid="753" angle="17.7076">
 					<from>average_depreciation_rate_of_DACC_energy_production_technology</from>
 					<to>DACC_energy_needed_to_replace_depreciation</to>
 				</connector>
-				<connector uid="754" angle="9.19241">
+				<connector uid="754" angle="34.5132">
 					<from>DACC_energy_needed_to_replace_depreciation</from>
 					<to>change_in_DACC_energy_usage_by_source</to>
+				</connector>
+				<connector uid="756" angle="39.9446">
+					<from>
+						<alias uid="755"/>
+					</from>
+					<to>average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit</to>
 				</connector>
 				<alias font_style="italic" uid="720" x="1109.31" y="1483.16" width="18" height="18">
 					<of>additional_investment_by_source_for_DACC</of>
@@ -5742,8 +5742,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<alias font_style="italic" uid="736" x="2597.47" y="1815.83" width="18" height="18">
 					<of>investment_by_source</of>
 				</alias>
-				<alias font_style="italic" uid="750" x="2070.98" y="2061.82" width="18" height="18">
+				<alias font_style="italic" uid="750" x="2096.42" y="2042.83" width="18" height="18">
 					<of>cost_to_build_per_unit</of>
+				</alias>
+				<alias font_style="italic" uid="755" x="1969.15" y="2052.32" width="18" height="18">
+					<of>adjusted_cost</of>
 				</alias>
 			</view>
 		</views>
