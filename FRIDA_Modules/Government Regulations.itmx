@@ -912,7 +912,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<doc>${Policy,No Sensi}
 </doc>
 				<eqn>.1</eqn>
-				<range min="0" max="0.35"/>
+				<range min="0" max="0.2"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="sustainable farming policy" access="output" isee:autocreated="true">
@@ -1041,7 +1041,7 @@ This is the desired annual real GDP growth rate the policy tries to support.</do
 				<eqn>TIME</eqn>
 				<gf>
 					<xscale min="2020" max="2100"/>
-					<yscale min="0" max="1"/>
+					<yscale min="0" max="0.01"/>
 					<ypts>0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
 				<units>dmnl/year</units>
@@ -1161,7 +1161,6 @@ This parameter determines the share of climate-caused risky defaults that the go
 				<entity name="Max_Share_of_GDP_expended_for_Solar_Energy_Subsidies"/>
 				<entity name="Max_Share_of_GDP_expended_for_Wind_Energy_Subsidies"/>
 				<entity name="Maximum_investment_into_CCS_as_share_of_private_investment"/>
-				<entity name="Maximum_share_of_energy_used_for_DACC"/>
 				<entity name="Moratorium_on_fossil_energy_year"/>
 				<entity name="rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
 				<entity name="rate_of_decommissioning_extraction_capital"/>
@@ -1324,13 +1323,6 @@ This parameter determines the share of climate-caused risky defaults that the go
 </doc>
 				<eqn>0.01</eqn>
 				<range min="0.00001" max="0.1"/>
-				<units>dmnl</units>
-			</aux>
-			<aux name="Maximum share of energy used for DACC" access="output" isee:autocreated="true">
-				<doc>${Policy,No Sensi}
-</doc>
-				<eqn>.1</eqn>
-				<range min="0" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
 		</variables>
@@ -1690,7 +1682,6 @@ N2O 1:273</text_box>
 				<aux x="1616.86" y="1598.3" name="Max Share of GDP expended for\nBio Energy Subsidies"/>
 				<aux x="1818.97" y="1401.19" name="Max Share of GDP expended for\nNuclear Energy Subsidies"/>
 				<aux x="2110.67" y="919.104" name="share of biofuel process\nemissions stored"/>
-				<aux x="2110.67" y="1390.78" name="Maximum share of energy used for DACC"/>
 			</view>
 		</views>
 	</model>

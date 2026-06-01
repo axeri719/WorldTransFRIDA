@@ -8,9 +8,9 @@
 		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1779884577" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="l6+NvBUYHDdxN6FALMi2V4Ji7T44ZSwTem1EmbD6wwP2/nUa6iuq0oUgNK1KRLv7d+WjCOykQIvLmszXGqq1AQ=="/>
+		<status verified="false" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1780330266" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="dP6T4RrWyH2oCk0hwpWSKpoOyKBDtnh36XTfPC2s7KLH2OFKQYZPpcSSdam32s6PG1eOQ0NQt+R5VNasW76nCw=="/>
 	</ai_information>
-	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
+	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
 		<stop>Simulation_End</stop>
 		<dt reciprocal="true">8</dt>
@@ -1786,10 +1786,6 @@
 				<connect2 to="Emissions.CDD" from="Energy_demand.CDD"/>
 				<connect to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
 				<connect2 to="Emissions.CDD_preindustrial" from="Energy_demand.CDD_preindustrial"/>
-				<connect to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
-				<connect2 to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
-				<connect to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
-				<connect2 to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect2 to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Energy_demand.average_yearly_demand_per_capita" from="Transportation_Energy_Demand.average_yearly_demand_per_capita"/>
@@ -1846,6 +1842,8 @@
 				<connect2 to="Energy_investments.change_in_DACC_CO2_captured" from="CCS.change_in_DACC_CO2_captured"/>
 				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect2 to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect to="Energy_investments.depreciation_rate_of_direct_air_carbon_capture_capital" from="CCS.depreciation_rate_of_direct_air_carbon_capture_capital"/>
+				<connect2 to="Energy_investments.depreciation_rate_of_direct_air_carbon_capture_capital" from="CCS.depreciation_rate_of_direct_air_carbon_capture_capital"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -3254,8 +3252,6 @@
 				<connect2 to="Government.Max_Share_of_GDP_expended_for_Coal_Extraction_Subsidies" from="Government_Regulations.Max_Share_of_GDP_expended_for_Coal_Extraction_Subsidies"/>
 				<connect to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
-				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
-				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect2 to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect to="Energy_investments.Moratorium_on_fossil_energy_year" from="Government_Regulations.Moratorium_on_fossil_energy_year"/>
@@ -3536,6 +3532,8 @@
 				<connect2 to="Energy_demand.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
 				<connect2 to="Energy_investments.DACC_energy_useage_per_tCO2_in_TWh" from="CCS.DACC_energy_useage_per_tCO2_in_TWh"/>
+				<connect to="Energy_investments.depreciation_rate_of_direct_air_carbon_capture_capital" from="CCS.depreciation_rate_of_direct_air_carbon_capture_capital"/>
+				<connect2 to="Energy_investments.depreciation_rate_of_direct_air_carbon_capture_capital" from="CCS.depreciation_rate_of_direct_air_carbon_capture_capital"/>
 				<connect to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect2 to="CO2_Forcing.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Energy_demand.direct_air_capture_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
@@ -3566,14 +3564,8 @@
 				<connect2 to="CCS.CO2_emissions_from_gas" from="Emissions.CO2_emissions_from_gas"/>
 				<connect to="CCS.CO2_emissions_from_oil" from="Emissions.CO2_emissions_from_oil"/>
 				<connect2 to="CCS.CO2_emissions_from_oil" from="Emissions.CO2_emissions_from_oil"/>
-				<connect to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
-				<connect2 to="CCS.DACC_share_of_energy_demand" from="Energy_demand.DACC_share_of_energy_demand"/>
-				<connect to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
-				<connect2 to="CCS.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
 				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments_1" from="Government_Regulations.Maximum_investment_into_CCS_as_share_of_private_investment"/>
-				<connect to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
-				<connect2 to="CCS.Maximum_investment_into_DACC_energy_as_share_of_non_DACC_investment" from="Government_Regulations.Maximum_share_of_energy_used_for_DACC"/>
 				<connect to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect2 to="CCS.perceived_average_cost_of_DACC_usable_energy_per_unit" from="Energy_investments.average_adjusted_cost_of_DACC_usable_energy_capacity_per_unit"/>
 				<connect to='CCS."Real_GDP_in_2021c$"' from='Demographics."Real_GDP_in_2021c$"'/>
@@ -4087,7 +4079,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="9" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="9" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5018,7 +5010,6 @@ Lorem ipsum dolor sit amet</text_box>
 		<ent name="Government Regulations.share of public investments financed by wealth taxation" preserve="true" lock="false"/>
 		<ent name="Government Regulations.growth rate target for government public investments" preserve="true" lock="false"/>
 		<ent name="Government Regulations.share of excess atmospheric CO2 stored" preserve="true" lock="false"/>
-		<ent name="Government Regulations.Maximum share of energy used for DACC" preserve="true" lock="false"/>
 	</isee:user_controlled>
 	<macro name="INFLATION_IMPACT_GROWTH_RATE">
 		<eqn>trend in input</eqn>
