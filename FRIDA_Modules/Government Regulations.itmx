@@ -5,7 +5,7 @@
 		<name>Government Regulations</name>
 		<uuid>309c5090-8988-4575-b19f-edb0ca37529d</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -940,13 +940,6 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				</gf>
 				<units>dmnl</units>
 			</aux>
-			<aux name="constant central\nbank led public investment" access="output" isee:autocreated="true">
-				<doc>${Policy}
-</doc>
-				<eqn>0.05</eqn>
-				<format precision="0.01"/>
-				<units>dmnl</units>
-			</aux>
 			<aux name="central bank led investment\npolicy start year" access="output" isee:autocreated="true">
 				<doc>${Policy}
 </doc>
@@ -956,7 +949,6 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 			<group name="Climate-driven default\npublic investment policy" run="false">
 				<format scale_by="auto"/>
 				<entity name="central_bank_led_investment_policy_start_year"/>
-				<entity name="constant_central_bank_led_public_investment"/>
 				<entity name="fraction_of_public_investments_financed_by_taxation"/>
 				<entity name="government_run_investment_policy_start_year"/>
 				<entity name="growth_rate_target_for_government_public_investments"/>
@@ -1077,7 +1069,7 @@ A policy parameter sets how long (duration) it takes to ramp from 0 to first-lev
 			<aux name="insurance coverage\nstart year">
 				<doc>${Policy}
 A policy parameter sets the year the insurance policy starts.</doc>
-				<eqn>2035.26</eqn>
+				<eqn>2030</eqn>
 				<format precision="1"/>
 				<units>Year</units>
 			</aux>
@@ -1374,7 +1366,7 @@ This parameter determines the share of climate-caused risky defaults that the go
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="1556" isee:scroll_y="914" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="710" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1553,7 +1545,6 @@ N2O 1:273</text_box>
 				<aux x="727.444" y="485.26" name="sustainable farming policy"/>
 				<aux x="732.08" y="425.796" name="switch sustainable farming policy"/>
 				<aux x="2114.7" y="1157.92" name="share of ccs storage costs\ncovered by the government"/>
-				<aux color="black" background="#00F900" font_color="black" x="1275.7" y="167.666" name="constant central\nbank led public investment"/>
 				<aux color="black" background="#00F900" font_color="black" x="1279" y="241.76" name="central bank led investment\npolicy start year"/>
 				<group locked="true" color="black" font_color="black" x="1197.79" y="75.1883" width="1028.88" height="489.086" name="Climate-driven default\npublic investment policy"/>
 				<aux color="black" background="#00F900" font_color="black" x="1465.66" y="249.848" name="government run investment\npolicy start year"/>
