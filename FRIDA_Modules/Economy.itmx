@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -1363,7 +1363,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="2" isee:page_rows="3" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="3" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10674,13 +10674,12 @@ Only 50% of insurance payouts reduce the risk-premium-relevant perception of def
 				<units>b$</units>
 			</stock>
 			<aux name="initial CB good loans">
-				<doc>${Internal Calibration Parameter}
+				<doc>${No Sensi}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>0</eqn>
-				<range min="7500" max="8500"/>
 				<units>b$</units>
 			</aux>
 			<flow name="CB good investment">
@@ -10716,13 +10715,12 @@ The failure rate here is using the same variable as used in regular good investm
 				<units>b$</units>
 			</stock>
 			<aux name="initial CB bad loans">
-				<doc>${Internal Calibration Parameter}
+				<doc>${No Sensi}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>0</eqn>
-				<range min="7500" max="8500"/>
 				<units>b$</units>
 			</aux>
 			<flow name="CB bad investment">
@@ -11038,7 +11036,7 @@ average_private_debt_safe_interest</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="9" isee:scroll_x="1872.86" isee:scroll_y="3077.86" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="9" isee:scroll_x="1992.86" isee:scroll_y="849.286" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12676,7 +12674,7 @@ SDG 10.5.1</text_box>
 						<pt x="3288.77" y="1148.76"/>
 					</pts>
 				</flow>
-				<connector uid="687" angle="40.5173">
+				<connector uid="687" angle="40.5172">
 					<from>CB_Safe_Loans</from>
 					<to>CB_safe_loans_affected_innovation</to>
 				</connector>
@@ -12692,7 +12690,7 @@ SDG 10.5.1</text_box>
 					<to>CB_actual_safe_investment_failure</to>
 				</connector>
 				<aux color="black" background="#00F900" font_color="black" label_side="left" x="3189.56" y="1054.92" name="rate of converting CB safe\nloans to CB safe loans for\nfinancing innovation"/>
-				<connector uid="692" angle="296.436">
+				<connector uid="692" angle="296.434">
 					<from>rate_of_converting_CB_safe_loans_to_CB_safe_loans_for_financing_innovation</from>
 					<to>CB_safe_loans_affected_innovation</to>
 				</connector>
@@ -12702,7 +12700,7 @@ SDG 10.5.1</text_box>
 						<pt x="3004.45" y="1308.67"/>
 					</pts>
 				</flow>
-				<connector uid="693" angle="47.2733">
+				<connector uid="693" angle="47.2739">
 					<from>CB_safe_loan_defaults</from>
 					<to>CB_safe_loans_affected_innovation</to>
 				</connector>
