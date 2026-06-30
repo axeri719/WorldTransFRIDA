@@ -11,12 +11,10 @@ habit, social diffusion, and the stickiness of culture. Demand and supply are
 placed on an equal footing, so consumption both responds to and feeds back on
 production, land use, and emissions.
 
-The module is developed in greatest depth for **dietary behavior**, spanning the
-sub-models for **Climate Risk Perception**, **Animal Products Demand**, and
-**Total Food Demand**. The same feedback architecture is reused for two further
-high-impact behaviors — **Transportation Energy Demand** and **Fertilizer
-Demand** — and a dedicated **Behavior Change Policy** sub-model exposes levers
-that shift any of these dynamics. Model output is reported as ensembles with
+The module represents **dietary behavior**, spanning the sub-models for
+**Climate Risk Perception**, **Animal Products Demand**, and **Total Food
+Demand**, with a dedicated **Behavior Change Policy** sub-model that exposes
+levers to shift these dynamics. Model output is reported as ensembles with
 median and confidence ranges rather than single deterministic runs.
 
 ### How endogenous behavioral change is represented
@@ -114,27 +112,6 @@ then decline* even as physical conditions worsen — the system desensitizes. Th
 makes climate-motivated dietary change a balancing loop that can weaken over
 time, allowing reinforcing social-value and norm loops to reassert themselves and
 producing the possibility of a reversal of sustainable change late in a run.
-
-### Transportation energy demand and fertilizer demand
-
-Transportation Energy Demand and Fertilizer Demand reuse the same behavioral
-architecture, applying it to energy use per person and to nitrogen fertilizer
-use. Each carries its own stock of desired demand that adjusts gradually toward a
-target set by accessibility, descriptive norm, and personal norms, with personal
-norms again shaped by perceived social value, consumption risk, and climate risk,
-and with final demand taken as the smaller of the personally-moderated desired
-demand and the accessibility-constrained demand.
-
-They differ from dietary demand mainly in their accessibility drivers, which
-reflect each behavior's economics. Both retain an income (GDP) response, but
-transportation demand also responds to energy scarcity and to the climate-risk
-attribution that accompanies the changing clean-energy share, while fertilizer
-demand responds to relative scarcity and to natural-gas availability and price
-(a key input cost) and is bounded by a sustainability ceiling on useful
-fertilizer per unit of land. Through these channels both behaviors stay coupled
-to the rest of FRIDA: transportation energy feeds energy-related emissions, and
-fertilizer use is tied to crop production and contributes N₂O emissions, so a
-worsening climate can damp these demands just as it damps dietary ones.
 
 ### Behavior change policy
 

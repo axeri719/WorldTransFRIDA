@@ -182,8 +182,12 @@ def children(name):
     return md.module_refs if md else []
 
 
-# top-level modules = direct children of FRIDA root
-TOP = children(ROOT)
+# Top-level modules present in the model files but intentionally omitted from
+# the documentation (not part of this published version of the model).
+EXCLUDE_TOP = {"Planetary_Boundaries"}
+
+# top-level modules = direct children of FRIDA root (minus excluded ones)
+TOP = [t for t in children(ROOT) if t not in EXCLUDE_TOP]
 
 # assign every reachable model to a top-level ancestor, preserving DFS order
 descendants = defaultdict(list)   # top norm-name -> [ (depth, norm-name) ] excluding the top itself

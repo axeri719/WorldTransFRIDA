@@ -34,15 +34,3 @@ The single aggregated crop yield is the harvested fraction of crop NPP, set by a
 ### Soil carbon
 
 Litter from each land system decomposes into soil organic carbon (SOC), emitting some carbon directly as CO2. Each of cropland, grassland and forest carries its own fast- and slow-decomposing SOC pools with different mean residence times; decay accelerates with temperature, so warming releases stored soil carbon — a positive feedback to the carbon cycle. Because emissions are proportional to stock size and stocks integrate litter input, an unchanging land system tends toward equilibrium. LUC breaks that equilibrium: shifting SOC between systems and reducing carbon input (e.g. forest to cropland) makes the land a CO2 source, while afforestation makes it a sink.
-
-### Biosphere Indicators
-
-The **Biosphere Indicators** sub-model quantifies five of the nine planetary boundaries from these processes, each via a control variable:
-
-- **Land-system change** — deforested area as a fraction of estimated Holocene forest cover (the difference between that baseline and current young-plus-mature forest).
-- **Biosphere integrity** — human appropriation of NPP (HANPP) as the functional-integrity proxy; the higher the share of biomass used, the greater HANPP and the implied biodiversity loss.
-- **Freshwater use** — consumptive water use, taken as a roughly constant fraction of total withdrawal.
-- **Biogeochemical flows** — nitrogen and phosphorus loads from fertiliser and manure.
-- **Climate change** — CO2 concentration and radiative forcing from the Climate module.
-
-Together these indicators let FRIDA approximate biodiversity trends from its three main pressures — land-use change, direct exploitation, and climate change — even without spatial or taxonomic detail, and they close the module's loop back to the Climate module through land-use, soil, and agricultural greenhouse-gas emissions, surface albedo, and irrigation water vapour.
