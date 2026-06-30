@@ -547,6 +547,20 @@ def page_architecture() -> str:
     return "\n".join(lines)
 
 
+def page_how_to() -> str:
+    lines = ["# How to", ""]
+    body = read_partial("_how-to")
+    if body:
+        lines.append(body)
+    else:
+        lines.append(
+            "Practical guides for installing, running, and extending FRIDA. "
+            "*To be completed.*"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
 def page_conventions() -> str:
     tag_rows = []
     for tag, (label, desc) in TAG_INFO.items():
@@ -613,6 +627,7 @@ def main():
 
     write("index.md", page_index())
     write("architecture.md", page_architecture())
+    write("how-to.md", page_how_to())
     write("conventions.md", page_conventions())
 
     nav_modules = []

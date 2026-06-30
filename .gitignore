@@ -17,5 +17,6 @@ docs-site/
 mkdocs.yml
 docs/index.md
 docs/architecture.md
+docs/how-to.md
 docs/conventions.md
 docs/modules/
