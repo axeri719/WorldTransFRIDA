@@ -516,6 +516,15 @@ The model comprises **{tot_models} sub-models** containing roughly
 **{tot_s} stocks**, **{tot_f} flows**, and **{tot_a} auxiliary variables and
 parameters**.
 
+## How to cite
+
+If you use FRIDA in your work, please cite the model description paper:
+
+> Schoenberg, W., Blanz, B., Rajah, J. K., Callegari, B., Wells, C., Breier, J., Grimeland, M. B., Lindqvist, A. N., Ramme, L., Smith, C., Li, C., Mashhadi, S., Muralidhar, A., and Mauritzen, C.: [An overview of FRIDA v2.1: a feedback-based, fully coupled, global integrated assessment model of climate and humans](https://gmd.copernicus.org/articles/18/8047/2025/gmd-18-8047-2025.html), Geoscientific Model Development, 18, 8047–8069, 2025. doi:[10.5194/gmd-18-8047-2025](https://doi.org/10.5194/gmd-18-8047-2025).
+
+The complete set of papers documenting FRIDA is collected in the
+[GMD FRIDA special issue](https://gmd.copernicus.org/articles/collection12.html).
+
 !!! info "Source"
     Generated from `FRIDA.stmx` and `FRIDA_Modules/*.itmx`. FRIDA is developed by the
     [WorldTrans](https://worldtrans-horizon.eu/) project (Horizon Europe grant no. 101081661).
@@ -668,6 +677,8 @@ site_name: FRIDA Model Documentation
 site_description: Documentation for the WorldTrans FRIDA integrated assessment model
 site_author: WorldTrans / isee systems
 copyright: "FRIDA is developed by the WorldTrans project (Horizon Europe grant no. 101081661)."
+repo_url: https://github.com/metno/WorldTransFRIDA
+repo_name: metno/WorldTransFRIDA
 use_directory_urls: true
 
 # The docs/ folder also holds the generator and its sources; keep them out of the build.
@@ -736,8 +747,8 @@ plugins:
 
 nav:
   - Home: index.md
-  - How to: how-to.md
   - Model architecture: architecture.md
+  - How to: how-to.md
   - Reading the reference: conventions.md
   - Modules:
 """
