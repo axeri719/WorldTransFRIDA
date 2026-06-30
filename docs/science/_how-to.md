@@ -1,5 +1,3 @@
-# How to
-
 Practical guides for working with FRIDA: installing the tools, running the model,
 and extending it with new structure.
 
