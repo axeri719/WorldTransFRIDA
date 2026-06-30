@@ -3,14 +3,12 @@ name: Deploy docs to GitHub Pages
 # Builds the FRIDA documentation site and publishes each branch to its own
 # versioned subdirectory of the gh-pages branch using `mike`, e.g.
 #   https://metno.github.io/WorldTransFRIDA/main/
-#   https://metno.github.io/WorldTransFRIDA/doc_site/
 # The site root redirects to whichever version is the default (main).
 
 on:
   push:
     branches:
       - main
-      - doc_site
   workflow_dispatch:        # allow manual runs from the Actions tab
 
 # mike commits the built site to the gh-pages branch, so the token needs write access.
