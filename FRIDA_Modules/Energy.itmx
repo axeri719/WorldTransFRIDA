@@ -5,7 +5,7 @@
 		<name>Energy</name>
 		<uuid>c1b82cc3-b7ea-44bd-8778-8cd0a8354dc8</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -4550,7 +4550,7 @@ depreciation_rate_1 *perceived_share_of_investment_into_DACC_usable_energy_sourc
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="896.667" isee:scroll_y="1509.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="1649.17" isee:scroll_y="1770.83" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6701,7 +6701,7 @@ Arbitrary unit of energy used to calculate the differentials of cost to produce 
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="290" isee:scroll_y="240" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="203" isee:scroll_y="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6781,12 +6781,12 @@ Arbitrary unit of energy used to calculate the differentials of cost to produce 
 					<from>Damages</from>
 					<to>Renewable_energy</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="965.084" y="689.522" name="Renewable Energy\nOutput"/>
-				<connector uid="39" angle="310.037" isee:autocreated="true">
+				<aux font_style="italic" font_weight="bold" x="1044" y="714" name="Renewable Energy\nOutput"/>
+				<connector uid="39" angle="324.82" isee:autocreated="true">
 					<from>Renewable_energy</from>
 					<to>Renewable_Energy_Output</to>
 				</connector>
-				<connector uid="40" angle="265.654">
+				<connector uid="40" angle="246.955">
 					<from>Renewable_Energy_Output</from>
 					<to>Total_Energy_Output</to>
 				</connector>
@@ -6805,7 +6805,7 @@ Arbitrary unit of energy used to calculate the differentials of cost to produce 
 					<from>Total_Energy_Output</from>
 					<to>Renewable_Energy_Output_Share</to>
 				</connector>
-				<connector uid="47" angle="294.276">
+				<connector uid="47" angle="280.129">
 					<from>Renewable_Energy_Output</from>
 					<to>Renewable_Energy_Output_Share</to>
 				</connector>
@@ -6922,12 +6922,12 @@ Arbitrary unit of energy used to calculate the differentials of cost to produce 
 					<from>Fossil_energy</from>
 					<to>Renewable_energy</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="987.857" y="568.572" name="bio fuel secondary energy output"/>
-				<connector uid="80" angle="335.689" isee:autocreated="true">
+				<aux font_style="italic" font_weight="bold" x="1044" y="547.179" name="bio fuel secondary energy output"/>
+				<connector uid="80" angle="357.305" isee:autocreated="true">
 					<from>Renewable_energy</from>
 					<to>bio_fuel_secondary_energy_output</to>
 				</connector>
-				<connector uid="81" angle="270">
+				<connector uid="81" angle="234.589">
 					<from>bio_fuel_secondary_energy_output</from>
 					<to>Bio_Energy_Output_Share</to>
 				</connector>
@@ -15739,6 +15739,13 @@ Wind_Energy_Output+
 				</dimensions>
 				<units>GW</units>
 			</aux>
+			<aux name="Total Non Biomass Renewable\nEnergy Output">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Wind_Energy_Output+Wind_Energy_Output_1+Hydropower_Energy_Output</eqn>
+				<units>TWh/Year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -15904,6 +15911,19 @@ Wind_Energy_Output+
 				<connector uid="32" angle="223.905">
 					<from>Converter_1</from>
 					<to>Total_Renewable_Energy_Capacity</to>
+				</connector>
+				<aux x="553.764" y="563.161" name="Total Non Biomass Renewable\nEnergy Output"/>
+				<connector uid="33" angle="353.562">
+					<from>Wind_Energy_Output</from>
+					<to>Total_Non_Biomass_Renewable_Energy_Output</to>
+				</connector>
+				<connector uid="34" angle="333.495">
+					<from>Wind_Energy_Output_1</from>
+					<to>Total_Non_Biomass_Renewable_Energy_Output</to>
+				</connector>
+				<connector uid="35" angle="218.408">
+					<from>Hydropower_Energy_Output</from>
+					<to>Total_Non_Biomass_Renewable_Energy_Output</to>
 				</connector>
 			</view>
 		</views>
@@ -16622,7 +16642,7 @@ tax_for_newly_installed_other_energy_capacity</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1097" page_height="767" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="107.5" isee:scroll_y="711.25" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="107.5" isee:scroll_y="711.25" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
