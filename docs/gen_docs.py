@@ -722,6 +722,12 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# Per-branch deploys are published with `mike`; this adds a branch/version
+# selector to the header. See .github/workflows/deploy-docs.yml.
+extra:
+  version:
+    provider: mike
+
 markdown_extensions:
   - admonition
   - attr_list
