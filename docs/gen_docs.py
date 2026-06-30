@@ -490,6 +490,10 @@ def page_index() -> str:
 
 {intro}
 
+!!! tip "Try the interactive simulator"
+    Explore FRIDA live in your browser — adjust policies and scenarios and watch the
+    feedbacks play out — at **[frida.earth](https://frida.earth/)**.
+
 FRIDA is a **system-dynamics** model built in
 [Stella Architect](https://www.iseesystems.com/store/products/stella-architect.aspx).
 This site documents the model module by module, combining paper-grounded overviews
@@ -732,6 +736,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - How to: how-to.md
   - Model architecture: architecture.md
   - Reading the reference: conventions.md
   - Modules:

@@ -59,3 +59,11 @@ img.cld {
 /* tighten the dense variable listings */
 .md-typeset h3 { margin-top: 1.6em; }
 .md-typeset blockquote { margin: 0.6em 0; }
+
+/* Equations (and other fenced code blocks) wrap to their box instead of
+   scrolling sideways. pre-wrap keeps the model's line breaks; overflow-wrap
+   lets FRIDA's long qualified names (e.g. Module.Very_Long_Variable_Name) break. */
+.md-typeset pre > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
