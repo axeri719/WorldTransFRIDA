@@ -189,13 +189,18 @@ Variable,Value,Min,Max,Assumption,Calibrated Output,Climate Impact Parameter,Dis
 "Climate Units.UNIT deg C to unitless",1,,,,,,,,,,,,,,1
 "Climate Units.UNIT fraction to ppm",1000000,,,,,,,,,,,,,,1
 "Climate Units.UNIT GtC to kmol",83259093975,,,,,,,,,,,,,,1
+"Climate Units.UNIT GWP100 CH4",27.9,,,,,,,,,,,,,,1
+"Climate Units.UNIT GWP100 CO2",1,,,,,,,,,,,,,,1
+"Climate Units.UNIT GWP100 HFC134a-eq",1530,,,,,,,,,,,,,,1
+"Climate Units.UNIT GWP100 N2O",273,,,,,,,,,,,,,,1
 "Climate Units.UNIT Kelvin at 0 deg C unitless",273.15,,,,,,,,,,,,,,1
 "Climate Units.UNIT kt to kg",1000000,,,,,,,,,,,,,,1
+"Climate Units.UNIT kt to t",1000,,,,,,,,,,,,,,1
 "Climate Units.UNIT ktN2O to MtN2O",0.001,,,,,,,,,,,,,,1
-"Climate Units.UNIT ktN2O to tCO2e",273000000,,,,,,,,,,,,,,1
-"Climate Units.UNIT MtCH4 to tCO2e",28000000,,,,,,,,,,,,,,1
+"Climate Units.UNIT ktN2O to tN2O",1000,,,,,,,,,,,,,,1
+"Climate Units.UNIT MtCH4 to tCH4",1000000,,,,,,,,,,,,,,1
 "Climate Units.UNIT MtCO2 to GtCO2",0.001,,,,,,,,,,,,,,1
-"Climate Units.UNIT MtCO2 to tCO2e",1000000,,,,,,,,,,,,,,1
+"Climate Units.UNIT MtCO2 to tCO2",1000000,,,,,,,,,,,,,,1
 "Climate Units.UNIT ppm to ppb",1000,,,,,,,,,,,,,,1
 "Climate Units.UNIT ppm to ppt",1000000,,,,,,,,,,,,,,1
 "Climate Units.UNIT ppt to ppb",0.001,,,,,,,,,,,,,,1

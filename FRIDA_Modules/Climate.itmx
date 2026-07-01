@@ -1583,38 +1583,50 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 				<units>dmnl</units>
 			</aux>
 			<aux name="UNIT GWP100 CO2">
-				<doc>IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
+				<doc>${Unit}
+IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
 				<eqn>1</eqn>
 				<units>tCO2e/tCO2e</units>
 			</aux>
 			<aux name="UNIT GWP100 N2O">
-				<doc>IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
+				<doc>${Unit}
+IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
 				<eqn>273</eqn>
 				<units>tCO2e/tN2O</units>
 			</aux>
 			<aux name="UNIT GWP100 CH4">
-				<doc>IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
+				<doc>${Unit}
+IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
 				<eqn>27.9</eqn>
 				<units>tCO2e/tCH4</units>
 			</aux>
 			<aux name="UNIT MtCO2 to tCO2">
+				<doc>${Unit}
+</doc>
 				<eqn>1000000</eqn>
 				<units>tCO2e/MtCO2</units>
 			</aux>
 			<aux name="UNIT ktN2O to tN2O">
+				<doc>${Unit}
+</doc>
 				<eqn>1000</eqn>
 				<units>tN2O/ktN2O</units>
 			</aux>
 			<aux name="UNIT MtCH4 to tCH4">
+				<doc>${Unit}
+</doc>
 				<eqn>1000000</eqn>
 				<units>tCH4/MtCH4</units>
 			</aux>
 			<aux name="UNIT GWP100 HFC134a-eq">
-				<doc>IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
+				<doc>${Unit}
+IPCC AR6 WG1 Ch7 Table 7.SM.7 https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter07_SM.pdf</doc>
 				<eqn>1530</eqn>
 				<units>tCO2e/t</units>
 			</aux>
 			<aux name="UNIT kt to t">
+				<doc>${Unit}
+</doc>
 				<eqn>1000</eqn>
 				<units>t/kt</units>
 			</aux>
@@ -1671,7 +1683,7 @@ This variable is unitless to avoid units issues with parameters in the downstrea
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="2" isee:scroll_y="71" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
