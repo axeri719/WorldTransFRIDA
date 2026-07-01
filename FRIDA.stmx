@@ -5,10 +5,10 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1782911597" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="SdUHuEu6s3kd5cZZ0WkpibzFvLezG5wzQpI4rIWBWFSY9JeT0rOM6+R12obo3KawMSkf+1uIRFg1a2sP1A27BA=="/>
+		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1782918805" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="NNcHkWJ8H4Y2yB6ZDh0KkWibp0oIjXDpF4OBBl8HrDJSh0KNFG53tCw4BYhOHJALKdfF+NtulVITCHjlQRHKDw=="/>
 	</ai_information>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -787,22 +787,22 @@
 		</isee:optimizer_specs>
 	</isee:optimizer_specs_list>
 	<isee:payoff_specs_list>
-		<isee:payoff_specs name="Population Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
-			<isee:payoff_element name="Demographics.Population[1]" weight="0.0070583971166533" compare_name="Demographics.Population[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_0_years[1]" weight="0.108907040854157" compare_name="Demographics.Aged_0_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_1_to_20_years[1]" weight="0.00201796654834666" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_20_to_40_years[1]" weight="0.00387721439483182" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_40_to_60_years[1]" weight="0.00376236988199209" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_60_to_65_years[1]" weight="0.169422867610727" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Aged_Over_75_years[1]" weight="0.204331433003298" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_0_years[1]" weight="47.9975591626885" compare_name="Demographics.deaths_0_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_1_to_20_years[1]" weight="59.1575392523421" compare_name="Demographics.deaths_1_to_20_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_20_to_40_years[1]" weight="55.6235574458565" compare_name="Demographics.deaths_20_to_40_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_40_to_60_years[1]" weight="5.48275734641781" compare_name="Demographics.deaths_40_to_60_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_60_to_65_years[1]" weight="22.0888866051027" compare_name="Demographics.deaths_60_to_65_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.deaths_Over_75_years[1]" weight="1.21562797035461" compare_name="Demographics.deaths_Over_75_years[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.Births[1]" weight="0.107469348066457" compare_name="Demographics.Births[1]" compare_run="-1" tolerance="0" type="ls"/>
-			<isee:payoff_element name="Demographics.total_deaths[1]" weight="0.244811782464994" compare_name="Demographics.total_deaths[1]" compare_run="-1" tolerance="0" type="ls"/>
+		<isee:payoff_specs name="Population Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
+			<isee:payoff_element name="Demographics.Population[1]" weight="0.0070583971166533" compare_name="Demographics.Population[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_0_years[1]" weight="0.108907040854157" compare_name="Demographics.Aged_0_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_1_to_20_years[1]" weight="0.00201796654834666" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_20_to_40_years[1]" weight="0.00387721439483182" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_40_to_60_years[1]" weight="0.00376236988199209" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_60_to_65_years[1]" weight="0.169422867610727" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Aged_Over_75_years[1]" weight="0.204331433003298" compare_name="Demographics.Aged_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_0_years[1]" weight="47.9975591626885" compare_name="Demographics.deaths_0_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_1_to_20_years[1]" weight="59.1575392523421" compare_name="Demographics.deaths_1_to_20_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_20_to_40_years[1]" weight="55.6235574458565" compare_name="Demographics.deaths_20_to_40_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_40_to_60_years[1]" weight="5.48275734641781" compare_name="Demographics.deaths_40_to_60_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_60_to_65_years[1]" weight="22.0888866051027" compare_name="Demographics.deaths_60_to_65_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.deaths_Over_75_years[1]" weight="1.21562797035461" compare_name="Demographics.deaths_Over_75_years[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.Births[1]" weight="0.107469348066457" compare_name="Demographics.Births[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
+			<isee:payoff_element name="Demographics.total_deaths[1]" weight="0.244811782464994" compare_name="Demographics.total_deaths[1]" compare_run="Calibration Data" tolerance="0" type="ls"/>
 			<isee:payoff_element name="Demographics.female_population_literacy_percentage[1]" weight="0.6815073073229">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -813,7 +813,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Land Use and Agriculture Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Land Use and Agriculture Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Crop.crop_production[1]" weight="0.0000103371411659414">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -896,7 +896,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Emissions Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Emissions Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Concrete.CO2_emissions[1]" weight="0.00012133">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -949,12 +949,12 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Literacy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Literacy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Demographics.female_population_literacy_percentage[1]" weight="0.681507307321808">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Behavioral Change Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Behavioral Change Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Animal_Products.animal_products_production[1]" weight="0.00150328118659404">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -977,7 +977,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Energy Demand" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Energy Demand" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Energy_demand.energy_demand_for_Buildings[1]" weight="1.8367960352319e-17">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -985,12 +985,12 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Ocean C cycle payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Ocean C cycle payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Ocean.Air_sea_co2_flux[1]" weight="40.8029">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Carbon Balance Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Carbon Balance Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Terrestrial_Carbon_Balance.Terrestrial_carbon_balance[1]" weight="1.68442">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1028,7 +1028,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Concrete Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Concrete Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Concrete.concrete_waste_generation[1]" weight="0.00033323">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1051,7 +1051,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Economic Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Economic Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="2.57459942556655e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1101,7 +1101,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Employment Sector Shares" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Employment Sector Shares" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Employment.share_of_employment_in_agriculture[1]" weight="13483.6">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1112,7 +1112,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Real GDP" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Real GDP" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name='GDP."Real_GDP_in_2021c$"[1]' weight="1.33443744596582e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1120,7 +1120,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Energy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Energy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Fossil_energy.Secondary_Fossil_Energy_Output[1]" weight="3.30536894404148e-9">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1272,7 +1272,7 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Econ &amp; Energy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Econ &amp; Energy Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Circular_Flow.private_consumption[1]" weight="1.30607e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1466,17 +1466,17 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="SDG 10.1.1" calibration="true" recompute_weights="false" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="SDG 10.1.1" calibration="true" recompute_weights="false" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Circular_Flow.bottom_40_share_of_real_income[1]" weight="558203.1452268">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Fertilizer Demand Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Fertilizer Demand Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Fertilizer_Demand.total_yearly_demand[1]" weight="0.0126316708125524">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Land Use and Agriculture without Fertilizer Payoff " calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Land Use and Agriculture without Fertilizer Payoff " calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Crop.crop_production[1]" weight="0.0000117220319202202">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1550,17 +1550,17 @@
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="Transport Energy Demand" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="Transport Energy Demand" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Transportation_Energy_Demand.total_yearly_demand[1]" weight="2.65499354103779e-18">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="PM2.5 Emissions from Energy" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="PM2.5 Emissions from Energy" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="Emissions.pm25_emissions_from_energy[1]" weight="0.0635701219869934">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
-		<isee:payoff_specs name="CCS" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="-1">
+		<isee:payoff_specs name="CCS" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
 			<isee:payoff_element name="CCS.BECC_Capacity[1]" weight="8.6908730288106e-13">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1767,6 +1767,18 @@
 			<alias>dmnl</alias>
 			<alias>unitless</alias>
 		</unit>
+		<unit name="G">
+			<eqn>Giga</eqn>
+		</unit>
+		<unit name="GtCO2">
+			<eqn>Giga*tCO2</eqn>
+		</unit>
+		<unit name="GtCH4">
+			<eqn>Giga*tCH4</eqn>
+		</unit>
+		<unit name="GtN2O">
+			<eqn>Giga*tN2O</eqn>
+		</unit>
 	</model_units>
 	<model>
 		<variables>
@@ -1924,6 +1936,8 @@
 				<connect2 to="Emissions.PM_per_fuel_extracted" from="Fossil_energy_coal.PM_per_fuel_extracted"/>
 				<connect to="CCS.share_of_emissions_stored" from="Fossil_energy_coal.share_of_emissions_stored"/>
 				<connect2 to="CCS.share_of_emissions_stored" from="Fossil_energy_coal.share_of_emissions_stored"/>
+				<connect to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
+				<connect2 to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
 				<connect to="Fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect2 to="Fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect to="Fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
@@ -3618,6 +3632,8 @@
 				<connect2 to="CCS.share_of_excess_atmospheric_CO2_stored" from="Government_Regulations.share_of_excess_atmospheric_CO2_stored"/>
 				<connect to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
+				<connect to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
+				<connect2 to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
 				<connect to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
 				<connect2 to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
 				<connect to="CCS.UNIT_GJ_to_TWh_1" from="Energy_Units.UNIT_GJ_to_TWh"/>
@@ -4107,7 +4123,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="9" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="5" isee:page_rows="9" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4990,22 +5006,13 @@ Lorem ipsum dolor sit amet</text_box>
 					</style>
 					<isee:shape background="#F7F7F7" border_width="thin" border_style="none" transparent_background="false" x="0" y="0" width="1066" height="600" kind="rectangle"/>
 					<graphics_frame z_index="2" fill="none" x="12.4806" y="16.9825" width="166" height="34">
-						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/home/benjamin/software/UHH/Stella_Architect/.app/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
+						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/Applications/Stella Architect.app/Contents/Resources/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
 					</graphics_frame>
 				</view>
 			</isee:templates>
 			<isee:stories/>
 		</views>
 	</model>
-	<isee:controls>
-		<isee:control priority="interactive" name="Government_Regulations.tax_on_CO2e_emissions" type="graphical">
-			<gf>
-				<xscale min="2020" max="2100"/>
-				<yscale min="0" max="250"/>
-				<ypts>0,119.2,128.8,152.9,179.8,250,250,250,250</ypts>
-			</gf>
-		</isee:control>
-	</isee:controls>
 	<isee:user_controlled>
 		<ent name="Simulation End" preserve="true" lock="false"/>
 		<ent name="Government Regulations.tax on CO2e emissions" preserve="true" lock="false"/>
@@ -5047,6 +5054,55 @@ Lorem ipsum dolor sit amet</text_box>
 		<ent name="Government Regulations.growth rate target for government public investments" preserve="true" lock="false"/>
 		<ent name="Government Regulations.share of excess atmospheric CO2 stored" preserve="true" lock="false"/>
 	</isee:user_controlled>
+	<macro name="EPSILON">
+		<eqn>output</eqn>
+		<variables>
+			<aux name="output" access="output">
+				<eqn>0.001</eqn>
+				<units>c$/(tCO2e/year)</units>
+			</aux>
+		</variables>
+		<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
+				<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+					<shape type="rectangle" width="45" height="35"/>
+				</stock>
+				<flow color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+					<shape type="circle" radius="18"/>
+				</flow>
+				<isee:placeholder color="#228B22" background="white" font_color="#228B22" font_size="11pt" label_side="bottom"/>
+				<module color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
+					<shape type="rectangle" width="67" height="55"/>
+				</module>
+				<aux color="blue" background="white" font_color="blue" font_size="11pt" label_side="bottom">
+					<shape type="circle" radius="18"/>
+				</aux>
+				<group color="red" background="white" font_color="red" font_size="11pt"/>
+				<connector color="#FF007F" background="white" font_color="#FF007F" font_size="9pt" isee:thickness="1"/>
+				<text_box color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<isee:loop_indicator color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt"/>
+				<numeric_display color="white" background="white" font_size="12pt" border_width="thin" border_style="solid" isee:transparent="false" isee:show_divider="true" isee:show_bounding_box="true" label_side="left"/>
+				<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
+					<isee:series_styles>
+						<isee:series_style color="blue" thickness="1"/>
+						<isee:series_style color="red" thickness="1"/>
+						<isee:series_style color="#008F44" thickness="1"/>
+						<isee:series_style color="#FF7F00" thickness="1"/>
+						<isee:series_style color="#7F00FF" thickness="1"/>
+						<isee:series_style color="#0CA0FF" thickness="1"/>
+						<isee:series_style color="lime" thickness="1"/>
+						<isee:series_style color="#FF007F" thickness="1"/>
+						<isee:series_style color="aqua" thickness="1"/>
+						<isee:series_style color="#F586FF" thickness="1"/>
+						<isee:series_style color="black" thickness="1"/>
+						<isee:series_style color="#C8C8C8" thickness="1"/>
+					</isee:series_styles>
+				</graph>
+				<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
+			</style>
+			<aux x="150.18" y="159.539" name="output"/>
+		</view>
+	</macro>
 	<macro name="INFLATION_IMPACT_GROWTH_RATE">
 		<eqn>trend in input</eqn>
 		<parm>input</parm>
