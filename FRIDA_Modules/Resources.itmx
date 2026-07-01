@@ -365,8 +365,6 @@
 				<connect2 to="CCS.share_of_excess_atmospheric_CO2_stored" from="Government_Regulations.share_of_excess_atmospheric_CO2_stored"/>
 				<connect to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
-				<connect to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
-				<connect2 to="CCS.SWITCH_Use_Endogenous_Storage_Choice" from="Fossil_energy_coal.SWITCH_Use_Endogenous_Storage_Choice"/>
 				<connect to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
 				<connect2 to='CCS."UNIT_c$_per_Bc$"' from='Finance."UNIT_c$_per_Bc$"'/>
 				<connect to="CCS.UNIT_GJ_to_TWh_1" from="Energy_Units.UNIT_GJ_to_TWh"/>
@@ -481,8 +479,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;(start_year) AND SWITCH_Use_Endogenous_Storage_Choice &lt;&gt; 1 THEN
-share_of_emissions_stored*CO2_emissions_from_coal
+				<eqn>IF TIME&gt;(start_year) THEN share_of_emissions_stored*CO2_emissions_from_coal
 ELSE
 0</eqn>
 				<units>MtCO2/Year</units>
@@ -491,7 +488,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;(start_year) AND SWITCH_Use_Endogenous_Storage_Choice &lt;&gt; 1THEN
+				<eqn>IF TIME&gt;(start_year) THEN
 share_of_emissions_stored_1*CO2_emissions_from_gas
 ELSE
 0</eqn>
@@ -501,7 +498,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;(start_year) AND SWITCH_Use_Endogenous_Storage_Choice &lt;&gt; 1 THEN
+				<eqn>IF TIME&gt;(start_year) THEN
 (share_of_biofuel_process_emissions_stored*CO2_emissions_from_biofuels_processes)
 ELSE
 0</eqn>
@@ -535,7 +532,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;(start_year) AND SWITCH_Use_Endogenous_Storage_Choice &lt;&gt; 1 THEN
+				<eqn>IF TIME&gt;(start_year) THEN
 share_of_emissions_stored_2*CO2_emissions_from_oil
 ELSE
 0</eqn>
@@ -1950,10 +1947,6 @@ Limits the spending on DACC when you have no ramp</doc>
 				<eqn>end_of_pipe_CO2_Captured//end_of_pipe_capturable_emissions</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="SWITCH Use Endogenous\nStorage Choice" access="input">
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>dmnl</units>
-			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -2003,7 +1996,7 @@ Limits the spending on DACC when you have no ramp</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="1207.14" isee:scroll_y="430" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="10" isee:page_rows="6" isee:scroll_x="2565.71" isee:scroll_y="987.143" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3498,23 +3491,6 @@ Limits the spending on DACC when you have no ramp</doc>
 				<connector uid="1101" angle="0.863897">
 					<from>end_of_pipe_CO2_Captured</from>
 					<to>actual_share_of_end_of_pipe_emissions_captured</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="678.07" y="1395.71" name="SWITCH Use Endogenous\nStorage Choice"/>
-				<connector uid="1102" angle="194.878">
-					<from>SWITCH_Use_Endogenous_Storage_Choice</from>
-					<to>desired_storing_carbon_from_coal_emissions</to>
-				</connector>
-				<connector uid="1103" angle="213.915">
-					<from>SWITCH_Use_Endogenous_Storage_Choice</from>
-					<to>desired_storing_carbon_from_oil_emissions</to>
-				</connector>
-				<connector uid="1104" angle="302.578">
-					<from>SWITCH_Use_Endogenous_Storage_Choice</from>
-					<to>desired_storing_carbon_from_gas_emissions</to>
-				</connector>
-				<connector uid="1105" angle="343.252">
-					<from>SWITCH_Use_Endogenous_Storage_Choice</from>
-					<to>desired_storing_carbon_from_biofuel_emissions</to>
 				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="4765.3" y="1109.64" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
