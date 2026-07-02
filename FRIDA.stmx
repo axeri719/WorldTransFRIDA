@@ -8,7 +8,7 @@
 		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1782921904" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="X9c6cLmYbwAoV/eenM3VaGBGWtW45+yW94mQPucAmRGFWIxL3Z46Wy++UjeFP+PXc+OTPYmRg3yD329sx3ljCg=="/>
+		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1783001639" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="pT3GAHlPoxk9JMCJB1zEmH290e+XjM5h64k9vOp9frnLMf31aDVfrHVc4dUsQ1svgUVwiRKoxgvxRD/Smlt0BQ=="/>
 	</ai_information>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -129,7 +129,7 @@
 			<isee:variable starting_value="1" ending_value="100" type="incremental" min="1" max="100" seed="12345" name="Climate_Units.selected_climate_case[1]" num_samples="100"/>
 		</isee:sensi_specs>
 	</isee:sensi_specs_list>
-	<isee:optimizer_specs_list active_index="4">
+	<isee:optimizer_specs_list active_index="17">
 		<isee:optimizer_specs name="Demographics Calibration" method="Powell" use_additional_starts_file="false" additional_starts="0" report_interval="1" confidence_range="0" maxiter="0">
 			<isee:parameter name="Demographics.infant_mortality_alpha[1]" scaling="100000"/>
 			<isee:parameter name="Demographics.infant_mortality_gamma[1]" scaling="100000"/>
@@ -814,85 +814,85 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="Land Use and Agriculture Payoff" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="Crop.crop_production[1]" weight="0.0000103371411659414">
+			<isee:payoff_element name="Crop.crop_production[1]" weight="0.00000964060837300992">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Freshwater.total_water_withdrawal[1]" weight="1.37089454649057e-22">
+			<isee:payoff_element name="Freshwater.total_water_withdrawal[1]" weight="1.26474451241817e-22">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Animal_Products.animal_products_production[1]" weight="0.000627658308978008">
+			<isee:payoff_element name="Animal_Products.animal_products_production[1]" weight="0.00265421822620731">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Freshwater.fraction_of_water_withdrawal_for_agriculture[1]" weight="199482.343409967">
+			<isee:payoff_element name="Freshwater.fraction_of_water_withdrawal_for_agriculture[1]" weight="591127.411368576">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Freshwater.available_water_supply[1]" weight="3.73118177678905e-23">
+			<isee:payoff_element name="Freshwater.available_water_supply[1]" weight="3.29972263175393e-23">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Nutrients.man_made_fertilizer_use[1]" weight="0.0851971539870939">
+			<isee:payoff_element name="Land_Nutrients.man_made_fertilizer_use[1]" weight="0.0556135500582189">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Nutrients.manure_fertilizer_use[1]" weight="1.5229084457472">
+			<isee:payoff_element name="Land_Nutrients.manure_fertilizer_use[1]" weight="1.60342413953789">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Freshwater.irrigated_cropland[1]" weight="0.0199073781698202">
+			<isee:payoff_element name="Freshwater.irrigated_cropland[1]" weight="0.0302792158854249">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Animal_Products.aquatic_animal_product_share[1]" weight="350391.575840192">
+			<isee:payoff_element name="Animal_Products.aquatic_animal_product_share[1]" weight="374029.746630156">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Sea_Level.Sea_level_anomaly_from_LWS[1]" weight="397752.524725328">
+			<isee:payoff_element name="Sea_Level.Sea_level_anomaly_from_LWS[1]" weight="380982.318952702">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Sea_Level.Land_water_storage_from_water_impoundment[1]" weight="8.26398567753233e-24">
+			<isee:payoff_element name="Sea_Level.Land_water_storage_from_water_impoundment[1]" weight="7.169090075314e-24">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.Crops_used_for_Seed_or_Lost[1]" weight="0.000165580772822315">
+			<isee:payoff_element name="Food_Demand.Crops_used_for_Seed_or_Lost[1]" weight="0.000163590411643196">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.crop_demand_for_food[1]" weight="0.000295432069167614">
+			<isee:payoff_element name="Food_Demand.crop_demand_for_food[1]" weight="0.000316924835667105">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.feed_production[1]" weight="0.0000656472243652629">
+			<isee:payoff_element name="Food_Demand.feed_production[1]" weight="0.0000848350652762044">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Food_Demand.animal_products_demand[1]" weight="0.00438376793053125">
+			<isee:payoff_element name="Food_Demand.animal_products_demand[1]" weight="0.00438995308520717">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Emissions.CO2_Emissions_from_Food_and_Land_Use[1]" weight="3.48993750778959e-7">
+			<isee:payoff_element name="Emissions.CO2_Emissions_from_Food_and_Land_Use[1]" weight="8.11348690935141e-7">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Emissions.land_carbon_sink[1]" weight="1.5658643320841">
+			<isee:payoff_element name="Emissions.land_carbon_sink[1]" weight="1.33272002782452">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Terrestrial_Carbon_Balance.deforestation_carbon_loss[1]" weight="6.17713196706677">
+			<isee:payoff_element name="Terrestrial_Carbon_Balance.deforestation_carbon_loss[1]" weight="25.0928520100157">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Terrestrial_Carbon_Balance.forest_regrowth_carbon_uptake[1]" weight="132.026739158918">
+			<isee:payoff_element name="Terrestrial_Carbon_Balance.forest_regrowth_carbon_uptake[1]" weight="594.760207995734">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Terrestrial_Carbon_Balance.Terrestrial_carbon_balance[1]" weight="1.19909024499266">
+			<isee:payoff_element name="Terrestrial_Carbon_Balance.Terrestrial_carbon_balance[1]" weight="1.33734890422849">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Crop.cropland_net_primary_production[1]" weight="4.74543811154943">
+			<isee:payoff_element name="Crop.cropland_net_primary_production[1]" weight="5.2375523836791">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Terrestrial_Carbon_Balance.Terrestrial_net_primary_production[1]" weight="324.192494863141">
+			<isee:payoff_element name="Terrestrial_Carbon_Balance.Terrestrial_net_primary_production[1]" weight="0.303953154870425">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Fertilizer_Demand.total_yearly_demand[1]" weight="0.085517233032973">
+			<isee:payoff_element name="Fertilizer_Demand.total_yearly_demand[1]" weight="0.0488887896235166">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Use.Grassland[1]" weight="0.000172372482759861">
+			<isee:payoff_element name="Land_Use.Grassland[1]" weight="0.000942405279879091">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Use.Degraded_Land[1]" weight="0.0186811384186896">
+			<isee:payoff_element name="Land_Use.Degraded_Land[1]" weight="0.0197800382720908">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Use.Cropland[1]" weight="0.0017544534679563">
+			<isee:payoff_element name="Land_Use.Cropland[1]" weight="0.00229887058293513">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="Land_Use.Forest_Land[1]" weight="0.000320864012248211">
+			<isee:payoff_element name="Land_Use.Forest_Land[1]" weight="0.000629813572793304">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 		</isee:payoff_specs>
