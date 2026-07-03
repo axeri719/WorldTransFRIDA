@@ -5,7 +5,7 @@
 		<name>Economy</name>
 		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.2.1" isee:build_number="3906" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -16158,7 +16158,7 @@ This is effectively a controller gain. It tunes aggressiveness rather than repre
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Coal_Extraction/time_to_consume_budget,
- -Coal_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity)</eqn>
+ -Coal_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16185,7 +16185,7 @@ This is effectively a controller gain. It tunes aggressiveness rather than repre
 				<units>year</units>
 			</aux>
 			<aux name="Time to Smooth Subsidy Realisation">
-				<eqn>2</eqn>
+				<eqn>1</eqn>
 				<units>Year</units>
 			</aux>
 			<aux name="ratio of fulfilled subsidy requests to unfulfilled subsidy requests for investments into coal extraction" access="output" isee:autocreated="true">
@@ -16193,10 +16193,7 @@ This is effectively a controller gain. It tunes aggressiveness rather than repre
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Coal_Extraction_Subsidies//Requested_Subsidies_for_Coal_Extraction_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16220,7 +16217,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity &lt; 0 THEN
 -Coal_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity
 ELSE
 0</eqn>
@@ -16258,7 +16255,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Coal_Energy_Conversion/time_to_consume_budget,
- -Coal_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_1)</eqn>
+ -Coal_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_1*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16278,10 +16275,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Coal_Energy_Conversion_Subsidies//Requested_Subsidies_for_Coal_Energy_Conversion_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16298,7 +16292,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_1 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_1 &lt; 0 THEN
 -Coal_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_1
 ELSE
 0</eqn>
@@ -16336,7 +16330,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Oil_Extraction/time_to_consume_budget,
- -Oil_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_2)</eqn>
+ -Oil_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_2*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16356,10 +16350,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Oil_Extraction_Subsidies//Requested_Subsidies_for_Oil_Extraction_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16376,7 +16367,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_2 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_2 &lt; 0 THEN
 -Oil_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_2
 ELSE
 0</eqn>
@@ -16414,7 +16405,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Oil_Energy_Conversion/time_to_consume_budget,
- -Oil_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_3)</eqn>
+ -Oil_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_3*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16434,9 +16425,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Oil_Energy_Conversion_Subsidies//Requested_Subsidies_for_Oil_Energy_Conversion_Investments
-ELSE 0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16453,7 +16442,7 @@ ELSE 0
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_3 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_3 &lt; 0 THEN
 -Oil_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_3
 ELSE
 0</eqn>
@@ -16491,7 +16480,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Gas_Extraction/time_to_consume_budget,
- -Gas_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_4)</eqn>
+ -Gas_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_4*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16511,10 +16500,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Gas_Extraction_Subsidies//Requested_Subsidies_for_Gas_Extraction_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16531,7 +16517,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_4 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_4 &lt; 0 THEN
 -Gas_Investments_in_Fossil_Fuel_Extraction_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_4
 ELSE
 0</eqn>
@@ -16569,7 +16555,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Gas_Energy_Conversion/time_to_consume_budget,
- -Gas_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_5)</eqn>
+ -Gas_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_5*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16589,10 +16575,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Gas_Energy_Conversion_Subsidies//Requested_Subsidies_for_Gas_Energy_Conversion_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16609,7 +16592,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_5 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_5 &lt; 0 THEN
 -Gas_Investments_in_Fossil_Energy_Capital * tax_rate_on_newly_installed_coal_extraction_capacity_5
 ELSE
 0</eqn>
@@ -16647,7 +16630,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Solar_Energy/time_to_consume_budget,
- -Investments_in_solar_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_6)</eqn>
+ -Investments_in_solar_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_6*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16667,10 +16650,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Solar_Subsidies//Requested_Subsidies_for_Solar_Energy_Investments
-ELSE 
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16687,7 +16667,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_6 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_6 &lt; 0 THEN
 -Investments_in_solar_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_6
 ELSE
 0</eqn>
@@ -16725,7 +16705,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Wind_Energy/time_to_consume_budget,
- -Investments_in_wind_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_7)</eqn>
+ -Investments_in_wind_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_7*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16745,10 +16725,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Wind_Energy_Subsidies//Requested_Subsidies_for_Wind_Energy_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16765,7 +16742,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_7 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_7 &lt; 0 THEN
 -Investments_in_wind_Energy_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_7
 ELSE
 0</eqn>
@@ -16803,7 +16780,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Hydropower_Energy/time_to_consume_budget,
- -Investments_in_Hydropower_Energy_capacity * tax_rate_on_newly_installed_coal_extraction_capacity_8)</eqn>
+ -Investments_in_Hydropower_Energy_capacity * tax_rate_on_newly_installed_coal_extraction_capacity_8*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16823,10 +16800,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Hydropower_Energy_Subsidies//Requested_Subsidies_for_Hydropower_Energy
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16843,7 +16817,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_8 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_8 &lt; 0 THEN
 -Investments_in_Hydropower_Energy_capacity * tax_rate_on_newly_installed_coal_extraction_capacity_8
 ELSE
 0</eqn>
@@ -16881,7 +16855,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Bio_Energy/time_to_consume_budget,
- -Investments_in_Biofuel_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_9)</eqn>
+ -Investments_in_Biofuel_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_9*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16901,10 +16875,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Bio_Energy_Subsidies//Requested_Subsidies_Bio_Energy_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16921,7 +16892,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_9 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_9 &lt; 0 THEN
 -Investments_in_Biofuel_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_9
 ELSE
 0</eqn>
@@ -16959,7 +16930,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>MIN(Budget_for_Subsidies_in_Nuclear_Energy_Subsidies/time_to_consume_budget,
- -Investments_in_Nuclear_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_10)</eqn>
+ -Investments_in_Nuclear_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_10*(TIME&gt;= start_year_1))</eqn>
 				<non_negative/>
 				<units>c$/Year</units>
 			</flow>
@@ -16979,10 +16950,7 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>SMTH1(
-IF TIME &gt; start_year_1 THEN
 Paid_out_Nuclear_Energy_Subsidies//Requested_Subsidies_for_Nuclear_Energy_Investments
-ELSE
-0
 , Time_to_Smooth_Subsidy_Realisation, 0)</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -16999,7 +16967,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF tax_rate_on_newly_installed_coal_extraction_capacity_10 &lt; 0 THEN
+				<eqn>IF TIME &gt;= start_year_1 AND tax_rate_on_newly_installed_coal_extraction_capacity_10 &lt; 0 THEN
 -Investments_in_Nuclear_Capacity * tax_rate_on_newly_installed_coal_extraction_capacity_10
 ELSE
 0</eqn>
@@ -17072,7 +17040,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="9" isee:page_rows="7" isee:scroll_x="4446.43" isee:scroll_y="1878.57" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="9" isee:page_rows="7" isee:scroll_x="5167.86" isee:scroll_y="463.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -18911,7 +18879,7 @@ ELSE
 					<to>Paid_out_Gas_Energy_Conversion_Subsidies</to>
 				</connector>
 				<aux x="5596.77" y="1301.6" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Gas energy conversion"/>
-				<connector uid="658" angle="222.043">
+				<connector uid="658" angle="222.042">
 					<from>Paid_out_Gas_Energy_Conversion_Subsidies</from>
 					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Gas_energy_conversion</to>
 				</connector>
@@ -19231,7 +19199,7 @@ ELSE
 					<to>Paid_out_Bio_Energy_Subsidies</to>
 				</connector>
 				<aux x="5598.02" y="2049.85" name="ratio of fulfilled subsidy requests\nto unfulfilled subsidy requests\nfor investments into Bio energy"/>
-				<connector uid="714" angle="222.043">
+				<connector uid="714" angle="222.042">
 					<from>Paid_out_Bio_Energy_Subsidies</from>
 					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Bio_energy</to>
 				</connector>
@@ -19510,67 +19478,67 @@ ELSE
 				<aux font_style="italic" font_weight="bold" x="5090.44" y="715.881" name="start year 1"/>
 				<connector uid="782" angle="160.981">
 					<from>start_year_1</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_coal_extraction</to>
+					<to>Requested_Subsidies_for_Coal_Extraction_Investments</to>
 				</connector>
 				<connector uid="793" angle="155.095">
 					<from>
 						<alias uid="794"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Coal_energy_conversion</to>
+					<to>Requested_Subsidies_for_Coal_Energy_Conversion_Investments</to>
 				</connector>
-				<connector uid="804" angle="149.421">
+				<connector uid="804" angle="164.104">
 					<from>
 						<alias uid="797"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Gas_extraction</to>
+					<to>Requested_Subsidies_for_Gas_Extraction_Investments</to>
 				</connector>
 				<connector uid="805" angle="160.821">
 					<from>
 						<alias uid="795"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Oil_extraction</to>
+					<to>Requested_Subsidies_for_Oil_Extraction_Investments</to>
 				</connector>
 				<connector uid="806" angle="163.496">
 					<from>
 						<alias uid="796"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Oil_energy_conversion</to>
+					<to>Requested_Subsidies_for_Oil_Energy_Conversion_Investments</to>
 				</connector>
 				<connector uid="807" angle="160.56">
 					<from>
 						<alias uid="798"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Gas_energy_conversion</to>
+					<to>Requested_Subsidies_for_Gas_Energy_Conversion_Investments</to>
 				</connector>
 				<connector uid="808" angle="167.735">
 					<from>
 						<alias uid="799"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Solar_Energy</to>
+					<to>Requested_Subsidies_for_Solar_Energy_Investments</to>
 				</connector>
 				<connector uid="809" angle="160.017">
 					<from>
 						<alias uid="800"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Wind_energy</to>
+					<to>Requested_Subsidies_for_Wind_Energy_Investments</to>
 				</connector>
 				<connector uid="810" angle="160.017">
 					<from>
 						<alias uid="801"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Hydropower_Energy</to>
+					<to>Requested_Subsidies_for_Hydropower_Energy</to>
 				</connector>
 				<connector uid="811" angle="151.557">
 					<from>
 						<alias uid="802"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Bio_energy</to>
+					<to>Requested_Subsidies_Bio_Energy_Investments</to>
 				</connector>
 				<connector uid="812" angle="159.444">
 					<from>
 						<alias uid="803"/>
 					</from>
-					<to>ratio_of_fulfilled_subsidy_requests_to_unfulfilled_subsidy_requests_for_investments_into_Nuclear_energy</to>
+					<to>Requested_Subsidies_for_Nuclear_Energy_Investments</to>
 				</connector>
 				<aux x="1116.28" y="2341.21" name="sum of public investment taxation"/>
 				<connector uid="813" angle="336.556">
@@ -19607,6 +19575,70 @@ ELSE
 				<connector uid="822" angle="187.696">
 					<from>total_unallocated_public_tax_income</from>
 					<to>smoothed_total_unallocated_public_tax_income</to>
+				</connector>
+				<connector uid="823" angle="127.914">
+					<from>start_year_1</from>
+					<to>Paid_out_Coal_Extraction_Subsidies</to>
+				</connector>
+				<connector uid="824" angle="126.071">
+					<from>
+						<alias uid="795"/>
+					</from>
+					<to>Paid_out_Oil_Extraction_Subsidies</to>
+				</connector>
+				<connector uid="825" angle="122.119">
+					<from>
+						<alias uid="797"/>
+					</from>
+					<to>Paid_out_Gas_Extraction_Subsidies</to>
+				</connector>
+				<connector uid="826" angle="133.26">
+					<from>
+						<alias uid="799"/>
+					</from>
+					<to>Paid_out_Solar_Subsidies</to>
+				</connector>
+				<connector uid="827" angle="129.904">
+					<from>
+						<alias uid="801"/>
+					</from>
+					<to>Paid_out_Hydropower_Energy_Subsidies</to>
+				</connector>
+				<connector uid="828" angle="119.118">
+					<from>
+						<alias uid="803"/>
+					</from>
+					<to>Paid_out_Nuclear_Energy_Subsidies</to>
+				</connector>
+				<connector uid="829" angle="122.409">
+					<from>
+						<alias uid="802"/>
+					</from>
+					<to>Paid_out_Bio_Energy_Subsidies</to>
+				</connector>
+				<connector uid="830" angle="123.935">
+					<from>
+						<alias uid="800"/>
+					</from>
+					<to>Paid_out_Wind_Energy_Subsidies</to>
+				</connector>
+				<connector uid="831" angle="120.392">
+					<from>
+						<alias uid="798"/>
+					</from>
+					<to>Paid_out_Gas_Energy_Conversion_Subsidies</to>
+				</connector>
+				<connector uid="832" angle="121.9">
+					<from>
+						<alias uid="796"/>
+					</from>
+					<to>Paid_out_Oil_Energy_Conversion_Subsidies</to>
+				</connector>
+				<connector uid="833" angle="122.535">
+					<from>
+						<alias uid="794"/>
+					</from>
+					<to>Paid_out_Coal_Energy_Conversion_Subsidies</to>
 				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1911.31" y="2437.55" width="18" height="18">
 					<of>baseline_interest</of>
