@@ -8,7 +8,7 @@
 		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1789546117" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="SkNUq8rOmP4KlygmPTDWvgRhRHsmnEKPicLBrCJEjscIpOQcFXUWt9nO1tvVUnmRuGj5HGL6h8W6d1DM0qz8Cg=="/>
+		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1789718772" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="f58Zwq5TdlvbJY+K9/JsgRhh8cLJJ7VxXaFO+pyVHZzX/zavc4p/MZnnqOzm5SfTSaZTyMNbR6d5ZOl1meXZAw=="/>
 	</ai_information>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -4162,7 +4162,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="5" isee:page_rows="9" isee:scroll_x="429" isee:scroll_y="544" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="5" isee:page_rows="9" isee:scroll_x="429" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5147,7 +5147,7 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:scroll_x="224" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:scroll_x="243" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6072,7 +6072,7 @@ Value: 100</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="6" isee:page_rows="2" isee:scroll_y="265" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="6" isee:page_rows="2" isee:scroll_x="3116.67" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="black" background="white" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6519,33 +6519,13 @@ Value: 100</doc>
 					</from>
 					<to>Fraction_forest_removed</to>
 				</connector>
-				<stacked_container uid="81" x="3934.92" y="278.75">
-					<table width="350" height="250" isee:export_name="PB values" isee:mark_for_export="true" title="PB values">
+				<text_box uid="82" x="10.5273" y="7.80469" width="550" height="108.924">This module contains quantifications of planetary boundaries (PBs). The PB framework emphasises the many different components of the Earth system that are strongly influenced by human activities. To quantify each PB, one or more control variables are selected, for which a safe operating space, a zone of increasing risk and a high risk zone are defined, delimited by the boundary value (transition from safe operating space to zone of increasing risk) and the high risk value (transition from zone of increasing risk to high risk zone), as defined in the module. Each PB is quantified in a separate sector within the module. For more details, consult the documentation of variables within the module.</text_box>
+				<stacked_container uid="83" x="4198.33" y="392.083">
+					<table width="350" height="250" comparative="true" isee:export_name="PB control variables" isee:mark_for_export="true" title="PB control variables">
 						<item type="time"/>
-						<item>
-							<entity name="HANPP_as_fraction_of_Holocene_net_primary_production[1]"/>
-						</item>
-						<item>
-							<entity name="Fraction_forest_removed[1]"/>
-						</item>
-						<item>
-							<entity name="Maximum_amount_of_consumptive_blue_water_use[1]"/>
-						</item>
-						<item>
-							<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system[1]"/>
-						</item>
-						<item>
-							<entity name="P_flow_from_fertilizers_to_erodible_soils[1]"/>
-						</item>
-						<item>
-							<entity name="Atmospheric_CO2_concentration[1]"/>
-						</item>
-						<item>
-							<entity name="Total_anthropogenic_radiative_forcing_at_top_of_atmosphere[1]"/>
-						</item>
+						<item/>
 					</table>
 				</stacked_container>
-				<text_box uid="82" x="10.5273" y="7.80469" width="550" height="108.924">This module contains quantifications of planetary boundaries (PBs). The PB framework emphasises the many different components of the Earth system that are strongly influenced by human activities. To quantify each PB, one or more control variables are selected, for which a safe operating space, a zone of increasing risk and a high risk zone are defined, delimited by the boundary value (transition from safe operating space to zone of increasing risk) and the high risk value (transition from zone of increasing risk to high risk zone), as defined in the module. Each PB is quantified in a separate sector within the module. For more details, consult the documentation of variables within the module.</text_box>
 				<alias font_style="italic" uid="1" x="101.833" y="731.334" width="18" height="18">
 					<of>Holocene_forested_area</of>
 				</alias>
