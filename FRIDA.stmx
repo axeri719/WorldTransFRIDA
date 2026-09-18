@@ -8,7 +8,7 @@
 		<product version="4.3.1" isee:build_number="3962" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
-		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1789718772" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="f58Zwq5TdlvbJY+K9/JsgRhh8cLJJ7VxXaFO+pyVHZzX/zavc4p/MZnnqOzm5SfTSaZTyMNbR6d5ZOl1meXZAw=="/>
+		<status verified="false" mixed="true" trusted="false" tampered="false" uses="false" analyzed="false" log_truncated="false" timestamp="1789719011" algorithm="ed25519" keyurl="https://iseesystems.com/keys/stella01.txt" want_var_info="true" want_var_status="false" want_log="false" sampling="9" signature="m32assky2rIfFNDP6milBrXJT61hvPBcCfFSRVUzJXP2HpOkt4DnYHUwihoZhNql6q5LiK4RdVddRUGQWchbCw=="/>
 	</ai_information>
 	<sim_specs isee:sim_duration="0" isee:run_prefix="Run" isee:simulation_delay="0" isee:restore_on_start="false" isee:save_interval="1" method="RK4" time_units="Year" isee:instantaneous_flows="false" isee:ignore_module_errors="false" isee:strict_units="false" isee:loop_scores="false" isee:loop_exhaustive_allowed="1000">
 		<start>1980</start>
@@ -4082,7 +4082,7 @@ This is what determines when the model stops calculating</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Energy_Balance_Model.Surface_Temperature_Anomaly[Run] + Demographics.real_GDP_per_capita[Run] + Animal_Products_Demand.Desired_Demand_from_Accessibility[Run] + Animal_Products_Demand.desired_demand_from_descriptive_norm[Run] + Animal_Products_Demand.desired_demand_from_personal_norm[Run] + Animal_Products_Demand.perceived_consumption_risk[Run] + Animal_Products_Demand.Perceived_Social_Value[Run] + Animal_Products_Demand.weight_of_accessibility[Run] + Animal_Products.animal_products_production[Run] + Animal_Products.aquatic_animal_product_share[Run] + Animal_Products_Demand.Desired_Average_Daily_Demand_Per_Capita[Run] + Animal_Products.animal_products_balance[Run] + Bio_fuel_energy.bio_fuel_primary_energy[Run] + Bio_fuel_energy.bio_fuel_production[Run] + Bio_fuel_energy.bio_fuel_secondary_energy_output[Run] + CH4_Forcing.Atmospheric_CH4_Concentration[Run] + CH4_Forcing.CH4_Effective_Radiative_Forcing[Run] + Circular_Flow.&quot;bank_profits_in_2021c$&quot;[Run] + Circular_Flow.bottom_40_share_of_real_income[Run] + Circular_Flow.growth_rates_of_income_per_capita_among_the_bottom_40_per_cent_of_the_total_population[Run] + Circular_Flow.income_inequality[Run] + Circular_Flow.Labour_share_of_GDP[Run] + Circular_Flow.&quot;non_bank_profits_in_2021c$&quot;[Run] + Circular_Flow.&quot;owner_savings_interest_in_2021c$&quot;[Run] + Circular_Flow.private_consumption[Run] + Circular_Flow.&quot;profit_tax_in_2021c$&quot;[Run] + Circular_Flow.Redistributive_impact_of_fiscal_policy[Run] + Circular_Flow.&quot;rent_in_in_2021c$&quot;[Run] + Circular_Flow.&quot;rent_tax_in_2021c$&quot;[Run] + Circular_Flow.&quot;transfers_in_2021c$&quot;[Run] + Circular_Flow.&quot;wage_tax_in_2021c$&quot;[Run] + Circular_Flow.&quot;wages_in_2021c$&quot;[Run] + Circular_Flow.&quot;worker_savings_interest_in_2021c$&quot;[Run] + Circular_Flow.worker_share_of_net_income[Run] + Climate_Risk_Perception.perceived_climate_change_risk[Run] + Climate_Risk_Perception.Perceived_Climate_Extremes_Exposure[Run] + Climate_Risk_Perception.Perceived_SLR_Flooding_Exposure[Run] + Climate_Risk_Perception.Perceived_Temperature_Anomaly[Run] + Climate_Risk_Perception.Reference_Climate_Extremes_Exposure[Run] + Climate_Risk_Perception.Reference_SLR_Flooding_Exposure[Run] + Climate_Risk_Perception.Reference_Temperature_Anomaly[Run] + CO2_Forcing.Atmospheric_CO2_Concentration[Run] + CO2_Forcing.Atmospheric_CO2_growth_GtC[Run] + CO2_Forcing.CO2_Effective_Radiative_Forcing[Run] + Coastal_Assets.Coastal_assets[Run,insufficient] + Coastal_Assets.Coastal_assets[Run,well_protected] + Coastal_population.Coastal_population[Run,insufficient] + Coastal_population.Coastal_population[Run,well_protected] + Concrete.CO2_emissions[Run] + Concrete.concrete_waste_generation[Run] + Concrete.In_use_concrete_stock[Run] + Concrete.Infrastructure_concrete_stock_in_use[Run] + Concrete.new_RS_construction[Run] + Concrete.residential_concrete_stock_in_use[Run] + Concrete.total_yearly_concrete_use[Run] + Crop.crop_production[Run] + Crop.crop_balance[Run] + Crop.cropland_net_primary_production[Run] + degraded_land_soil_carbon.degraded_land_litter[Run] + Demographics.Aged_0_years[Run] + Demographics.Aged_1_to_20_years[Run] + Demographics.Aged_20_to_40_years[Run] + Demographics.Aged_40_to_60_years[Run] + Demographics.Aged_60_to_65_years[Run] + Demographics.Aged_65_to_75_years[Run] + Demographics.Aged_Over_75_years[Run] + Demographics.Births[Run] + Demographics.deaths_0_years[Run] + Demographics.deaths_1_to_20_years[Run] + Demographics.deaths_20_to_40_years[Run] + Demographics.deaths_40_to_60_years[Run] + Demographics.deaths_60_to_65_years[Run] + Demographics.deaths_65_to_75_years[Run] + Demographics.deaths_Over_75_years[Run] + Demographics.female_population_literacy_percentage[Run] + Demographics.fertility[Run] + Demographics.nominal_GDP_per_person[Run] + Demographics.Population[Run] + Demographics.real_GDP_per_person[Run] + Demographics.total_deaths[Run] + Emissions.CH4_Emissions_from_Energy[Run] + Emissions.CH4_Emissions_from_Food_and_Land_Use[Run] + Emissions.CH4_Emissions_from_Other[Run] + Emissions.CO_Emissions[Run] + Emissions.CO2_emissions_from_Energy[Run] + Emissions.CO2_Emissions_from_Food_and_Land_Use_GtC[Run] + Emissions.CO2_Emissions_from_Food_and_Land_Use[Run] + Emissions.CO2_Emissions_from_Other_GtC[Run] + Emissions.HFC134a_eq_Emissions[Run] + Emissions.land_carbon_sink[Run] + Emissions.N2O_Emissions_from_Energy[Run] + Emissions.N2O_Emissions_from_Food_and_Land_Use[Run] + Emissions.N2O_Emissions_from_Other[Run] + Emissions.NOx_AFOLU_Emissions[Run] + Emissions.NOx_non_AFOLU_Emissions[Run] + Emissions.Realized_CO2_Emissions_from_Energy_GtC[Run] + Emissions.SO2_Emissions_from_Energy[Run] + Emissions.SO2_Emissions_from_Food_and_Land_Use[Run] + Emissions.Total_CH4_Emissions[Run] + Emissions.Total_CO2_Emissions_GtC[Run] + Emissions.Total_CO2_Emissions[Run] + Emissions.Total_N2O_Emissions[Run] + Emissions.Total_NOx_Emissions[Run] + Emissions.Total_SO2_Emissions[Run] + Emissions.VOC_Emissions[Run] + Employment.annual_aggregate_wages[Run] + Employment.Employed[Run] + Employment.Productivity[Run] + Employment.share_of_employment_in_agriculture[Run] + Employment.share_of_employment_in_industry[Run] + Employment.share_of_employment_in_services[Run] + Employment.Unemployed[Run] + Employment.unemployment_rate[Run] + Employment.Wage_Rate[Run] + Energy_Balance_Model.Surface_Temperature_Anomaly[Run] + Energy_demand.demand_for_energy[Run] + Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital[Run] + Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital[Run] + Energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Biofuel_Capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital_oil_and_gas[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Hydropower_Energy_capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Renewables[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Solar_Energy_Capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_wind_Energy_Capacity[Run] + Energy_investments.Investments_in_Fossil_Energy[Run] + Energy_investments.Investments_in_Nuclear_Capacity[Run] + Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital[Run] + Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.share_of_GDP_invested_in_Energy_without_fuel[Run] + Energy_investments.share_of_GDP_invested_in_fuel_extraction[Run] + Energy_supply.Total_Energy_Output[Run] + Energy_supply.Renewable_Energy_Output_Share[Run] + Finance.Non_performing_loans_net_of_provisions_to_capital[Run] + Finance.Non_performing_loans_to_total_gross_loans[Run] + Finance.Regulatory_Tier_1_capital_to_assets[Run] + Finance.Return_on_assets_to_short_term_liabilities[Run] + Finance.total_investment[Run] + Food_Demand.animal_product_demand_per_person_per_day[Run] + Food_Demand.animal_products_demand[Run] + Food_Demand.crop_demand_for_food[Run] + Food_Demand.crop_used_for_non_energy_other[Run] + Food_Demand.crops_for_energy[Run] + Food_Demand.Crops_used_for_Seed_or_Lost[Run] + Food_Demand.direct_food_demand_per_person_per_day[Run] + Food_Demand.feed_production[Run] + Food_Demand.vegetal_product_demand_per_person_per_day[Run] + Forcing.Anthropogenic_Effective_Radiative_Forcing[Run] + Forcing.Total_Effective_Radiative_Forcing[Run] + Forest.mature_forest_net_primary_production[Run] + Forest.young_forest_net_primary_production[Run] + Fossil_energy_coal.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_coal.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_coal.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_coal.Secondary_Fossil_Energy_Output[Run] + Fossil_energy_gas.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_gas.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_gas.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_gas.Secondary_Fossil_Energy_Output[Run] + Fossil_energy_oil.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_oil.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_oil.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_oil.Secondary_Fossil_Energy_Output[Run] + Fossil_energy.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy.Secondary_Fossil_Energy_Output[Run] + Freshwater.agricultural_water_withdrawal[Run] + Freshwater.available_water_supply[Run] + Freshwater.fraction_of_water_withdrawal_for_agriculture[Run] + Freshwater.irrigated_cropland[Run] + Freshwater.non_agricultural_water_withdrawl[Run] + Freshwater.total_water_withdrawal[Run] + GDP.future_recession_counter[Run] + GDP.future_time_in_recession[Run] + GDP.&quot;government_transfers_in_2021c$&quot;[Run] + GDP.nominal_GDP_growth_rate[Run] + GDP.Nominal_GDP[Run] + GDP.&quot;owner_consumption_in_2021c$&quot;[Run] + GDP.&quot;private_investment_in_in_2021c$&quot;[Run] + GDP.&quot;public_investment_in_2021c$&quot;[Run] + GDP.real_GDP_growth_rate[Run] + GDP.&quot;Real_GDP_in_2021c$&quot;[Run] + GDP.&quot;worker_consumption_excluding_transfers_in_2021c$&quot;[Run] + Government.debt_to_GDP_ratio[Run] + Government.government_consumption[Run] + Government.&quot;government_spending_because_of_climate_in_2021c$&quot;[Run] + Government.&quot;government_spending_without_climate_impact_in_2021c$&quot;[Run] + Government.public_expenditure[Run] + Government.total_public_tax_income[Run] + Grass.grassland_net_primary_production[Run] + Hydropower_energy.Hydropower_Energy_Capacity[Run] + Hydropower_energy.Hydropower_Energy_Output[Run] + Hydropower_energy.Hydropower_Installation_Costs[Run] + Inflation.agriculture_percentage_of_GDP[Run] + Inflation.gdp_difference[Run] + Inflation.Inflation_Rate[Run] + Inflation.Inflation_Index[Run] + Land_Nutrients.man_made_fertilizer_use[Run] + Land_Nutrients.manure_fertilizer_use[Run] + Land_Use.Cropland[Run] + Land_Use.Degraded_Land[Run] + Land_Use.Forest_Land[Run] + Land_Use.Grassland[Run] + Land_Use.Mature_Forest[Run] + Land_Use.Young_Forest[Run] + N2O_Forcing.Atmospheric_N2O_Concentration[Run] + N2O_Forcing.N2O_Effective_Radiative_Forcing[Run] + Nuclear_energy.Nuclear_Energy_Capacity[Run] + Nuclear_energy.Nuclear_Energy_Output[Run] + Nuclear_energy.Nuclear_Installation_Costs[Run] + Ocean.Air_sea_co2_flux[Run] + Ocean.Cold_surface_ocean_pH[Run] + Ocean.Warm_surface_ocean_pH[Run] + Renewable_energy.Renewable_Energy_Output[Run] + Renewable_energy.Total_Renewable_Energy_Capacity[Run] + Sea_level_rise_costs_and_impacts.Productivity_reduction_factor_from_coastal_flooding[Run] + Sea_level_rise_costs_and_impacts.Total_fatalities_due_to_coastal_floods[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_loss_of_assets_from_SLR[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_people_retreat_costs[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost[Run] + Sea_level_rise_costs_and_impacts.Total_number_of_people_flooded[Run] + Sea_Level.Land_water_storage_from_water_impoundment[Run] + Sea_Level.Sea_level_anomaly_from_Antarctic_Ice_Sheet[Run] + Sea_Level.Sea_level_anomaly_from_Greenland_Ice_Sheet[Run] + Sea_Level.Sea_level_anomaly_from_LWS[Run] + Sea_Level.Sea_level_anomaly_from_mountain_glaciers[Run] + Sea_Level.Sea_level_anomaly_from_thermal_expansion[Run] + Sea_Level.Total_global_sea_level_anomaly[Run] + Solar_energy.Installation_Cost_of_Solar_capacity[Run] + Solar_energy.Solar_Energy_Capacity[Run] + Solar_energy.Solar_Energy_Output[Run] + Terrestrial_Carbon_Balance.Annual_carbon_uptake_in_peatlands[Run] + Terrestrial_Carbon_Balance.deforestation_carbon_loss[Run] + Terrestrial_Carbon_Balance.forest_regrowth_carbon_uptake[Run] + Terrestrial_Carbon_Balance.Terrestrial_carbon_balance[Run] + Terrestrial_Carbon_Balance.Terrestrial_net_primary_production[Run] + Total_Food_Demand.Desired_Demand_from_Accessibility[Run] + Total_Food_Demand.desired_demand_from_descriptive_norm[Run] + Total_Food_Demand.desired_demand_from_personal_norm[Run] + Total_Food_Demand.perceived_consumption_risk[Run] + Total_Food_Demand.Perceived_Social_Value[Run] + Total_Food_Demand.weight_of_accessibility[Run] + Wind_energy.Installation_Cost_of_Wind_capacity[Run] + Wind_energy.Wind_Energy_Capacity[Run] + Wind_energy.Wind_Energy_Output[Run] + Planetary_Boundaries.Fraction_forest_removed[Run] + Planetary_Boundaries.HANPP_as_fraction_of_Holocene_net_primary_production[Run] + Planetary_Boundaries.Intentionally_fixed_N_applied_to_the_agricultural_system[Run] + Planetary_Boundaries.Maximum_amount_of_consumptive_blue_water_use[Run] + Planetary_Boundaries.P_flow_from_fertilizers_to_erodible_soils[Run]</eqn>
+				<eqn>Energy_Balance_Model.Surface_Temperature_Anomaly[Run] + Demographics.real_GDP_per_capita[Run] + Animal_Products_Demand.Desired_Demand_from_Accessibility[Run] + Animal_Products_Demand.desired_demand_from_descriptive_norm[Run] + Animal_Products_Demand.desired_demand_from_personal_norm[Run] + Animal_Products_Demand.perceived_consumption_risk[Run] + Animal_Products_Demand.Perceived_Social_Value[Run] + Animal_Products_Demand.weight_of_accessibility[Run] + Animal_Products.animal_products_production[Run] + Animal_Products.aquatic_animal_product_share[Run] + Animal_Products_Demand.Desired_Average_Daily_Demand_Per_Capita[Run] + Animal_Products.animal_products_balance[Run] + Bio_fuel_energy.bio_fuel_primary_energy[Run] + Bio_fuel_energy.bio_fuel_production[Run] + Bio_fuel_energy.bio_fuel_secondary_energy_output[Run] + CH4_Forcing.Atmospheric_CH4_Concentration[Run] + CH4_Forcing.CH4_Effective_Radiative_Forcing[Run] + Circular_Flow.&quot;bank_profits_in_2021c$&quot;[Run] + Circular_Flow.bottom_40_share_of_real_income[Run] + Circular_Flow.growth_rates_of_income_per_capita_among_the_bottom_40_per_cent_of_the_total_population[Run] + Circular_Flow.income_inequality[Run] + Circular_Flow.Labour_share_of_GDP[Run] + Circular_Flow.&quot;non_bank_profits_in_2021c$&quot;[Run] + Circular_Flow.&quot;owner_savings_interest_in_2021c$&quot;[Run] + Circular_Flow.private_consumption[Run] + Circular_Flow.&quot;profit_tax_in_2021c$&quot;[Run] + Circular_Flow.Redistributive_impact_of_fiscal_policy[Run] + Circular_Flow.&quot;rent_in_in_2021c$&quot;[Run] + Circular_Flow.&quot;rent_tax_in_2021c$&quot;[Run] + Circular_Flow.&quot;transfers_in_2021c$&quot;[Run] + Circular_Flow.&quot;wage_tax_in_2021c$&quot;[Run] + Circular_Flow.&quot;wages_in_2021c$&quot;[Run] + Circular_Flow.&quot;worker_savings_interest_in_2021c$&quot;[Run] + Circular_Flow.worker_share_of_net_income[Run] + Climate_Risk_Perception.perceived_climate_change_risk[Run] + Climate_Risk_Perception.Perceived_Climate_Extremes_Exposure[Run] + Climate_Risk_Perception.Perceived_SLR_Flooding_Exposure[Run] + Climate_Risk_Perception.Perceived_Temperature_Anomaly[Run] + Climate_Risk_Perception.Reference_Climate_Extremes_Exposure[Run] + Climate_Risk_Perception.Reference_SLR_Flooding_Exposure[Run] + Climate_Risk_Perception.Reference_Temperature_Anomaly[Run] + CO2_Forcing.Atmospheric_CO2_Concentration[Run] + CO2_Forcing.Atmospheric_CO2_growth_GtC[Run] + CO2_Forcing.CO2_Effective_Radiative_Forcing[Run] + Coastal_Assets.Coastal_assets[Run,insufficient] + Coastal_Assets.Coastal_assets[Run,well_protected] + Coastal_population.Coastal_population[Run,insufficient] + Coastal_population.Coastal_population[Run,well_protected] + Concrete.CO2_emissions[Run] + Concrete.concrete_waste_generation[Run] + Concrete.In_use_concrete_stock[Run] + Concrete.Infrastructure_concrete_stock_in_use[Run] + Concrete.new_RS_construction[Run] + Concrete.residential_concrete_stock_in_use[Run] + Concrete.total_yearly_concrete_use[Run] + Crop.crop_production[Run] + Crop.crop_balance[Run] + Crop.cropland_net_primary_production[Run] + degraded_land_soil_carbon.degraded_land_litter[Run] + Demographics.Aged_0_years[Run] + Demographics.Aged_1_to_20_years[Run] + Demographics.Aged_20_to_40_years[Run] + Demographics.Aged_40_to_60_years[Run] + Demographics.Aged_60_to_65_years[Run] + Demographics.Aged_65_to_75_years[Run] + Demographics.Aged_Over_75_years[Run] + Demographics.Births[Run] + Demographics.deaths_0_years[Run] + Demographics.deaths_1_to_20_years[Run] + Demographics.deaths_20_to_40_years[Run] + Demographics.deaths_40_to_60_years[Run] + Demographics.deaths_60_to_65_years[Run] + Demographics.deaths_65_to_75_years[Run] + Demographics.deaths_Over_75_years[Run] + Demographics.female_population_literacy_percentage[Run] + Demographics.fertility[Run] + Demographics.nominal_GDP_per_person[Run] + Demographics.Population[Run] + Demographics.real_GDP_per_person[Run] + Demographics.total_deaths[Run] + Emissions.CH4_Emissions_from_Energy[Run] + Emissions.CH4_Emissions_from_Food_and_Land_Use[Run] + Emissions.CH4_Emissions_from_Other[Run] + Emissions.CO_Emissions[Run] + Emissions.CO2_emissions_from_Energy[Run] + Emissions.CO2_Emissions_from_Food_and_Land_Use_GtC[Run] + Emissions.CO2_Emissions_from_Food_and_Land_Use[Run] + Emissions.CO2_Emissions_from_Other_GtC[Run] + Emissions.HFC134a_eq_Emissions[Run] + Emissions.land_carbon_sink[Run] + Emissions.N2O_Emissions_from_Energy[Run] + Emissions.N2O_Emissions_from_Food_and_Land_Use[Run] + Emissions.N2O_Emissions_from_Other[Run] + Emissions.NOx_AFOLU_Emissions[Run] + Emissions.NOx_non_AFOLU_Emissions[Run] + Emissions.Realized_CO2_Emissions_from_Energy_GtC[Run] + Emissions.SO2_Emissions_from_Energy[Run] + Emissions.SO2_Emissions_from_Food_and_Land_Use[Run] + Emissions.Total_CH4_Emissions[Run] + Emissions.Total_CO2_Emissions_GtC[Run] + Emissions.Total_CO2_Emissions[Run] + Emissions.Total_N2O_Emissions[Run] + Emissions.Total_NOx_Emissions[Run] + Emissions.Total_SO2_Emissions[Run] + Emissions.VOC_Emissions[Run] + Employment.annual_aggregate_wages[Run] + Employment.Employed[Run] + Employment.Productivity[Run] + Employment.share_of_employment_in_agriculture[Run] + Employment.share_of_employment_in_industry[Run] + Employment.share_of_employment_in_services[Run] + Employment.Unemployed[Run] + Employment.unemployment_rate[Run] + Employment.Wage_Rate[Run] + Energy_Balance_Model.Surface_Temperature_Anomaly[Run] + Energy_demand.demand_for_energy[Run] + Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital[Run] + Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital[Run] + Energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Biofuel_Capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital_oil_and_gas[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Hydropower_Energy_capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Renewables[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Solar_Energy_Capacity[Run] + Energy_investments.Investments_Allocated_to_Capacity_Construction_in_wind_Energy_Capacity[Run] + Energy_investments.Investments_in_Fossil_Energy[Run] + Energy_investments.Investments_in_Nuclear_Capacity[Run] + Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital[Run] + Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital[Run] + Energy_investments.share_of_GDP_invested_in_Energy_without_fuel[Run] + Energy_investments.share_of_GDP_invested_in_fuel_extraction[Run] + Energy_supply.Total_Energy_Output[Run] + Energy_supply.Renewable_Energy_Output_Share[Run] + Finance.Non_performing_loans_net_of_provisions_to_capital[Run] + Finance.Non_performing_loans_to_total_gross_loans[Run] + Finance.Regulatory_Tier_1_capital_to_assets[Run] + Finance.Return_on_assets_to_short_term_liabilities[Run] + Finance.total_investment[Run] + Food_Demand.animal_product_demand_per_person_per_day[Run] + Food_Demand.animal_products_demand[Run] + Food_Demand.crop_demand_for_food[Run] + Food_Demand.crop_used_for_non_energy_other[Run] + Food_Demand.crops_for_energy[Run] + Food_Demand.Crops_used_for_Seed_or_Lost[Run] + Food_Demand.direct_food_demand_per_person_per_day[Run] + Food_Demand.feed_production[Run] + Food_Demand.vegetal_product_demand_per_person_per_day[Run] + Forcing.Anthropogenic_Effective_Radiative_Forcing[Run] + Forcing.Total_Effective_Radiative_Forcing[Run] + Forest.mature_forest_net_primary_production[Run] + Forest.young_forest_net_primary_production[Run] + Fossil_energy_coal.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_coal.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_coal.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_coal.Secondary_Fossil_Energy_Output[Run] + Fossil_energy_gas.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_gas.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_gas.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_gas.Secondary_Fossil_Energy_Output[Run] + Fossil_energy_oil.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy_oil.Fossil_Fuel_Extraction_Carbon[Run] + Fossil_energy_oil.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy_oil.Secondary_Fossil_Energy_Output[Run] + Fossil_energy.conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy[Run] + Fossil_energy.Primary_Fossil_Energy_FUEL[Run] + Fossil_energy.Secondary_Fossil_Energy_Output[Run] + Freshwater.agricultural_water_withdrawal[Run] + Freshwater.available_water_supply[Run] + Freshwater.fraction_of_water_withdrawal_for_agriculture[Run] + Freshwater.irrigated_cropland[Run] + Freshwater.non_agricultural_water_withdrawl[Run] + Freshwater.total_water_withdrawal[Run] + GDP.future_recession_counter[Run] + GDP.future_time_in_recession[Run] + GDP.&quot;government_transfers_in_2021c$&quot;[Run] + GDP.nominal_GDP_growth_rate[Run] + GDP.Nominal_GDP[Run] + GDP.&quot;owner_consumption_in_2021c$&quot;[Run] + GDP.&quot;private_investment_in_in_2021c$&quot;[Run] + GDP.&quot;public_investment_in_2021c$&quot;[Run] + GDP.real_GDP_growth_rate[Run] + GDP.&quot;Real_GDP_in_2021c$&quot;[Run] + GDP.&quot;worker_consumption_excluding_transfers_in_2021c$&quot;[Run] + Government.debt_to_GDP_ratio[Run] + Government.government_consumption[Run] + Government.&quot;government_spending_because_of_climate_in_2021c$&quot;[Run] + Government.&quot;government_spending_without_climate_impact_in_2021c$&quot;[Run] + Government.public_expenditure[Run] + Government.total_public_tax_income[Run] + Grass.grassland_net_primary_production[Run] + Hydropower_energy.Hydropower_Energy_Capacity[Run] + Hydropower_energy.Hydropower_Energy_Output[Run] + Hydropower_energy.Hydropower_Installation_Costs[Run] + Inflation.agriculture_percentage_of_GDP[Run] + Inflation.gdp_difference[Run] + Inflation.Inflation_Rate[Run] + Inflation.Inflation_Index[Run] + Land_Nutrients.man_made_fertilizer_use[Run] + Land_Nutrients.manure_fertilizer_use[Run] + Land_Use.Cropland[Run] + Land_Use.Degraded_Land[Run] + Land_Use.Forest_Land[Run] + Land_Use.Grassland[Run] + Land_Use.Mature_Forest[Run] + Land_Use.Young_Forest[Run] + N2O_Forcing.Atmospheric_N2O_Concentration[Run] + N2O_Forcing.N2O_Effective_Radiative_Forcing[Run] + Nuclear_energy.Nuclear_Energy_Capacity[Run] + Nuclear_energy.Nuclear_Energy_Output[Run] + Nuclear_energy.Nuclear_Installation_Costs[Run] + Ocean.Air_sea_co2_flux[Run] + Ocean.Cold_surface_ocean_pH[Run] + Ocean.Warm_surface_ocean_pH[Run] + Renewable_energy.Renewable_Energy_Output[Run] + Renewable_energy.Total_Renewable_Energy_Capacity[Run] + Sea_level_rise_costs_and_impacts.Productivity_reduction_factor_from_coastal_flooding[Run] + Sea_level_rise_costs_and_impacts.Total_fatalities_due_to_coastal_floods[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_loss_of_assets_from_SLR[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_people_retreat_costs[Run] + Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost[Run] + Sea_level_rise_costs_and_impacts.Total_number_of_people_flooded[Run] + Sea_Level.Land_water_storage_from_water_impoundment[Run] + Sea_Level.Sea_level_anomaly_from_Antarctic_Ice_Sheet[Run] + Sea_Level.Sea_level_anomaly_from_Greenland_Ice_Sheet[Run] + Sea_Level.Sea_level_anomaly_from_LWS[Run] + Sea_Level.Sea_level_anomaly_from_mountain_glaciers[Run] + Sea_Level.Sea_level_anomaly_from_thermal_expansion[Run] + Sea_Level.Total_global_sea_level_anomaly[Run] + Solar_energy.Installation_Cost_of_Solar_capacity[Run] + Solar_energy.Solar_Energy_Capacity[Run] + Solar_energy.Solar_Energy_Output[Run] + Terrestrial_Carbon_Balance.Annual_carbon_uptake_in_peatlands[Run] + Terrestrial_Carbon_Balance.deforestation_carbon_loss[Run] + Terrestrial_Carbon_Balance.forest_regrowth_carbon_uptake[Run] + Terrestrial_Carbon_Balance.Terrestrial_carbon_balance[Run] + Terrestrial_Carbon_Balance.Terrestrial_net_primary_production[Run] + Total_Food_Demand.Desired_Demand_from_Accessibility[Run] + Total_Food_Demand.desired_demand_from_descriptive_norm[Run] + Total_Food_Demand.desired_demand_from_personal_norm[Run] + Total_Food_Demand.perceived_consumption_risk[Run] + Total_Food_Demand.Perceived_Social_Value[Run] + Total_Food_Demand.weight_of_accessibility[Run] + Wind_energy.Installation_Cost_of_Wind_capacity[Run] + Wind_energy.Wind_Energy_Capacity[Run] + Wind_energy.Wind_Energy_Output[Run] + Planetary_Boundaries.PB_Fraction_forest_removed[Run] + Planetary_Boundaries.PB_HANPP_as_fraction_of_Holocene_net_primary_production[Run] + Planetary_Boundaries.PB_Intentionally_fixed_N_applied_to_the_agricultural_system[Run] + Planetary_Boundaries.PB_Maximum_amount_of_consumptive_blue_water_use[Run] + Planetary_Boundaries.PB_P_flow_from_fertilizers_to_erodible_soils[Run]</eqn>
 			</isee:placeholder>
 			<module name="Indicators" isee:label="">
 				<format scale_by="auto"/>
@@ -5209,7 +5209,6 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<entity name="Grazing_land_NPP_harvested_or_destroyed"/>
 				<entity name="Grazing_land_NPP_harvested_or_destroyed_per_unit_area_2000"/>
 				<entity name="Habitable_Land_Area"/>
-				<entity name="HANPP_as_fraction_of_Holocene_net_primary_production"/>
 				<entity name="HANPP_as_fraction_of_Holocene_net_primary_production_Boundary_value"/>
 				<entity name="HANPP_as_fraction_of_Holocene_net_primary_production_High_risk_boundary_value"/>
 				<entity name="HANPP_as_fraction_of_Holocene_net_primary_production_Holocene_value"/>
@@ -5220,6 +5219,7 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<entity name="Holocene_grassland_area"/>
 				<entity name="Holocene_net_primary_production"/>
 				<entity name="Human_appropriation_of_net_primary_production"/>
+				<entity name="PB_HANPP_as_fraction_of_Holocene_net_primary_production"/>
 				<entity name="Potential_net_primary_production"/>
 				<entity name="Potential_net_primary_production_Forest"/>
 				<entity name="Potential_net_primary_production_Grassland"/>
@@ -5232,13 +5232,13 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 			<group name="Land System Change" run="false">
 				<format scale_by="auto"/>
 				<entity name="Forested_area"/>
-				<entity name="Fraction_forest_removed"/>
 				<entity name="Fraction_forest_removed_Boundary_value"/>
 				<entity name="Fraction_forest_removed_High_risk_boundary_value"/>
 				<entity name="Fraction_forest_removed_Holocene_value"/>
 				<entity name="Fraction_forest_removed_Normalized_control_variable"/>
 				<entity name="Holocene_forested_area"/>
 				<entity name="Mature_Forest"/>
+				<entity name="PB_Fraction_forest_removed"/>
 				<entity name="Young_Forest"/>
 			</group>
 			<group name="Freshwater Use, 2015 def" run="false">
@@ -5246,11 +5246,11 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<entity name='"Total_blue_water_extraction_2000-2020"'/>
 				<entity name='"Total_consumptive_blue_water_use_2000-2020"'/>
 				<entity name="Fraction_of_total_water_withdrawal_for_consumption"/>
-				<entity name="Maximum_amount_of_consumptive_blue_water_use"/>
 				<entity name="Maximum_amount_of_consumptive_blue_water_use_Boundary_value"/>
 				<entity name="Maximum_amount_of_consumptive_blue_water_use_High_risk_boundary_value"/>
 				<entity name="Maximum_amount_of_consumptive_blue_water_use_Holocene_value"/>
 				<entity name="Maximum_amount_of_consumptive_blue_water_use_Normalised_control_variable"/>
+				<entity name="PB_Maximum_amount_of_consumptive_blue_water_use"/>
 				<entity name="total_water_withdrawal"/>
 				<entity name="UNIT_km3_to_m3"/>
 			</group>
@@ -5261,17 +5261,17 @@ Corresponding author: Axel Eriksson, ax3635er-s@student.lu.se or j.axel.e.erikss
 				<entity name='"Ratio_N:P_in_man_made_fertilizer_2000"'/>
 				<entity name="Intended_biological_nitrogen_fixation"/>
 				<entity name="Intended_BNF_per_unit_cropland_NPP"/>
-				<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system"/>
 				<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system_Boundary_value"/>
 				<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system_High_risk_boundary_value"/>
 				<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system_Holocene_value"/>
 				<entity name="Intentionally_fixed_N_applied_to_the_agricultural_system_Normalised_control_variable"/>
 				<entity name="man_made_fertilizer_use"/>
-				<entity name="P_flow_from_fertilizers_to_erodible_soils"/>
 				<entity name="P_flow_from_fertilizers_to_erodible_soils_Boundary_value"/>
 				<entity name="P_flow_from_fertilizers_to_erodible_soils_High_risk_boundary_value"/>
 				<entity name="P_flow_from_fertilizers_to_erodible_soils_Holocene_value"/>
 				<entity name="P_flow_from_fertilizers_to_erodible_soils_Normalised_control_variable"/>
+				<entity name="PB_Intentionally_fixed_N_applied_to_the_agricultural_system"/>
+				<entity name="PB_P_flow_from_fertilizers_to_erodible_soils"/>
 			</group>
 			<aux name="timber" access="input">
 				<dimensions>
@@ -5328,7 +5328,7 @@ Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2
 				<eqn>55.9</eqn>
 				<units>GtC/Year</units>
 			</aux>
-			<aux name="HANPP as fraction of\nHolocene net primary production">
+			<aux name="PB HANPP as fraction of\nHolocene net primary production">
 				<doc>${Explanatory Variable}
 Control variable for the functional Biosphere Integrity planetary boundary, defined as human appropriation of net primary production as a fraction of the Holocene net primary production.
 
@@ -5372,7 +5372,7 @@ Source: Steffen et al., 2015 (https://www.science.org/doi/10.1126/science.125985
 				<eqn>6387</eqn>
 				<units>Mha</units>
 			</aux>
-			<aux name="Fraction\nforest removed">
+			<aux name="PB Fraction\nforest removed">
 				<doc>Control variable for the global Land System Change planetary boundary, defined as the global forest removed as a fraction of the Holocene global forest cover.
 
 Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2458)</doc>
@@ -5437,7 +5437,7 @@ Assumptions: This fraction is constant over time.</doc>
 				<eqn>&quot;Total_consumptive_blue_water_use_2000-2020&quot; / &quot;Total_blue_water_extraction_2000-2020&quot;</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Maximum amount of\nconsumptive blue water use">
+			<aux name="PB Maximum amount of\nconsumptive blue water use">
 				<doc>${Explanatory Variable}
 Control variable for the Freshwater Use planetary boundary (2015 definition by Steffen et al.), defined as the global consumptive blue water use.
 
@@ -5517,7 +5517,7 @@ Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtN/year</units>
 			</aux>
-			<aux name="Intentionally fixed N\napplied to the\nagricultural system">
+			<aux name="PB Intentionally fixed N\napplied to the\nagricultural system">
 				<doc>${Explanatory Variable}
 Control variable for the nitrogen Biogeochemical Flows planetary boundary, defined as the mass of intentionally fixed nitrogen applied to the agricultural system.
 
@@ -5542,7 +5542,7 @@ Source: Bouwman et al., 2011 (https://www.pnas.org/doi/full/10.1073/pnas.1012878
 				<range min="8.6" max="8.6"/>
 				<units>MtN/MtP</units>
 			</aux>
-			<aux name="P flow from\nfertilizers to erodible soils">
+			<aux name="PB P flow from\nfertilizers to erodible soils">
 				<doc>${Explanatory Variable}
 Control variable for the regional phosphorus Biogeochemical Flows planetary boundary, defined as the mass flow of phosphorus from fertilizers to erodible soils.
 
@@ -5558,13 +5558,13 @@ Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2
 			<group name="Climate Change" run="false">
 				<format scale_by="auto"/>
 				<entity name="Anthropogenic_Effective_Radiative_Forcing"/>
-				<entity name="Atmospheric_CO2_concentration"/>
 				<entity name="Atmospheric_CO2_concentration_1"/>
 				<entity name="Atmospheric_CO2_concentration_Boundary_value"/>
 				<entity name="Atmospheric_CO2_concentration_High_risk_boundary_value"/>
 				<entity name="Atmospheric_CO2_concentration_Holocene_value"/>
 				<entity name="Atmospheric_CO2_concentration_Normalised_control_variable"/>
-				<entity name="Total_anthropogenic_radiative_forcing_at_top_of_atmosphere"/>
+				<entity name="PB_Atmospheric_CO2_concentration"/>
+				<entity name="PB_Total_anthropogenic_radiative_forcing_at_top_of_atmosphere"/>
 				<entity name="Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Boundary_value"/>
 				<entity name="Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_High_risk_boundary_value"/>
 				<entity name="Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value"/>
@@ -5577,7 +5577,7 @@ Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>ppm</units>
 			</aux>
-			<aux name="Atmospheric\nCO2 concentration">
+			<aux name="PB Atmospheric\nCO2 concentration">
 				<doc>${Explanatory Variable}
 Control variable for the CO2 concentration Climate Change planetary boundary, defined as the atmospheric CO2 concentration.
 
@@ -5613,7 +5613,7 @@ Source: Richardson et al., 2023 (https://www.science.org/doi/10.1126/sciadv.adh2
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>W/(metre^2)</units>
 			</aux>
-			<aux name="Total anthropogenic radiative\nforcing at top of atmosphere">
+			<aux name="PB Total anthropogenic radiative forcing at top of atmosphere">
 				<doc>${Explanatory Variable}
 Control variable for the anthropogenic forcing Climate Change planetary boundary, defined as the total anthropogenic radiative forcing at top-of-atmosphere.
 
@@ -5724,7 +5724,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(HANPP_as_fraction_of_Holocene_net_primary_production - HANPP_as_fraction_of_Holocene_net_primary_production_Holocene_value)/(HANPP_as_fraction_of_Holocene_net_primary_production_Boundary_value - HANPP_as_fraction_of_Holocene_net_primary_production_Holocene_value)</eqn>
+				<eqn>(PB_HANPP_as_fraction_of_Holocene_net_primary_production - HANPP_as_fraction_of_Holocene_net_primary_production_Holocene_value)/(HANPP_as_fraction_of_Holocene_net_primary_production_Boundary_value - HANPP_as_fraction_of_Holocene_net_primary_production_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Fraction\nforest removed Holocene value">
@@ -5744,7 +5744,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Fraction_forest_removed - Fraction_forest_removed_Holocene_value)/(Fraction_forest_removed_Boundary_value - Fraction_forest_removed_Holocene_value)</eqn>
+				<eqn>(PB_Fraction_forest_removed - Fraction_forest_removed_Holocene_value)/(Fraction_forest_removed_Boundary_value - Fraction_forest_removed_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Maximum amount of\nconsumptive blue water use Holocene value">
@@ -5764,7 +5764,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Maximum_amount_of_consumptive_blue_water_use - Maximum_amount_of_consumptive_blue_water_use_Holocene_value)/(Maximum_amount_of_consumptive_blue_water_use_Boundary_value - Maximum_amount_of_consumptive_blue_water_use_Holocene_value)</eqn>
+				<eqn>(PB_Maximum_amount_of_consumptive_blue_water_use - Maximum_amount_of_consumptive_blue_water_use_Holocene_value)/(Maximum_amount_of_consumptive_blue_water_use_Boundary_value - Maximum_amount_of_consumptive_blue_water_use_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Intentionally fixed N\napplied to the\nagricultural system Holocene value">
@@ -5783,7 +5783,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Intentionally_fixed_N_applied_to_the_agricultural_system - Intentionally_fixed_N_applied_to_the_agricultural_system_Holocene_value)/(Intentionally_fixed_N_applied_to_the_agricultural_system_Boundary_value - Intentionally_fixed_N_applied_to_the_agricultural_system_Holocene_value)</eqn>
+				<eqn>(PB_Intentionally_fixed_N_applied_to_the_agricultural_system - Intentionally_fixed_N_applied_to_the_agricultural_system_Holocene_value)/(Intentionally_fixed_N_applied_to_the_agricultural_system_Boundary_value - Intentionally_fixed_N_applied_to_the_agricultural_system_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="P flow from\nfertilizers to erodible soils Holocene value">
@@ -5803,7 +5803,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(P_flow_from_fertilizers_to_erodible_soils - P_flow_from_fertilizers_to_erodible_soils_Holocene_value)/(P_flow_from_fertilizers_to_erodible_soils_Boundary_value - P_flow_from_fertilizers_to_erodible_soils_Holocene_value)</eqn>
+				<eqn>(PB_P_flow_from_fertilizers_to_erodible_soils - P_flow_from_fertilizers_to_erodible_soils_Holocene_value)/(P_flow_from_fertilizers_to_erodible_soils_Boundary_value - P_flow_from_fertilizers_to_erodible_soils_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Atmospheric\nCO2 concentration Holocene value">
@@ -5823,7 +5823,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Atmospheric_CO2_concentration - Atmospheric_CO2_concentration_Holocene_value)/(Atmospheric_CO2_concentration_Boundary_value - Atmospheric_CO2_concentration_Holocene_value)</eqn>
+				<eqn>(PB_Atmospheric_CO2_concentration - Atmospheric_CO2_concentration_Holocene_value)/(Atmospheric_CO2_concentration_Boundary_value - Atmospheric_CO2_concentration_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Total anthropogenic radiative\nforcing at top of atmosphere Holocene value">
@@ -5843,7 +5843,7 @@ Source: Lade et al., 2019 (https://www.nature.com/articles/s41893-019-0454-4)</d
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Total_anthropogenic_radiative_forcing_at_top_of_atmosphere - Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value)/(Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Boundary_value - Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value)</eqn>
+				<eqn>(PB_Total_anthropogenic_radiative_forcing_at_top_of_atmosphere - Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value)/(Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Boundary_value - Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value)</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Fraction of cropland NPP\nharvested or destroyed">
@@ -6072,7 +6072,7 @@ Value: 100</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="6" isee:page_rows="2" isee:scroll_x="3116.67" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="6" isee:page_rows="2" isee:scroll_x="2610" isee:scroll_y="16.6667" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="black" background="white" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6137,10 +6137,10 @@ Value: 100</doc>
 				</connector>
 				<aux label_side="bottom" x="361.583" y="436.084" name="Human appropriation of net primary production"/>
 				<aux x="361.583" y="345.334" name="Holocene net\nprimary production"/>
-				<aux x="448.333" y="432.334" name="HANPP as fraction of\nHolocene net primary production"/>
+				<aux x="448.333" y="432.334" name="PB HANPP as fraction of\nHolocene net primary production"/>
 				<connector uid="7" angle="331.294">
 					<from>Holocene_net_primary_production</from>
-					<to>HANPP_as_fraction_of_Holocene_net_primary_production</to>
+					<to>PB_HANPP_as_fraction_of_Holocene_net_primary_production</to>
 				</connector>
 				<stock font_style="italic" font_weight="bold" x="734.583" y="207.666" name="Mature Forest"/>
 				<stock font_style="italic" font_weight="bold" x="742.083" y="296.416" name="Young Forest"/>
@@ -6154,14 +6154,14 @@ Value: 100</doc>
 					<to>Forested_area</to>
 				</connector>
 				<aux x="849.583" y="196.791" name="Holocene forested area"/>
-				<aux x="975.833" y="240.166" name="Fraction\nforest removed"/>
+				<aux x="975.833" y="240.166" name="PB Fraction\nforest removed"/>
 				<connector uid="10" angle="4.869">
 					<from>Holocene_forested_area</from>
-					<to>Fraction_forest_removed</to>
+					<to>PB_Fraction_forest_removed</to>
 				</connector>
 				<connector uid="11" angle="21.0659">
 					<from>Forested_area</from>
-					<to>Fraction_forest_removed</to>
+					<to>PB_Fraction_forest_removed</to>
 				</connector>
 				<aux label_side="top" x="559" y="518.084" name="HANPP as fraction of\nHolocene net primary production Boundary value"/>
 				<aux x="559" y="579.334" name="HANPP as fraction of\nHolocene net primary production High risk\nboundary value"/>
@@ -6170,52 +6170,52 @@ Value: 100</doc>
 				<aux x="1086.77" y="302.999" name="Fraction\nforest removed High risk\nboundary value"/>
 				<aux font_style="italic" font_weight="bold" x="1477.5" y="232.667" name="total\nwater\nwithdrawal"/>
 				<aux x="1563" y="331.417" name="Fraction of total water\nwithdrawal for consumption"/>
-				<aux label_side="left" label_angle="135" x="1696.25" y="290.167" name="Maximum amount of\nconsumptive blue water use"/>
+				<aux label_side="left" label_angle="135" x="1696.25" y="290.167" name="PB Maximum amount of\nconsumptive blue water use"/>
 				<connector uid="12" angle="14.6209">
 					<from>total_water_withdrawal</from>
-					<to>Maximum_amount_of_consumptive_blue_water_use</to>
+					<to>PB_Maximum_amount_of_consumptive_blue_water_use</to>
 				</connector>
 				<connector uid="13" angle="17.2009">
 					<from>Fraction_of_total_water_withdrawal_for_consumption</from>
-					<to>Maximum_amount_of_consumptive_blue_water_use</to>
+					<to>PB_Maximum_amount_of_consumptive_blue_water_use</to>
 				</connector>
 				<aux x="1753.75" y="290.167" name="Maximum amount of\nconsumptive blue water use Boundary value"/>
 				<aux x="1757.91" y="387.019" name="Maximum amount of\nconsumptive blue water use High risk\nboundary value"/>
 				<aux x="1477.5" y="473.917" name="UNIT km3 to m3"/>
 				<connector uid="14" angle="40.0303">
 					<from>UNIT_km3_to_m3</from>
-					<to>Maximum_amount_of_consumptive_blue_water_use</to>
+					<to>PB_Maximum_amount_of_consumptive_blue_water_use</to>
 				</connector>
 				<aux x="2494.42" y="276.083" name="Intentionally fixed N\napplied to the\nagricultural system Boundary value"/>
 				<aux x="2620.42" y="323.917" name="Intentionally fixed N\napplied to the\nagricultural system High risk\nboundary value"/>
 				<aux x="2525.51" y="475.917" name="P flow from\nfertilizers to erodible soils Boundary value"/>
 				<aux x="2645.52" y="502.644" name="P flow from\nfertilizers to erodible soils High risk\nboundary value"/>
 				<aux font_style="italic" font_weight="bold" x="2211.25" y="438.167" name="man made fertilizer use"/>
-				<aux label_side="top" x="2392.92" y="228.417" name="Intentionally fixed N\napplied to the\nagricultural system"/>
+				<aux label_side="top" x="2392.92" y="228.417" name="PB Intentionally fixed N\napplied to the\nagricultural system"/>
 				<connector uid="15" angle="62.4906">
 					<from>man_made_fertilizer_use</from>
-					<to>Intentionally_fixed_N_applied_to_the_agricultural_system</to>
+					<to>PB_Intentionally_fixed_N_applied_to_the_agricultural_system</to>
 				</connector>
 				<aux x="2215.92" y="489.417" name="Ratio N:P in man\nmade fertilizer 2000"/>
-				<aux x="2389.42" y="438.167" name="P flow from\nfertilizers to erodible soils"/>
+				<aux x="2389.42" y="438.167" name="PB P flow from\nfertilizers to erodible soils"/>
 				<connector uid="16" angle="31.0102">
 					<from>&quot;Ratio_N:P_in_man_made_fertilizer_2000&quot;</from>
-					<to>P_flow_from_fertilizers_to_erodible_soils</to>
+					<to>PB_P_flow_from_fertilizers_to_erodible_soils</to>
 				</connector>
 				<group locked="true" x="2840" y="169.083" width="893.75" height="483.167" name="Climate Change"/>
 				<aux font_style="italic" font_weight="bold" x="2930" y="258.083" name="Atmospheric\nCO2 concentration 1"/>
-				<aux x="3073.75" y="258.083" name="Atmospheric\nCO2 concentration"/>
+				<aux x="3073.75" y="258.083" name="PB Atmospheric\nCO2 concentration"/>
 				<connector uid="17" angle="22.1663">
 					<from>Atmospheric_CO2_concentration_1</from>
-					<to>Atmospheric_CO2_concentration</to>
+					<to>PB_Atmospheric_CO2_concentration</to>
 				</connector>
 				<aux x="3235" y="258.083" name="Atmospheric\nCO2 concentration Boundary value"/>
 				<aux x="3235" y="331.833" name="Atmospheric\nCO2 concentration High risk\nboundary value"/>
 				<aux font_style="italic" font_weight="bold" x="2935" y="515.583" name="Anthropogenic Effective Radiative\nForcing"/>
-				<aux x="3077.5" y="523.083" name="Total anthropogenic radiative\nforcing at top of atmosphere"/>
-				<connector uid="18" angle="24.6236">
+				<aux label_side="bottom" x="3079.72" y="533.583" name="PB Total anthropogenic radiative forcing at top of atmosphere"/>
+				<connector uid="18" angle="20.5466">
 					<from>Anthropogenic_Effective_Radiative_Forcing</from>
-					<to>Total_anthropogenic_radiative_forcing_at_top_of_atmosphere</to>
+					<to>PB_Total_anthropogenic_radiative_forcing_at_top_of_atmosphere</to>
 				</connector>
 				<aux x="3246.25" y="529.333" name="Total anthropogenic radiative\nforcing at top of atmosphere Boundary value"/>
 				<aux x="3246.25" y="591.833" name="Total anthropogenic radiative\nforcing at top of atmosphere High risk\nboundary value"/>
@@ -6274,7 +6274,7 @@ Value: 100</doc>
 					<to>HANPP_as_fraction_of_Holocene_net_primary_production_Normalised_control_variable</to>
 				</connector>
 				<connector uid="29" angle="33.2317">
-					<from>HANPP_as_fraction_of_Holocene_net_primary_production</from>
+					<from>PB_HANPP_as_fraction_of_Holocene_net_primary_production</from>
 					<to>HANPP_as_fraction_of_Holocene_net_primary_production_Normalised_control_variable</to>
 				</connector>
 				<connector uid="30" angle="59.1715">
@@ -6284,7 +6284,7 @@ Value: 100</doc>
 				<aux x="1068.77" y="178.791" name="Fraction\nforest removed Holocene value"/>
 				<aux x="1217.04" y="240.166" name="Fraction\nforest removed Normalized control variable"/>
 				<connector uid="31" angle="23.0742">
-					<from>Fraction_forest_removed</from>
+					<from>PB_Fraction_forest_removed</from>
 					<to>Fraction_forest_removed_Normalized_control_variable</to>
 				</connector>
 				<connector uid="32" angle="6.53225">
@@ -6302,7 +6302,7 @@ Value: 100</doc>
 					<to>Maximum_amount_of_consumptive_blue_water_use_Normalised_control_variable</to>
 				</connector>
 				<connector uid="35" angle="33.4017">
-					<from>Maximum_amount_of_consumptive_blue_water_use</from>
+					<from>PB_Maximum_amount_of_consumptive_blue_water_use</from>
 					<to>Maximum_amount_of_consumptive_blue_water_use_Normalised_control_variable</to>
 				</connector>
 				<connector uid="36" angle="14.0362">
@@ -6312,7 +6312,7 @@ Value: 100</doc>
 				<aux x="2543.51" y="196.862" name="Intentionally fixed N\napplied to the\nagricultural system Holocene value"/>
 				<aux x="2701.94" y="258.083" name="Intentionally fixed N\napplied to the\nagricultural system Normalised control variable"/>
 				<connector uid="37" angle="14.009">
-					<from>Intentionally_fixed_N_applied_to_the_agricultural_system</from>
+					<from>PB_Intentionally_fixed_N_applied_to_the_agricultural_system</from>
 					<to>Intentionally_fixed_N_applied_to_the_agricultural_system_Normalised_control_variable</to>
 				</connector>
 				<connector uid="38" angle="25.9882">
@@ -6326,7 +6326,7 @@ Value: 100</doc>
 				<aux x="2525.51" y="405.019" name="P flow from\nfertilizers to erodible soils Holocene value"/>
 				<aux x="2737.23" y="445.577" name="P flow from\nfertilizers to erodible soils Normalised control variable"/>
 				<connector uid="40" angle="11.3845">
-					<from>P_flow_from_fertilizers_to_erodible_soils</from>
+					<from>PB_P_flow_from_fertilizers_to_erodible_soils</from>
 					<to>P_flow_from_fertilizers_to_erodible_soils_Normalised_control_variable</to>
 				</connector>
 				<connector uid="41" angle="40.7635">
@@ -6340,7 +6340,7 @@ Value: 100</doc>
 				<aux x="3235" y="207.833" name="Atmospheric\nCO2 concentration Holocene value"/>
 				<aux x="3336.5" y="261.833" name="Atmospheric\nCO2 concentration Normalised control variable"/>
 				<connector uid="43" angle="34.3803">
-					<from>Atmospheric_CO2_concentration</from>
+					<from>PB_Atmospheric_CO2_concentration</from>
 					<to>Atmospheric_CO2_concentration_Normalised_control_variable</to>
 				</connector>
 				<connector uid="44" angle="347.3">
@@ -6357,8 +6357,8 @@ Value: 100</doc>
 					<from>Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Holocene_value</from>
 					<to>Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Normalised_control_variable</to>
 				</connector>
-				<connector uid="47" angle="33.2849">
-					<from>Total_anthropogenic_radiative_forcing_at_top_of_atmosphere</from>
+				<connector uid="47" angle="35.0859">
+					<from>PB_Total_anthropogenic_radiative_forcing_at_top_of_atmosphere</from>
 					<to>Total_anthropogenic_radiative_forcing_at_top_of_atmosphere_Normalised_control_variable</to>
 				</connector>
 				<connector uid="48" angle="28.3212">
@@ -6431,7 +6431,7 @@ Value: 100</doc>
 				</connector>
 				<connector uid="62" angle="13.0571">
 					<from>Human_appropriation_of_net_primary_production</from>
-					<to>HANPP_as_fraction_of_Holocene_net_primary_production</to>
+					<to>PB_HANPP_as_fraction_of_Holocene_net_primary_production</to>
 				</connector>
 				<connector uid="63" angle="12.9183">
 					<from>
@@ -6466,7 +6466,7 @@ Value: 100</doc>
 				</connector>
 				<connector uid="70" angle="38.7728">
 					<from>man_made_fertilizer_use</from>
-					<to>P_flow_from_fertilizers_to_erodible_soils</to>
+					<to>PB_P_flow_from_fertilizers_to_erodible_soils</to>
 				</connector>
 				<aux x="2197.92" y="268.917" name="Cropland net primary\nproduction 2000-2020"/>
 				<aux x="2197.92" y="331.417" name="Intended biological\nnitrogen fixation 2000-2020"/>
@@ -6492,11 +6492,11 @@ Value: 100</doc>
 				</connector>
 				<connector uid="75" angle="3.38538">
 					<from>Intended_biological_nitrogen_fixation</from>
-					<to>Intentionally_fixed_N_applied_to_the_agricultural_system</to>
+					<to>PB_Intentionally_fixed_N_applied_to_the_agricultural_system</to>
 				</connector>
 				<connector uid="76" angle="292.63">
 					<from>Intended_biological_nitrogen_fixation</from>
-					<to>P_flow_from_fertilizers_to_erodible_soils</to>
+					<to>PB_P_flow_from_fertilizers_to_erodible_soils</to>
 				</connector>
 				<aux label_side="bottom" x="1480.75" y="316.417" name="Total blue water\nextraction 2000-2020"/>
 				<aux x="1480.75" y="378.917" name="Total consumptive blue water use 2000-2020"/>
@@ -6511,16 +6511,16 @@ Value: 100</doc>
 				<aux x="440" y="269.751" name="UNIT Percent to decimal"/>
 				<connector uid="79" angle="281.535">
 					<from>UNIT_Percent_to_decimal</from>
-					<to>HANPP_as_fraction_of_Holocene_net_primary_production</to>
+					<to>PB_HANPP_as_fraction_of_Holocene_net_primary_production</to>
 				</connector>
 				<connector uid="80" angle="34.0772">
 					<from>
 						<alias uid="3"/>
 					</from>
-					<to>Fraction_forest_removed</to>
+					<to>PB_Fraction_forest_removed</to>
 				</connector>
 				<text_box uid="82" x="10.5273" y="7.80469" width="550" height="108.924">This module contains quantifications of planetary boundaries (PBs). The PB framework emphasises the many different components of the Earth system that are strongly influenced by human activities. To quantify each PB, one or more control variables are selected, for which a safe operating space, a zone of increasing risk and a high risk zone are defined, delimited by the boundary value (transition from safe operating space to zone of increasing risk) and the high risk value (transition from zone of increasing risk to high risk zone), as defined in the module. Each PB is quantified in a separate sector within the module. For more details, consult the documentation of variables within the module.</text_box>
-				<stacked_container uid="83" x="4198.33" y="392.083">
+				<stacked_container uid="83" x="3985" y="288.75">
 					<table width="350" height="250" comparative="true" isee:export_name="PB control variables" isee:mark_for_export="true" title="PB control variables">
 						<item type="time"/>
 						<item/>
