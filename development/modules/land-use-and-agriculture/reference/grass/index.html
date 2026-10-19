@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -379,6 +379,8 @@
   
     
     
+      
+        
       
         
       
@@ -2153,8 +2155,6 @@
       
         
       
-        
-      
     
     
     
@@ -2938,34 +2938,6 @@
     
   
     Forest
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../biosphere-indicators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Biosphere Indicators
   
 
     
@@ -4410,6 +4382,169 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../indicators/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Indicators
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10_2" id="__nav_5_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indicators/reference/planetary-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planetary Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4743,7 +4878,7 @@
 <h2 id="auxiliaries-parameters">Auxiliaries &amp; parameters<a class="headerlink" href="#auxiliaries-parameters" title="Permanent link">&para;</a></h2>
 <h3 id="grass-grass-net-primary-production">Grass.grass_net_primary_production<a class="headerlink" href="#grass-grass-net-primary-production" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* Run</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> Run</p>
 <p><em>Equation:</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>MAXSOFT(Grass.grass_net_primary_production_in_1750[Climate_Units.selected_climate_case] + Grass.change_in_grass_net_primary_production_from_CO2+Grass.change_in_grass_net_primary_production_from_STA+Grass.change_in_grass_net_primary_production_from_STA_squared, Grass.grass_net_primary_production_in_1750[Climate_Units.selected_climate_case]*Grass.minimum_fraction_of_1750_grass_primary_production, Grass.tolerance_for_net_primary_production)
 </code></pre></div></p>
@@ -4863,13 +4998,13 @@
 </code></pre></div></p>
 <h3 id="grass-change-in-grass-net-primary-production-from-co2">Grass.change_in_grass_net_primary_production_from_CO2<a class="headerlink" href="#grass-change-in-grass-net-primary-production-from-co2" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* Run</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> Run</p>
 <p><em>Equation:</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Grass.grass_net_primary_production_in_1750[Climate_Units.selected_climate_case]*Grass.effect_of_CO2_on_grass_net_primary_production
 </code></pre></div></p>
 <h3 id="grass-change-in-grass-net-primary-production-from-sta">Grass.change_in_grass_net_primary_production_from_STA<a class="headerlink" href="#grass-change-in-grass-net-primary-production-from-sta" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* Run</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> Run</p>
 <p><em>Equation:</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Grass.grass_net_primary_production_in_1750[Climate_Units.selected_climate_case]*Grass.effect_of_STA_on_grass_net_primary_production
 </code></pre></div></p>
@@ -4989,7 +5124,7 @@
 </code></pre></div></p>
 <h3 id="grass-change-in-grass-net-primary-production-from-sta-squared">Grass.change_in_grass_net_primary_production_from_STA_squared<a class="headerlink" href="#grass-change-in-grass-net-primary-production-from-sta-squared" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* Run</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> Run</p>
 <p><em>Equation:</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Grass.grass_net_primary_production_in_1750[Climate_Units.selected_climate_case]*Grass.effect_of_STA_squared_on_grass_net_primary_production
 </code></pre></div></p>
@@ -5109,7 +5244,7 @@
 </code></pre></div></p>
 <h3 id="grass-combined-change-in-grass-net-primary-production-from-sta">Grass.combined_change_in_grass_net_primary_production_from_STA<a class="headerlink" href="#grass-combined-change-in-grass-net-primary-production-from-sta" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* Run</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> Run</p>
 <p><em>Equation:</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Grass.change_in_grass_net_primary_production_from_STA+Grass.change_in_grass_net_primary_production_from_STA_squared
 </code></pre></div></p>
@@ -5127,7 +5262,7 @@
 </code></pre></div></p>
 <h3 id="grass-grass-net-primary-production-in-1750">Grass.grass_net_primary_production_in_1750<a class="headerlink" href="#grass-grass-net-primary-production-in-1750" title="Permanent link">&para;</a></h3>
 <p><span class="badge badge-aux">aux</span> <span class="tag tag-assumption" title="A value set by modeller judgement rather than fit to data.">Assumption</span></p>
-<p><strong>Units:</strong> GtC/(Mha<em>year)  ·  </em><em>Dimensions:</em>* ClimateCase</p>
+<p><strong>Units:</strong> GtC/(Mha*year)  ·  <strong>Dimensions:</strong> ClimateCase</p>
 <blockquote>
 <p>https://doi.org/10.1007/s11769-019-1063-x 0.0046283</p>
 </blockquote>
@@ -5343,7 +5478,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
